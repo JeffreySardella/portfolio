@@ -4,15 +4,23 @@ const projects = [
     description:
       'Multi-tier healthcare app with patient management, appointment scheduling, and medical records. Senior capstone project built with a team using Agile.',
     tech: ['ASP.NET Core', 'C#', 'SQL Server', 'Flutter', 'REST API'],
-    github: 'https://github.com/gbkabel/MedicalApp',
     color: 'bg-blue-50',
     emoji: '🏥',
   },
   {
+    title: 'Toontown Mini-Games',
+    description:
+      'Implemented gameplay logic and event systems for two interactive mini-games in a Unity3D recreation of Toontown. Optimized mechanics and performance while collaborating with a multi-developer team.',
+    tech: ['Unity3D', 'C#', 'Game Dev'],
+    live: 'https://toon.gg',
+    color: 'bg-yellow-50',
+    emoji: '🎮',
+  },
+  {
     title: 'OWP Forum Website',
     description:
-      'Community forum for the Office of Water Programs at Sacramento State. Built with the "Bug Busters" team for knowledge sharing.',
-    tech: ['ASP.NET', 'C#', 'SQL Server', 'JavaScript'],
+      'RESTful API and community forum for the Office of Water Programs at Sacramento State. Building backend CRUD operations, relational database architecture, and Vue.js frontend integration.',
+    tech: ['PHP', 'Vue.js', 'REST API', 'SQL', 'Auth/Middleware'],
     color: 'bg-green-50',
     emoji: '💧',
   },
@@ -21,7 +29,7 @@ const projects = [
     description:
       'This site! A bento-grid portfolio built with React and TypeScript. Features a Formspree-powered contact form and Cloudflare Pages hosting.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/Jsarde/portfolio',
+    github: 'https://github.com/JeffreySardella/portfolio',
     color: 'bg-purple-50',
     emoji: '✨',
   },
@@ -54,19 +62,34 @@ function ProjectsSection() {
                 </span>
               ))}
             </div>
-            {projects[0].github && (
-              <a
-                href={projects[0].github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
-              >
-                View on GitHub
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </a>
-            )}
+            <div className="flex gap-4">
+              {projects[0].github && (
+                <a
+                  href={projects[0].github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
+                >
+                  GitHub
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </a>
+              )}
+              {projects[0].live && (
+                <a
+                  href={projects[0].live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
+                >
+                  Live Site
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </a>
+              )}
+            </div>
           </div>
         </div>
 
@@ -89,19 +112,34 @@ function ProjectsSection() {
                 </span>
               ))}
             </div>
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
-              >
-                View on GitHub
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </a>
-            )}
+            <div className="flex gap-4">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
+                >
+                  GitHub
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </a>
+              )}
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
+                >
+                  Live Site
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>

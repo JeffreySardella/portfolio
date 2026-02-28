@@ -47,7 +47,7 @@ function ContactSection() {
           </div>
           <div className="flex gap-3 mt-6">
             <a
-              href="https://github.com/Jsarde"
+              href="https://github.com/JeffreySardella"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -58,7 +58,7 @@ function ContactSection() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/jeffrey-sardella"
+              href="https://www.linkedin.com/in/jeffrey-sardella-7889b3163/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
