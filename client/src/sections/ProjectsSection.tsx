@@ -1,0 +1,112 @@
+const projects = [
+  {
+    title: 'Medical Application',
+    description:
+      'Multi-tier healthcare app with patient management, appointment scheduling, and medical records. Senior capstone project built with a team using Agile.',
+    tech: ['ASP.NET Core', 'C#', 'SQL Server', 'Flutter', 'REST API'],
+    github: 'https://github.com/gbkabel/MedicalApp',
+    color: 'bg-blue-50',
+    emoji: '🏥',
+  },
+  {
+    title: 'OWP Forum Website',
+    description:
+      'Community forum for the Office of Water Programs at Sacramento State. Built with the "Bug Busters" team for knowledge sharing.',
+    tech: ['ASP.NET', 'C#', 'SQL Server', 'JavaScript'],
+    color: 'bg-green-50',
+    emoji: '💧',
+  },
+  {
+    title: 'Portfolio Website',
+    description:
+      'This site! A bento-grid portfolio built with React and TypeScript. Features a Formspree-powered contact form and Cloudflare Pages hosting.',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/Jsarde/portfolio',
+    color: 'bg-purple-50',
+    emoji: '✨',
+  },
+]
+
+function ProjectsSection() {
+  return (
+    <section id="projects" className="py-8 scroll-mt-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Section header - full width */}
+        <div className="md:col-span-2 px-2 mb-2">
+          <p className="text-xs text-text-muted uppercase tracking-widest mb-1">What I've built</p>
+          <h2 className="text-2xl font-bold">
+            Projects<span className="text-primary">.</span>
+          </h2>
+        </div>
+
+        {/* Featured project - large card */}
+        <div className={`bento-card md:row-span-2 p-0 overflow-hidden`}>
+          <div className={`${projects[0].color} p-8 min-h-[200px] flex items-center justify-center`}>
+            <span className="text-7xl">{projects[0].emoji}</span>
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2">{projects[0].title}</h3>
+            <p className="text-sm text-text-muted mb-4 leading-relaxed">{projects[0].description}</p>
+            <div className="flex flex-wrap gap-1.5 mb-4">
+              {projects[0].tech.map((t) => (
+                <span key={t} className="px-2.5 py-1 bg-bg rounded-md text-xs font-medium text-text-muted">
+                  {t}
+                </span>
+              ))}
+            </div>
+            {projects[0].github && (
+              <a
+                href={projects[0].github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
+              >
+                View on GitHub
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg>
+              </a>
+            )}
+          </div>
+        </div>
+
+        {/* Other project cards */}
+        {projects.slice(1).map((project) => (
+          <div key={project.title} className="bento-card p-6">
+            <div className="flex items-start gap-4 mb-3">
+              <div className={`w-12 h-12 rounded-xl ${project.color} flex items-center justify-center text-2xl flex-shrink-0`}>
+                {project.emoji}
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">{project.title}</h3>
+                <p className="text-sm text-text-muted leading-relaxed">{project.description}</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              {project.tech.map((t) => (
+                <span key={t} className="px-2.5 py-1 bg-bg rounded-md text-xs font-medium text-text-muted">
+                  {t}
+                </span>
+              ))}
+            </div>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
+              >
+                View on GitHub
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg>
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export default ProjectsSection
