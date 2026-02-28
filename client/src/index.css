@@ -73,6 +73,19 @@ body {
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
+/* Animated hero gradient */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-gradient {
+  background: linear-gradient(-45deg, #4f46e5, #6366f1, #0ea5e9, #6366f1);
+  background-size: 300% 300%;
+  animation: gradient-shift 8s ease infinite;
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;

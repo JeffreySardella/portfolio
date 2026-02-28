@@ -25,6 +25,22 @@ const projects = [
     emoji: '💧',
   },
   {
+    title: 'Web Load Tester',
+    description:
+      'Concurrent load testing tool using Java virtual threads to simulate high-volume traffic against web endpoints. Measures response times, throughput, and failure rates under stress.',
+    tech: ['Java', 'Virtual Threads', 'Concurrency', 'Performance Testing'],
+    color: 'bg-red-50',
+    emoji: '⚡',
+  },
+  {
+    title: 'Restaurant App',
+    description:
+      'Android mobile app for browsing menus, placing orders, and managing restaurant information. Built as a personal project to explore native Android development.',
+    tech: ['Android Studio', 'Java', 'Mobile Dev'],
+    color: 'bg-cyan-50',
+    emoji: '🍽️',
+  },
+  {
     title: 'Portfolio Website',
     description:
       'This site! A bento-grid portfolio built with React and TypeScript. Features a Formspree-powered contact form and Cloudflare Pages hosting.',
@@ -38,9 +54,9 @@ const projects = [
 function ProjectsSection() {
   return (
     <section id="projects" className="py-8 scroll-mt-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {/* Section header - full width */}
-        <div className="md:col-span-2 px-2 mb-2">
+        <div className="md:col-span-2 lg:col-span-3 px-2 mb-2">
           <p className="text-xs text-text-muted uppercase tracking-widest mb-1">What I've built</p>
           <h2 className="text-2xl font-bold">
             Projects<span className="text-primary">.</span>
@@ -48,7 +64,7 @@ function ProjectsSection() {
         </div>
 
         {/* Featured project - large card */}
-        <div className={`bento-card md:row-span-2 p-0 overflow-hidden`}>
+        <div className="bento-card md:row-span-2 p-0 overflow-hidden">
           <div className={`${projects[0].color} p-8 min-h-[200px] flex items-center justify-center`}>
             <span className="text-7xl">{projects[0].emoji}</span>
           </div>

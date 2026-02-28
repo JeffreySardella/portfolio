@@ -3,7 +3,7 @@ function HeroSection() {
     <section className="pt-28 pb-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Main intro card - spans 2 cols */}
-        <div className="bento-card md:col-span-2 p-8 md:p-10 flex flex-col justify-between min-h-[320px] bg-gradient-to-br from-indigo-500 to-blue-600 text-white border-none">
+        <div className="bento-card md:col-span-2 p-8 md:p-10 flex flex-col justify-between min-h-[320px] hero-gradient text-white border-none">
           <div>
             <div className="flex items-center gap-2 mb-6">
               <span className="w-2.5 h-2.5 rounded-full bg-green-300 animate-pulse-dot" />
@@ -18,7 +18,6 @@ function HeroSection() {
               <span className="text-white font-semibold"> .NET</span>,
               <span className="text-white font-semibold"> React</span>, and
               <span className="text-white font-semibold"> SQL Server</span>.
-              Pursuing Azure certifications for enterprise cloud work.
             </p>
           </div>
           <div className="flex gap-3 mt-6">
@@ -86,6 +85,57 @@ function HeroSection() {
           </div>
         </div>
 
+        {/* Currently working on */}
+        <div className="bento-card p-6 bg-gradient-to-br from-emerald-50 to-green-50 border-emerald-100">
+          <p className="text-xs text-text-muted uppercase tracking-widest mb-3">Currently</p>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <span className="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0 animate-pulse-dot" />
+              <div>
+                <p className="font-medium text-sm">Building OWP Forum</p>
+                <p className="text-xs text-text-muted">PHP, Vue.js, REST API</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="w-2 h-2 rounded-full bg-blue-400 mt-2 flex-shrink-0 animate-pulse-dot" />
+              <div>
+                <p className="font-medium text-sm">Studying Azure AZ-900</p>
+                <p className="text-xs text-text-muted">Target: March 2026</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="w-2 h-2 rounded-full bg-purple-400 mt-2 flex-shrink-0 animate-pulse-dot" />
+              <div>
+                <p className="font-medium text-sm">Graduating Spring 2026</p>
+                <p className="text-xs text-text-muted">Sacramento State, B.S. CS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Resume download card */}
+        <div className="bento-card p-6 bg-gradient-to-br from-slate-800 to-slate-900 text-white border-none flex flex-col justify-between">
+          <div>
+            <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-4">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-lg mb-1">Resume</h3>
+            <p className="text-sm text-slate-400">Download my full resume with detailed experience and skills.</p>
+          </div>
+          <a
+            href="/Jeffrey_resume.pdf"
+            download
+            className="mt-4 inline-flex items-center gap-2 px-4 py-2.5 bg-white text-slate-900 text-sm font-medium rounded-xl hover:bg-slate-100 transition-colors w-fit"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download PDF
+          </a>
+        </div>
+
         {/* Certifications card */}
         <div className="bento-card p-6 bg-gradient-to-br from-amber-50 to-orange-50 border-amber-100">
           <p className="text-xs text-text-muted uppercase tracking-widest mb-3">Certifications</p>
@@ -107,8 +157,8 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Tech marquee card - spans 2 cols */}
-        <div className="bento-card md:col-span-2 p-5 overflow-hidden">
+        {/* Tech marquee card - full width */}
+        <div className="bento-card md:col-span-3 p-5 overflow-hidden">
           <p className="text-xs text-text-muted uppercase tracking-widest mb-3">Tech I work with</p>
           <div className="relative overflow-hidden">
             <div className="flex animate-marquee whitespace-nowrap">

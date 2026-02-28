@@ -75,7 +75,7 @@ function AboutSection() {
             </div>
             <div>
               <div className="text-3xl font-bold text-emerald-600">4+</div>
-              <div className="text-sm text-text-muted">Projects shipped</div>
+              <div className="text-sm text-text-muted">Projects built</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-emerald-600">2</div>
@@ -111,6 +111,55 @@ function AboutSection() {
             </div>
           </div>
         ))}
+
+        {/* Beyond code card */}
+        <div className="bento-card md:col-span-3 p-6 bg-gradient-to-br from-slate-50 to-gray-100 border-slate-200">
+          <p className="text-xs text-text-muted uppercase tracking-widest mb-4">Beyond code</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="flex items-start gap-3">
+              <span className="text-xl">🌐</span>
+              <div>
+                <p className="font-medium text-sm">Network Setup</p>
+                <p className="text-xs text-text-muted">Designed and installed a small business network — router, switches, Ethernet runs, and IP cameras</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl">🔧</span>
+              <div>
+                <p className="font-medium text-sm">Electronics & Soldering</p>
+                <p className="text-xs text-text-muted">Soldering, circuit board assembly, modifying electronics, and building DIY controllers (Renard SS24)</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl">🖥️</span>
+              <div>
+                <p className="font-medium text-sm">PC Building</p>
+                <p className="text-xs text-text-muted">Built and configured numerous custom PCs — component selection, assembly, OS setup, and troubleshooting</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl">🏠</span>
+              <div>
+                <p className="font-medium text-sm">Homelab</p>
+                <p className="text-xs text-text-muted">NAS, pfSense router, Pi-hole/AdGuard DNS, VPN, and self-hosted services on a home network</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl">🎮</span>
+              <div>
+                <p className="font-medium text-sm">Game Modding</p>
+                <p className="text-xs text-text-muted">Years of creating mods, content packs, and contributing to open-source gaming communities</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl">🖨️</span>
+              <div>
+                <p className="font-medium text-sm">3D Printing</p>
+                <p className="text-xs text-text-muted">Designing and printing custom parts, enclosures, and prototypes</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Work experience - full width */}
         <div className="bento-card md:col-span-3 p-8">
