@@ -49,6 +49,24 @@ const projects = [
     color: 'bg-purple-50',
     emoji: '✨',
   },
+  {
+    title: 'Discord Voice Word Tracker',
+    description:
+      'Discord bot that records voice chat and transcribes each user\'s speech entirely on-device — no external APIs. Posts a per-user word count and top 10 most-used words to a text channel after each session.',
+    tech: ['Python', 'Pycord', 'Faster-Whisper', 'Discord API'],
+    github: 'https://github.com/JeffreySardella/Discord-Word-Tracker',
+    color: 'bg-indigo-50',
+    emoji: '🎙️',
+  },
+  {
+    title: 'PogoFest Ticket Alerts Bot',
+    description:
+      'Discord bot that monitors the Pokémon GO official site every 3 minutes and instantly alerts servers the moment GO Fest 2026 tickets go on sale. Supports per-server channel and role configuration.',
+    tech: ['Python', 'discord.py', 'BeautifulSoup4', 'SQLite', 'aiohttp'],
+    github: 'https://github.com/JeffreySardella/PogoFestTicketsDiscordBot',
+    color: 'bg-orange-50',
+    emoji: '🎟️',
+  },
 ]
 
 function ProjectsSection() {

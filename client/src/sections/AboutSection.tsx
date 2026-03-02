@@ -2,7 +2,7 @@ const skills = [
   { category: 'Languages', items: ['C# (6 yrs)', 'Python (4 yrs)', 'SQL (3+ yrs)', 'JavaScript (2+ yrs)', 'PHP', 'R', 'HTML/CSS'], gradient: 'from-violet-50 to-purple-50', border: 'border-violet-100' },
   { category: 'Frameworks', items: ['ASP.NET Core', '.NET MVC', 'React', 'Vue.js', 'Entity Framework', 'pandas', 'NumPy', 'Pygame', 'Tailwind', 'Bootstrap'], gradient: 'from-orange-50 to-amber-50', border: 'border-orange-100' },
   { category: 'Data & Cloud', items: ['SQL Server', 'Stored Procedures', 'Relational Modeling', 'Azure Fundamentals', 'REST APIs', 'Auth/RBAC'], gradient: 'from-blue-50 to-indigo-50', border: 'border-blue-100' },
-  { category: 'Tools', items: ['Git', 'GitHub', 'Visual Studio', 'VS Code', 'Postman', 'Agile/Scrum'], gradient: 'from-rose-50 to-pink-50', border: 'border-rose-100' },
+  { category: 'Tools', items: ['Git', 'GitHub', 'Visual Studio', 'VS Code', 'Postman', 'Agile/Scrum', 'Claude Code'], gradient: 'from-rose-50 to-pink-50', border: 'border-rose-100' },
 ]
 
 const experience = [
