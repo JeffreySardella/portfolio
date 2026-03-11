@@ -13,7 +13,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{SUMMARY}
-Full-stack developer with 6+ years of software development experience and a strong background in C\#, Python, SQL, and modern web frameworks. Builds production-ready applications, REST APIs, and automation tools across web, mobile, and AI-powered platforms. Comfortable owning projects end-to-end --- from database design to frontend --- and working in fast-moving Agile teams with real clients.
+Computer Science professional with 6+ years of software development experience specializing in full-stack web application development, relational database design, and RESTful API development. Proven ability to deliver production-ready software for real-world clients in Agile/Scrum environments. Experienced in requirements analysis, technical documentation, system design, and cross-functional team collaboration.
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -22,52 +22,77 @@ Full-stack developer with 6+ years of software development experience and a stro
 
 \begin{rSection}{TECHNICAL SKILLS}
 \textbf{Languages:} C\# (6 yrs), Python (4 yrs), SQL (3+ yrs), JavaScript (2+ yrs), PHP, Java, R, HTML/CSS \\
-\textbf{Frameworks:} ASP.NET MVC / .NET Core, Vue.js, React, PHP Slim, Bootstrap, Tailwind CSS, pandas, NumPy \\
-\textbf{Databases:} SQL Server, PostgreSQL, SQLite --- relational modeling, stored procedures, Power BI integration \\
-\textbf{APIs \& Tools:} RESTful APIs, RBAC, OTP auth, Git/GitHub, Jira, Figma, Postman, Claude Code, Azure Fundamentals
+\textbf{Frameworks \& Libraries:} ASP.NET MVC / .NET Core, Vue.js, React, PHP Slim, Bootstrap, Tailwind CSS, pandas, NumPy \\
+\textbf{Databases:} SQL Server (T-SQL, stored procedures, relational modeling), PostgreSQL, SQLite, Power BI integration \\
+\textbf{APIs \& Security:} RESTful API design, Role-Based Access Control (RBAC), OTP email authentication, middleware development \\
+\textbf{Tools \& Methodology:} Git/GitHub, Jira, Figma, Visual Studio, VS Code, Postman, Agile/Scrum, Claude Code, Azure Fundamentals \\
+\textbf{Compliance \& Standards:} WCAG 2.1 accessibility compliance, technical documentation, requirements specifications, ERD design
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-% SOFTWARE ENGINEERING EXPERIENCE
+% SOFTWARE ENGINEERING EXPERIENCE (PROJECT-BASED)
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{SOFTWARE ENGINEERING EXPERIENCE}
+\begin{rSection}{SOFTWARE ENGINEERING EXPERIENCE (PROJECT-BASED)}
 
-\textbf{Backend \& Full-Stack Developer | OWP Forum --- Sacramento State} \hfill Oct 2025 -- Present
+\textbf{Backend \& Full-Stack Developer} --- \textit{Office of Water Programs Forum --- Sacramento State} \hfill Oct 2025 -- Present \\
+\textit{Sacramento, CA --- Volunteer --- Real-World Client Project}
 \begin{itemize}
-    \item Building a \textbf{RESTful API} in \textbf{PHP Slim} with full CRUD across a four-tier role system (Admin, Moderator, User, Guest) for a client that trains 14,000+ professionals annually.
-    \item Architecting a \textbf{T-SQL} database with OTP email auth and custom middleware for permission-based route protection.
-    \item Building WCAG-compliant \textbf{Vue.js} frontend components and Figma mockups; managing sprints in Jira with an 8-person Agile team.
+    \item Building a RESTful API using PHP Slim framework supporting full CRUD operations across a four-tier role system (Admin, Moderator, User, Guest) for a client organization that trains over 14,000 water and wastewater professionals annually.
+    \item Architecting and implementing a T-SQL relational database with OTP email authentication and custom middleware for permission-based route protection and session management.
+    \item Contributing to Vue.js frontend development including responsive, WCAG 2.1-compliant UI components ensuring accessibility across desktop and mobile platforms.
+    \item Developed Figma UI mockups to present design concepts to the client for review and approval prior to implementation, facilitating iterative requirements refinement.
+    \item Participating in bi-weekly client meetings, sprint planning in Jira, and daily team coordination via Discord in an 8-person Agile/Scrum team.
 \end{itemize}
 
-\textbf{Project Lead \& Backend Developer | Medical Web Application} \hfill Jan 2024 -- May 2024
+\textbf{Project Lead \& Backend Developer} --- \textit{Medical Web Application --- CSC 131} \hfill Jan 2024 -- May 2024 \\
+\textit{California State University, Sacramento --- Volunteer --- Academic Client Project}
 \begin{itemize}
-    \item Led backend development on a 6-person team; built a full \textbf{ASP.NET MVC} / \textbf{C\#} application with role-based auth, patient management, appointments, prescriptions, and secure in-app messaging.
-    \item Designed and normalized a \textbf{SQL Server} schema using stored procedures; migrated to \textbf{PostgreSQL} for Power BI analytics.
+    \item Led a 6-person development team as project lead and primary backend developer, driving the majority of commits across all major system modules.
+    \item Built the full backend in ASP.NET MVC with C\#, implementing role-based authentication (doctor, worker, patient), patient record management, appointment scheduling, prescription tracking, and secure in-app provider messaging.
+    \item Designed and normalized a relational database schema in SQL Server using stored procedures for performance and security; later migrated to PostgreSQL to support Power BI reporting and analytics integration.
+    \item Implemented full CRUD functionality across all modules including patients, appointments, prescriptions, medical history, and clinic locations.
+    \item Produced comprehensive project documentation including requirements specifications, entity relationship diagrams, architectural diagrams, use case models, and UI design flows.
+    \item Coordinated team task delegation, managed GitHub version control, and resolved merge conflicts throughout the development lifecycle.
+    \item Performed functional testing and bug fixes across all modules, validating behavior against documented requirements.
+\end{itemize}
+
+\textbf{Developer} --- \textit{Discord Voice Word Tracker \& PogoFest Alert Bot} \hfill 2025 \\
+\textit{Personal Projects}
+\begin{itemize}
+    \item Built a Discord bot in Python using Pycord that captures per-user audio streams and transcribes speech entirely on-device via Faster-Whisper; posts per-user word counts and top keywords to a text channel at session end.
+    \item Built a Pok\'{e}mon GO event alert bot using aiohttp and BeautifulSoup4 with a SQLite-backed per-server config system, slash commands for custom alert channels, and automated scraping every 3 minutes.
+\end{itemize}
+
+\textbf{Developer} --- \textit{SmartTripPlanner (Local AI Trip Planner)} \hfill 2025 \\
+\textit{Personal Project}
+\begin{itemize}
+    \item Built a local AI trip planner in ASP.NET Core with a Blazor Server UI that uses an agent loop to research destinations, check Google Calendar availability, validate travel times via Haversine distance calculations, and create optimized itineraries.
+    \item Runs entirely on local hardware via Ollama with tool-calling LLMs (Qwen 3.5 35B-A3B); persists trip history and location caches in SQLite with EF Core. Includes a REST API for external integrations and 41 unit tests covering all services.
+\end{itemize}
+
+\textbf{Developer} --- \textit{X Country Filter (Chrome Extension)} \hfill 2025 \\
+\textit{Personal Project}
+\begin{itemize}
+    \item Built a Chrome extension that filters posts on X (Twitter) by geographic origin, intercepting API responses via content scripts to extract user location metadata and resolve it to country codes.
+    \item Implemented allowlist/blocklist filtering modes with hidden and collapsed display options using MutationObserver for real-time DOM manipulation as the feed loads.
 \end{itemize}
 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-% PERSONAL PROJECTS
+% VOLUNTEER EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{PERSONAL PROJECTS}
+\begin{rSection}{VOLUNTEER EXPERIENCE}
 
-\textbf{SmartTripPlanner} --- \textit{ASP.NET Core, Blazor, Ollama, Google Calendar API, SQLite} \hfill 2025
+\textbf{Game Developer (Volunteer)} --- \textit{Toontown in Unity} \hfill Oct 2021 -- Nov 2023 \\
+\textit{Remote --- Salt Lake City, UT --- toon.gg}
 \begin{itemize}
-    \item Local AI trip planner with an agent loop that researches destinations, checks Google Calendar availability, validates travel times, and pushes optimized itineraries. Runs on local hardware via Ollama.
-\end{itemize}
-
-\textbf{X Country Filter} --- \textit{JavaScript, Chrome Extensions, MutationObserver} \hfill 2025
-\begin{itemize}
-    \item Chrome extension that filters posts on X (Twitter) by geographic origin, intercepting API data via content scripts to resolve user locations to country codes with allowlist/blocklist modes.
-\end{itemize}
-
-\textbf{Discord Bots} --- \textit{Python, Pycord, Faster-Whisper, discord.py, aiohttp, SQLite} \hfill 2025
-\begin{itemize}
-    \item Voice Word Tracker: captures per-user audio and transcribes speech on-device via Faster-Whisper; posts word counts at session end.
-    \item PogoFest Alerts: scrapes Pok\'{e}mon GO site every 3 min, alerts Discord servers when GO Fest tickets go on sale.
+    \item Volunteer developer for Toontown in Unity, a community-driven multiplayer game project built in C\# with an active Discord player base.
+    \item Developed and shipped Pizzatron 3000, a fully playable multiplayer minigame, and contributed to Match Minnie through development and testing.
+    \item Implemented networking functionality using the Krypton networking library including data transmission and distributed object setup to support multiplayer gameplay.
+    \item Modified core game logic, built UI elements for minigames, and handled gameplay fixes and improvements; worked primarily independently while collaborating with the project lead on specific systems.
 \end{itemize}
 
 \end{rSection}
@@ -82,20 +107,32 @@ Full-stack developer with 6+ years of software development experience and a stro
 \textit{Remote --- California}
 \begin{itemize}
     \item Building AI-powered automation agents using Claude Code to solve real business workflow problems for small and mid-size clients.
-    \item Built \textbf{SmartApply Agent}: automated job application system using Claude AI that discovers jobs across 7 sources, scores candidates, generates ATS-optimized resumes/cover letters, and auto-submits via Playwright across 6 ATS platforms.
-    \item Built \textbf{Drover Dashboard}: plugin-based analytics platform in React + TypeScript with Supabase, integrating GA4, Search Console, Google Ads, and Meta Ads with Claude API-powered insights.
+    \item Providing technical consulting and architectural guidance on software implementation, tech stack decisions, and system design.
+    \item Designing reusable automation frameworks to deploy consistent AI-powered workflows across multiple business clients from a single tool.
+    \item Analyzing client business processes to identify inefficiencies, improve prompt engineering, and accelerate automation deployment timelines.
+    \item Built \textbf{Drover Dashboard}, a plugin-based internal analytics platform in React + TypeScript with Supabase backend, integrating Google Analytics 4, Search Console, Google Ads, and Meta Ads through Edge Function proxies with JWT-verified auth.
+    \item Implemented Claude API-powered analytics insights, a CRM pipeline with Kanban board, scheduled email reports, alert management, and PDF export functionality; deployed on Cloudflare Pages.
+    \item Developed \textbf{SmartApply Agent}, an automated job application system using Claude Sonnet that discovers jobs across 7 sources (Adzuna, Indeed, LinkedIn, RemoteOK, WeWorkRemotely, Remotive, HackerNews), scores candidates 0--100, and generates ATS-optimized resumes and cover letters.
+    \item Integrated Playwright browser automation to auto-submit applications across 6 ATS platforms (Lever, Greenhouse, Workday, iCIMS, Taleo, SmartRecruiters) with CAPTCHA handling and AI-powered screening question answering.
+    \item Built a web dashboard with Chart.js analytics, a Discord bot with slash commands for job approvals and mode control, and IMAP email monitoring with Claude-powered recruiter response classification and auto-reply.
 \end{itemize}
 
 \textbf{Computer Tech \& Operations Support} --- \textit{Pool Time Pool and Spa} \hfill Jan 2021 -- Jun 2021 \\
 \textit{Rancho Cordova, CA}
 \begin{itemize}
-    \item Evaluated job estimation software, configured GPS fleet tracking, and provided Windows technical support across 50+ employees.
+    \item Brought on to evaluate and implement job estimation software for a growing operations company with 50+ employees; independently assessed existing workflows, determined proposed software was not viable, and researched and presented alternatives to ownership.
+    \item Configured and maintained GPS fleet tracking systems monitoring 5--10 service vehicles to ensure accurate scheduling and dispatch records.
+    \item Extracted operational data from field service management software and manipulated datasets in Excel to support scheduling, dispatch tracking, and reporting.
+    \item Trained staff on mobile time tracking applications and provided technical support for Windows systems, office hardware, and network infrastructure across the organization.
 \end{itemize}
 
 \textbf{Shift Manager} --- \textit{Burger and Cream} \hfill Nov 2015 -- Dec 2020 \\
 \textit{Auburn, CA}
 \begin{itemize}
-    \item Supervised 15 employees; handled POS migrations, ethernet cabling, workstation setup. Built a desktop app to automate labor calculations.
+    \item Managed daily shift operations for a fast casual restaurant with a staff of 15 employees, overseeing scheduling, task delegation, and floor supervision.
+    \item Handled network infrastructure work including ethernet cabling, security camera setup, and configuration of workstations and point-of-sale hardware.
+    \item Led technical coordination of a POS system migration including transition planning, menu system updates, and staff onboarding to the new platform.
+    \item Built a Windows desktop application to automate labor calculation workflows, reducing time spent on manual tracking.
 \end{itemize}
 
 \end{rSection}
