@@ -7,6 +7,17 @@ const skills = [
 
 const experience = [
   {
+    title: 'AI Automation Engineer (Contract)',
+    company: 'Drover Insights LLC',
+    location: 'Remote — California',
+    dates: 'Mar 2026 - Present',
+    bullets: [
+      'Building AI-powered automation agents using Claude Code to solve real business workflow problems for small and mid-size clients',
+      'Built SmartApply Agent: automated job application system using Claude AI that discovers jobs across 7 sources, scores candidates, generates ATS-optimized resumes/cover letters, and auto-submits via Playwright across 6 ATS platforms',
+      'Built Drover Dashboard: plugin-based analytics platform in React + TypeScript with Supabase, integrating GA4, Search Console, Google Ads, and Meta Ads with Claude API-powered insights',
+    ],
+  },
+  {
     title: 'IT Assistant & Operations Support',
     company: 'Pool Time Pool and Spa',
     location: 'Rancho Cordova, CA',

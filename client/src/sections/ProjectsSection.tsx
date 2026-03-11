@@ -68,6 +68,15 @@ const projects = [
     emoji: '🎟️',
   },
   {
+    title: 'AetherPlan',
+    description:
+      'Local AI trip planner that uses an agent loop to research destinations, check Google Calendar availability, validate travel times, and push optimized itineraries to your calendar. Runs on a local LLM via Ollama — no cloud AI required.',
+    tech: ['ASP.NET Core', 'Blazor', 'Ollama', 'Google Calendar API', 'SQLite', 'EF Core'],
+    github: 'https://github.com/JeffreySardella/SmartTripPlanner',
+    color: 'bg-emerald-50',
+    emoji: '🗺️',
+  },
+  {
     title: 'X Country Filter',
     description:
       'Chrome extension that filters posts on X (Twitter) by the geographic origin of each account. Intercepts API data, resolves locations to country codes, and hides or collapses posts based on allowlist/blocklist preferences.',
