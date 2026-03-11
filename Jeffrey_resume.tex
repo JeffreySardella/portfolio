@@ -3,8 +3,8 @@
 \usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
 
 \name{Jeffrey Sardella}
-\address{sardellajeffrey123@gmail.com \\ (916) 295-3636}
-\address{github.com/JeffreySardella \\ linkedin.com/in/jeffrey-sardella-7889b3163 \\ sardella.dev}
+\address{Rocklin, CA \\ (916) 295-3636 \\ sardellajeffrey123@gmail.com}
+\address{linkedin.com/in/jeffrey-sardella-7889b3163 \\ github.com/JeffreySardella \\ sardella.dev}
 
 \begin{document}
 
@@ -13,7 +13,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{SUMMARY}
-Computer Science professional with over 6 years of technical experience in object-oriented programming (C\#) and 4 years of data-driven development (Python, SQL). Proven track record building multi-tier applications, REST APIs, and automation tools across web, mobile, and Discord platforms. Seeking full-stack or backend roles in .NET and React stacks.
+Full-stack developer with 6+ years of software development experience and a strong background in C\#, Python, SQL, and modern web frameworks. Builds production-ready applications, REST APIs, and automation tools across web, mobile, and AI-powered platforms. Comfortable owning projects end-to-end --- from database design to frontend --- and working in fast-moving Agile teams with real clients.
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -21,66 +21,53 @@ Computer Science professional with over 6 years of technical experience in objec
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{TECHNICAL SKILLS}
-\textbf{Languages:} C\# (6 yrs), Python (4 yrs), SQL (3+ yrs), JavaScript (2+ yrs), Java, PHP, R, HTML/CSS \\
-\textbf{Frameworks:} ASP.NET \& .NET Core, React, Vue.js, Flutter, Tailwind CSS, Bootstrap, pandas, NumPy \\
-\textbf{Databases \& APIs:} SQL Server (Relational modeling, Stored Procedures), SQLite, RESTful APIs, Auth/RBAC \\
-\textbf{Tools \& Cloud:} Git, GitHub, Visual Studio, VS Code, Postman, Agile/Scrum, Azure Fundamentals, Claude Code
+\textbf{Languages:} C\# (6 yrs), Python (4 yrs), SQL (3+ yrs), JavaScript (2+ yrs), PHP, Java, R, HTML/CSS \\
+\textbf{Frameworks:} ASP.NET MVC / .NET Core, Vue.js, React, PHP Slim, Bootstrap, Tailwind CSS, pandas, NumPy \\
+\textbf{Databases:} SQL Server, PostgreSQL, SQLite --- relational modeling, stored procedures, Power BI integration \\
+\textbf{APIs \& Tools:} RESTful APIs, RBAC, OTP auth, Git/GitHub, Jira, Figma, Postman, Claude Code, Azure Fundamentals
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-% SOFTWARE ENGINEERING EXPERIENCE (PROJECT-BASED)
+% SOFTWARE ENGINEERING EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{SOFTWARE ENGINEERING EXPERIENCE (PROJECT-BASED)}
+\begin{rSection}{SOFTWARE ENGINEERING EXPERIENCE}
 
-\textbf{Full-Stack Developer | Medical Web Application} \hfill Jan 2024 -- May 2024
+\textbf{Backend \& Full-Stack Developer | OWP Forum --- Sacramento State} \hfill Oct 2025 -- Present
 \begin{itemize}
-    \item Led backend development on a 6-person team; drove the majority of commits across patient management, appointments, prescriptions, medical records, and secure in-app messaging.
-    \item Engineered a multi-tier \textbf{ASP.NET MVC} / \textbf{C\#} application with a DAL pattern; designed and normalized a \textbf{SQL Server} schema using stored procedures for performance and security.
-    \item Implemented role-based auth (doctor, worker, patient) with OTP email confirmation and built \textbf{Bootstrap}/Razor Pages frontend views.
+    \item Building a \textbf{RESTful API} in \textbf{PHP Slim} with full CRUD across a four-tier role system (Admin, Moderator, User, Guest) for a client that trains 14,000+ professionals annually.
+    \item Architecting a \textbf{T-SQL} database with OTP email auth and custom middleware for permission-based route protection.
+    \item Building WCAG-compliant \textbf{Vue.js} frontend components and Figma mockups; managing sprints in Jira with an 8-person Agile team.
 \end{itemize}
 
-\textbf{Backend Developer | OWP Forum Web Application} \hfill Jan 2025 -- Present
+\textbf{Project Lead \& Backend Developer | Medical Web Application} \hfill Jan 2024 -- May 2024
 \begin{itemize}
-    \item Building a \textbf{RESTful API} with \textbf{PHP Slim} for a real-world client (Sacramento State OWP), supporting CRUD operations across a four-tier role system (Admin, Moderator, User, Guest).
-    \item Architecting a \textbf{T-SQL} relational database with OTP email auth and custom middleware for permission-based route protection.
-    \item Collaborating in an 8-person \textbf{Agile/Scrum} team with bi-weekly client meetings; integrating \textbf{Vue.js} frontend with WCAG-compliant responsive design.
+    \item Led backend development on a 6-person team; built a full \textbf{ASP.NET MVC} / \textbf{C\#} application with role-based auth, patient management, appointments, prescriptions, and secure in-app messaging.
+    \item Designed and normalized a \textbf{SQL Server} schema using stored procedures; migrated to \textbf{PostgreSQL} for Power BI analytics.
 \end{itemize}
 
-\textbf{Developer | Discord Voice Word Tracker} \hfill 2025
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% PERSONAL PROJECTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PERSONAL PROJECTS}
+
+\textbf{SmartTripPlanner} --- \textit{ASP.NET Core, Blazor, Ollama, Google Calendar API, SQLite} \hfill 2025
 \begin{itemize}
-    \item Built a Discord bot in \textbf{Python} using \textbf{Pycord} that captures per-user audio streams and transcribes speech entirely on-device via \textbf{Faster-Whisper} — no external APIs.
-    \item Posts per-user word counts and top 10 most-used words to a text channel at session end.
+    \item Local AI trip planner with an agent loop that researches destinations, checks Google Calendar availability, validates travel times, and pushes optimized itineraries. Runs on local hardware via Ollama.
 \end{itemize}
 
-\textbf{Developer | PogoFest Ticket Alerts Discord Bot} \hfill 2025 -- Present
+\textbf{X Country Filter} --- \textit{JavaScript, Chrome Extensions, MutationObserver} \hfill 2025
 \begin{itemize}
-    \item Built a Discord bot that scrapes the Pok\'{e}mon GO site every 3 minutes with \textbf{aiohttp} and \textbf{BeautifulSoup4}, instantly alerting servers when GO Fest tickets go on sale.
-    \item Designed a \textbf{SQLite}-backed per-server config system with custom alert channels and role pings via slash commands.
+    \item Chrome extension that filters posts on X (Twitter) by geographic origin, intercepting API data via content scripts to resolve user locations to country codes with allowlist/blocklist modes.
 \end{itemize}
 
-\textbf{Developer | Drover Dashboard (Internal Analytics Platform)} \hfill 2026
+\textbf{Discord Bots} --- \textit{Python, Pycord, Faster-Whisper, discord.py, aiohttp, SQLite} \hfill 2025
 \begin{itemize}
-    \item Built a plugin-based analytics dashboard in \textbf{React} + \textbf{TypeScript} with integrations for Google Analytics 4, Search Console, Google Ads, and Meta Ads, proxied through \textbf{Supabase Edge Functions}.
-    \item Implemented AI-powered analytics insights via the \textbf{Claude API}, a CRM pipeline with Kanban board, and role-protected auth with \textbf{Supabase}.
-\end{itemize}
-
-\textbf{Developer | SmartApply Agent (AI Job Application Bot)} \hfill 2026
-\begin{itemize}
-    \item Built an automated job application agent using \textbf{Claude AI} that discovers jobs across 7 sources, scores them against a candidate profile, and generates ATS-optimized resumes and cover letters.
-    \item Integrated \textbf{Playwright} browser automation to auto-submit across 6 ATS platforms; built a web dashboard with analytics, a \textbf{Discord bot} for approvals, and IMAP email monitoring with AI-powered recruiter response classification.
-\end{itemize}
-
-\textbf{Developer | SmartTripPlanner (Local AI Trip Planner)} \hfill 2025
-\begin{itemize}
-    \item Built a local AI trip planner in \textbf{ASP.NET Core} with a \textbf{Blazor Server} UI that uses an agent loop to research destinations, check \textbf{Google Calendar} availability, validate travel times, and create optimized itineraries.
-    \item Runs entirely on local hardware via \textbf{Ollama} with tool-calling LLMs; persists trip history and location caches in \textbf{SQLite} with \textbf{EF Core}.
-\end{itemize}
-
-\textbf{Developer | X Country Filter (Chrome Extension)} \hfill 2025
-\begin{itemize}
-    \item Built a \textbf{Chrome extension} that filters posts on X (Twitter) by geographic origin, intercepting API responses via content scripts to extract user location metadata and resolve it to country codes.
-    \item Implemented allowlist/blocklist filtering modes with hidden and collapsed display options using \textbf{MutationObserver} for real-time DOM manipulation as the feed loads.
+    \item Voice Word Tracker: captures per-user audio and transcribes speech on-device via Faster-Whisper; posts word counts at session end.
+    \item PogoFest Alerts: scrapes Pok\'{e}mon GO site every 3 min, alerts Discord servers when GO Fest tickets go on sale.
 \end{itemize}
 
 \end{rSection}
@@ -91,18 +78,24 @@ Computer Science professional with over 6 years of technical experience in objec
 
 \begin{rSection}{PROFESSIONAL EXPERIENCE}
 
-\textbf{IT Assistant \& Operations Support} \hfill Jan 2021 -- Jun 2021 \\
-Pool Time Pool and Spa -- Rancho Cordova, CA
+\textbf{AI Automation Engineer (Contract)} --- \textit{Drover Insights LLC} \hfill Mar 2026 -- Present \\
+\textit{Remote --- California}
 \begin{itemize}
-    \item Configured software to streamline job estimates and transitioned paper records to searchable digital formats.
-    \item Provided technical support for Windows systems to maintain department productivity.
+    \item Building AI-powered automation agents using Claude Code to solve real business workflow problems for small and mid-size clients.
+    \item Built \textbf{SmartApply Agent}: automated job application system using Claude AI that discovers jobs across 7 sources, scores candidates, generates ATS-optimized resumes/cover letters, and auto-submits via Playwright across 6 ATS platforms.
+    \item Built \textbf{Drover Dashboard}: plugin-based analytics platform in React + TypeScript with Supabase, integrating GA4, Search Console, Google Ads, and Meta Ads with Claude API-powered insights.
 \end{itemize}
 
-\textbf{Shift Manager} \hfill Nov 2016 -- Dec 2020 \\
-Burger and Cream -- Auburn, CA
+\textbf{Computer Tech \& Operations Support} --- \textit{Pool Time Pool and Spa} \hfill Jan 2021 -- Jun 2021 \\
+\textit{Rancho Cordova, CA}
 \begin{itemize}
-    \item Supervised diverse teams and managed daily operations in a high-volume environment.
-    \item Troubleshot POS systems and technical equipment to minimize service disruptions.
+    \item Evaluated job estimation software, configured GPS fleet tracking, and provided Windows technical support across 50+ employees.
+\end{itemize}
+
+\textbf{Shift Manager} --- \textit{Burger and Cream} \hfill Nov 2015 -- Dec 2020 \\
+\textit{Auburn, CA}
+\begin{itemize}
+    \item Supervised 15 employees; handled POS migrations, ethernet cabling, workstation setup. Built a desktop app to automate labor calculations.
 \end{itemize}
 
 \end{rSection}
@@ -112,11 +105,11 @@ Burger and Cream -- Auburn, CA
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{EDUCATION}
-\textbf{Bachelor of Science, Computer Science} \hfill Expected Spring 2026 \\
+\textbf{Bachelor of Science, Computer Science} \hfill Expected May 2026 \\
 California State University, Sacramento \\
 
-\textbf{Associate of Science, Computer Science} \hfill 2023 \\
-Sierra College
+\textbf{Associate of Science, Computer Science} \hfill May 2024 \\
+Sierra College --- Rocklin, CA
 \end{rSection}
 
 \end{document}
