@@ -68,7 +68,7 @@ const projects = [
     emoji: '🎟️',
   },
   {
-    title: 'AetherPlan',
+    title: 'SmartTripPlanner',
     description:
       'Local AI trip planner that uses an agent loop to research destinations, check Google Calendar availability, validate travel times, and push optimized itineraries to your calendar. Runs on a local LLM via Ollama — no cloud AI required.',
     tech: ['ASP.NET Core', 'Blazor', 'Ollama', 'Google Calendar API', 'SQLite', 'EF Core'],
