@@ -1,0 +1,138 @@
+\documentclass{resume}
+
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
+
+\name{Jeffrey Sardella}
+\address{Rocklin, CA \\ (916) 295-3636 \\ sardellajeffrey123@gmail.com}
+\address{linkedin.com/in/jeffrey-sardella-7889b3163 \\ github.com/JeffreySardella \\ sardella.dev}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{SUMMARY}
+Full-stack developer with 6+ years of software development experience and a strong background in C\#, Python, SQL, and modern web frameworks. Builds production-ready applications, REST APIs, and automation tools across web, mobile, and AI-powered platforms. Comfortable owning projects end-to-end --- from database design to frontend --- and working in fast-moving Agile teams with real clients.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{TECHNICAL SKILLS}
+\textbf{Languages:} C\# (6 yrs), Python (4 yrs), SQL (3+ yrs), JavaScript (2+ yrs), PHP, Java, R, HTML/CSS \\
+\textbf{Frameworks:} ASP.NET MVC / .NET Core, Vue.js, React, PHP Slim, Bootstrap, Tailwind CSS, pandas, NumPy \\
+\textbf{Databases:} SQL Server, PostgreSQL, SQLite --- relational modeling, stored procedures, Power BI integration \\
+\textbf{APIs \& Tools:} RESTful APIs, RBAC, OTP auth, Git/GitHub, Jira, Figma, Postman, Claude Code, Azure Fundamentals
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% SOFTWARE ENGINEERING EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{SOFTWARE ENGINEERING EXPERIENCE}
+
+\textbf{Backend \& Full-Stack Developer} --- \textit{OWP Forum --- Sacramento State} \hfill Oct 2025 -- Present \\
+\textit{Sacramento, CA --- Real-world client project, 8-person Agile team}
+\begin{itemize}
+    \item Building a RESTful API in PHP Slim with full CRUD across a four-tier role system (Admin, Moderator, User, Guest) for a client that trains 14,000+ professionals annually.
+    \item Architecting a T-SQL database with OTP email auth and custom middleware for permission-based route protection.
+    \item Building WCAG-compliant Vue.js frontend components and Figma mockups presented directly to the client for approval before implementation.
+    \item Managing sprints in Jira, coordinating an 8-person team via Discord, and attending bi-weekly client meetings.
+    \item Integrated Git version control with feature branching and pull request workflows across the full team.
+\end{itemize}
+
+\textbf{Project Lead \& Backend Developer} --- \textit{Medical Web Application} \hfill Jan 2024 -- May 2024 \\
+\textit{California State University, Sacramento --- 6-person team, real client}
+\begin{itemize}
+    \item Led backend development on a 6-person team; drove the majority of commits across patient management, appointments, prescriptions, medical records, and secure in-app messaging.
+    \item Built a full ASP.NET MVC / C\# application with a DAL pattern; designed and normalized a SQL Server schema using stored procedures for performance and security.
+    \item Migrated database to PostgreSQL to support Power BI analytics integration.
+    \item Implemented role-based auth (doctor, worker, patient) with OTP email confirmation.
+    \item Performed functional testing and bug fixes across all modules, validating behavior against documented requirements.
+\end{itemize}
+
+\textbf{Game Developer (Volunteer)} --- \textit{Toontown in Unity} \hfill Oct 2021 -- Nov 2023 \\
+\textit{Remote --- toon.gg}
+\begin{itemize}
+    \item Shipped Pizzatron 3000, a fully playable multiplayer minigame in C\#, and contributed to Match Minnie through development and testing.
+    \item Implemented networking using the Krypton library including distributed objects and data sync to support multiplayer gameplay.
+    \item Modified core game logic, built UI elements for minigames, and handled fixes and improvements across the project.
+    \item Collaborated with the project lead and a distributed volunteer community; coordinated work asynchronously via Discord.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% PERSONAL PROJECTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PERSONAL PROJECTS}
+
+\textbf{Discord Voice Word Tracker} --- \textit{Python, Pycord, Faster-Whisper} \hfill 2025
+\begin{itemize}
+    \item Captures per-user audio streams in Discord and transcribes speech entirely on-device via Faster-Whisper --- no external APIs, no data leaving the server.
+    \item Posts per-user word counts and top 10 most-used keywords to a text channel at session end; designed for privacy-first local deployment.
+\end{itemize}
+
+\textbf{PogoFest Ticket Alert Bot} --- \textit{Python, aiohttp, BeautifulSoup4, SQLite} \hfill 2025 -- Present
+\begin{itemize}
+    \item Scrapes the Pok\'{e}mon GO site every 3 minutes and instantly alerts Discord servers when GO Fest tickets go on sale.
+    \item SQLite-backed per-server config system with slash commands for custom alert channels and role pings; deployed across multiple servers.
+\end{itemize}
+
+\textbf{X Country Filter} --- \textit{JavaScript, Chrome Extensions, MutationObserver} \hfill 2025
+\begin{itemize}
+    \item Chrome extension that filters posts on X (Twitter) by geographic origin, intercepting API data via content scripts to extract and resolve user locations to country codes.
+    \item Supports allowlist/blocklist modes with hidden and collapsed display options; uses MutationObserver for real-time DOM filtering as the feed loads.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROFESSIONAL EXPERIENCE}
+
+\textbf{AI Automation Engineer (Contract)} --- \textit{Drover Insights LLC} \hfill Mar 2026 -- Present \\
+\textit{Remote --- California}
+\begin{itemize}
+    \item Building AI-powered automation agents using Claude Code to solve real business workflow problems for small and mid-size clients.
+    \item Providing technical consulting and architectural guidance on software implementation, tech stack decisions, and system design.
+    \item Designing reusable automation frameworks to deploy consistent AI-powered workflows across multiple business clients from a single tool.
+    \item Analyzing client business processes to identify inefficiencies, improve prompt engineering, and accelerate automation deployment timelines.
+\end{itemize}
+
+\textbf{Computer Tech \& Operations Support} --- \textit{Pool Time Pool and Spa} \hfill Jan 2021 -- Jun 2021 \\
+\textit{Rancho Cordova, CA}
+\begin{itemize}
+    \item Evaluated and rejected proposed job estimation software after independently assessing workflows; researched alternatives and presented options to ownership.
+    \item Configured GPS fleet tracking for 5--10 vehicles, extracted and manipulated operational data in Excel, and trained staff on mobile time tracking tools.
+    \item Provided Windows technical support and network infrastructure work across 50+ employees.
+\end{itemize}
+
+\textbf{Shift Manager} --- \textit{Burger and Cream} \hfill Nov 2015 -- Dec 2020 \\
+\textit{Auburn, CA}
+\begin{itemize}
+    \item Supervised 15 employees across daily operations; handled POS migrations, ethernet cabling, workstation setup, and security camera configuration.
+    \item Built a Windows desktop app to automate labor calculations, cutting manual tracking time significantly.
+    \item Managed vendor relationships and made operational decisions independently during shifts in a high-volume environment.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{EDUCATION}
+\textbf{Bachelor of Science, Computer Science} \hfill Expected May 2026 \\
+California State University, Sacramento \\
+
+\textbf{Associate of Science, Computer Science} \hfill May 2024 \\
+Sierra College --- Rocklin, CA
+\end{rSection}
+
+\end{document}

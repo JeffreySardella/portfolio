@@ -67,6 +67,15 @@ const projects = [
     color: 'bg-orange-50',
     emoji: '🎟️',
   },
+  {
+    title: 'X Country Filter',
+    description:
+      'Chrome extension that filters posts on X (Twitter) by the geographic origin of each account. Intercepts API data, resolves locations to country codes, and hides or collapses posts based on allowlist/blocklist preferences.',
+    tech: ['JavaScript', 'Chrome Extensions', 'MutationObserver', 'Content Scripts'],
+    github: 'https://github.com/JeffreySardella/X-Country-Filter',
+    color: 'bg-sky-50',
+    emoji: '🌍',
+  },
 ]
 
 function ProjectsSection() {
