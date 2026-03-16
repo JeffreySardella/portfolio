@@ -39,6 +39,14 @@ function Navbar() {
               </a>
             ))}
             <a
+              href="https://sardella.dev/drive-smart/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 px-4 py-2 text-sm font-medium text-primary hover:text-primary/80 rounded-lg hover:bg-primary/5 transition-colors"
+            >
+              Drive Smart
+            </a>
+            <a
               href="/Jeffrey_resume.pdf"
               download
               className="ml-2 px-4 py-2 text-sm font-medium bg-text text-white rounded-lg hover:bg-gray-800 transition-colors"
@@ -75,6 +83,15 @@ function Navbar() {
               {label}
             </a>
           ))}
+          <a
+            href="https://sardella.dev/drive-smart/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="block px-4 py-2.5 text-sm font-medium text-primary"
+          >
+            Drive Smart
+          </a>
           <a
             href="/Jeffrey_resume.pdf"
             download
