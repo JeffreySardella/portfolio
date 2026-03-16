@@ -8,6 +8,15 @@ const projects = [
     emoji: '🏥',
   },
   {
+    title: 'Drive Smart',
+    description:
+      'Educational website teaching real-world defensive driving tips that traditional driver\'s ed doesn\'t cover. Topics include following distance, highway ramps, weather driving, zipper merging, and more.',
+    tech: ['WordPress', 'Custom Theme', 'CSS', 'JavaScript', 'Responsive Design'],
+    live: 'https://sardella.dev/drive-smart/',
+    color: 'bg-amber-50',
+    emoji: '🚗',
+  },
+  {
     title: 'Toontown Mini-Games',
     description:
       'Implemented gameplay logic and event systems for two interactive mini-games in a Unity3D recreation of Toontown. Optimized mechanics and performance while collaborating with a multi-developer team.',
