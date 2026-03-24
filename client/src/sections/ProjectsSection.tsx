@@ -8,6 +8,15 @@ const projects = [
     emoji: '🏥',
   },
   {
+    title: '3DAI',
+    description:
+      'Multi-level AI training pipeline for 3D model generation, built at a hackathon. Agents iteratively generate and score OpenSCAD code with human-in-the-loop approval, photo-based regression testing, and generalization testing on unseen objects. Includes cross-training scorecards and a Google AI API integration with token-optimized skill mapping.',
+    tech: ['TypeScript', 'Node.js', 'OpenSCAD', 'Google AI API', 'Docker'],
+    github: 'https://github.com/zacbemis/3DAI',
+    color: 'bg-teal-50',
+    emoji: '🧊',
+  },
+  {
     title: 'Drive Smart',
     description:
       'Educational website teaching real-world defensive driving tips that traditional driver\'s ed doesn\'t cover. Topics include following distance, highway ramps, weather driving, zipper merging, and more.',
