@@ -3,7 +3,7 @@ const projects = [
     title: 'Medical Application',
     description:
       'Multi-tier healthcare app with patient management, appointment scheduling, and medical records. Senior capstone project built with a team using Agile.',
-    tech: ['ASP.NET Core', 'C#', 'SQL Server', 'Flutter', 'REST API'],
+    tech: ['ASP.NET MVC', 'C#', 'SQL Server', 'PostgreSQL', 'REST API'],
     color: 'bg-blue-50',
     emoji: '🏥',
   },

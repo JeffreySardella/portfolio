@@ -47,7 +47,7 @@ function HeroSection() {
               B.S. Computer Science — Sacramento State (Spring 2026)
             </p>
             <p className="text-sm text-text-muted">
-              A.S. Computer Science — Sierra College (2023)
+              A.S. Computer Science — Sierra College (2024)
             </p>
           </div>
           <div className="flex gap-3 mt-4">
@@ -110,8 +110,8 @@ function HeroSection() {
             <div className="flex items-start gap-3">
               <span className="w-2 h-2 rounded-full bg-blue-400 mt-2 flex-shrink-0 animate-pulse-dot" />
               <div>
-                <p className="font-medium text-sm">Studying Azure AZ-900</p>
-                <p className="text-xs text-text-muted">Target: March 2026</p>
+                <p className="font-medium text-sm">AI Solutions Engineer</p>
+                <p className="text-xs text-text-muted">Drover Insights LLC</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -155,14 +155,21 @@ function HeroSection() {
               <span className="text-xl">☁️</span>
               <div>
                 <p className="font-medium text-sm">Azure Fundamentals (AZ-900)</p>
-                <p className="text-xs text-text-muted">In Progress — Target March 2026</p>
+                <p className="text-xs text-text-muted">March 2026</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-xl">📊</span>
               <div>
                 <p className="font-medium text-sm">Azure Data Fundamentals (DP-900)</p>
-                <p className="text-xs text-text-muted">Planned</p>
+                <p className="text-xs text-text-muted">April 2026</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-xl">🐙</span>
+              <div>
+                <p className="font-medium text-sm">GitHub Foundations</p>
+                <p className="text-xs text-text-muted">2026</p>
               </div>
             </div>
           </div>

@@ -11,3 +11,6 @@ client/dist/
 # OS
 .DS_Store
 Thumbs.db
+pictures/20240405_141800.jpg
+.claude/settings.local.json
+CLAUDE.md

@@ -7,14 +7,14 @@ const skills = [
 
 const experience = [
   {
-    title: 'AI Automation Engineer (Contract)',
+    title: 'AI Solutions Engineer (Contract)',
     company: 'Drover Insights LLC',
     location: 'Remote — California',
     dates: 'Mar 2026 - Present',
     bullets: [
-      'Building AI-powered automation agents using Claude Code to solve real business workflow problems for small and mid-size clients',
-      'Built SmartApply Agent: automated job application system using Claude AI that discovers jobs across 7 sources, scores candidates, generates ATS-optimized resumes/cover letters, and auto-submits via Playwright across 6 ATS platforms',
-      'Built Drover Dashboard: plugin-based analytics platform in React + TypeScript with Supabase, integrating GA4, Search Console, Google Ads, and Meta Ads with Claude API-powered insights',
+      'Designing and developing AI-powered automation tools and internal software for a business consulting firm serving small and mid-size clients',
+      'Built a React/TypeScript analytics dashboard integrating GA4, Search Console, Google Ads, and Meta Ads through Supabase Edge Function API proxies with Claude API-powered insights, CRM Kanban board, and scheduled reports',
+      'Building a Python-based training and evaluation pipeline that scores AI agent performance against defined tasks and iteratively improves agent configurations',
     ],
   },
   {
@@ -32,7 +32,7 @@ const experience = [
     title: 'Shift Manager',
     company: 'Burger and Cream',
     location: 'Auburn, CA',
-    dates: 'Nov 2016 - Dec 2020',
+    dates: 'Nov 2015 - Dec 2020',
     bullets: [
       'Supervised diverse teams and managed daily operations in a high-volume environment',
       'Troubleshot POS systems and technical equipment to minimize service disruptions',
@@ -63,8 +63,8 @@ function AboutSection() {
               software development lifecycle from database design to deployment.
             </p>
             <p>
-              Actively pursuing <span className="text-text font-medium">Microsoft Azure
-              certifications</span> to support enterprise-level cloud modernization.
+              Earning <span className="text-text font-medium">Microsoft Azure
+              certifications (AZ-900, DP-900)</span> and <span className="text-text font-medium">GitHub Foundations</span>.
               Looking for full-stack or backend roles in
               <span className="text-text font-medium"> .NET</span> and
               <span className="text-text font-medium"> React</span> stacks.
@@ -85,12 +85,12 @@ function AboutSection() {
               <div className="text-sm text-text-muted">Years Python & SQL</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-emerald-600">4+</div>
+              <div className="text-3xl font-bold text-emerald-600">12+</div>
               <div className="text-sm text-text-muted">Projects built</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-emerald-600">2</div>
-              <div className="text-sm text-text-muted">Azure certs in progress</div>
+              <div className="text-3xl font-bold text-emerald-600">3</div>
+              <div className="text-sm text-text-muted">Certifications</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-emerald-600">2+</div>
