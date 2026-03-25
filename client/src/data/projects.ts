@@ -2,6 +2,7 @@ export interface Project {
   title: string
   description: string
   challenge?: string // "what was hard" — replaces SDLC tags
+  screenshot?: string // path to screenshot image
   techTags: string[]
   githubUrl?: string
   liveUrl?: string
@@ -15,6 +16,7 @@ export const projects: Project[] = [
       'Forum platform for an organization that trains 14,000+ water professionals annually. Four-tier RBAC system (Admin, Mod, User, Guest), OTP email auth, and WCAG 2.2-compliant frontend.',
     challenge:
       'Building the permission middleware was tricky — every route needed to check role + ownership + resource state, and the client kept changing the permission matrix mid-sprint.',
+    screenshot: '/photos/projects/owp-forum.png',
     techTags: ['PHP Slim', 'Vue.js', 'T-SQL', 'REST API', 'GitHub Actions'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: true,
@@ -35,6 +37,7 @@ export const projects: Project[] = [
       'Production analytics dashboard pulling data from GA4, Search Console, Google Ads, and Meta Ads through Supabase Edge Function proxies. Claude API generates insights from the data.',
     challenge:
       'Each ad platform returns data in completely different formats and time zones. Normalizing everything into a unified view without losing precision was a rabbit hole.',
+    screenshot: '/photos/projects/drover-dashboard.png',
     techTags: ['React', 'TypeScript', 'Supabase', 'Claude API'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: true,
@@ -63,6 +66,7 @@ export const projects: Project[] = [
     title: 'CascadeGuard',
     description:
       'Detects prescribing cascades — when one drug is prescribed to treat side effects of another — using 65 validated patterns + 28M FDA adverse event pairs.',
+    screenshot: '/photos/projects/cascadeguard.png',
     techTags: ['TypeScript', 'React', 'FDA OpenData'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: false,

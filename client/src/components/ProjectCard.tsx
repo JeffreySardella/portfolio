@@ -42,13 +42,21 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           isEven ? '' : 'md:[direction:rtl]'
         }`}
       >
-        {/* Image placeholder */}
+        {/* Screenshot or placeholder */}
         <div
-          className={`aspect-[16/10] bg-bg-surface rounded-lg shimmer mb-6 md:mb-0 ${
+          className={`aspect-[16/10] bg-bg-surface rounded-lg overflow-hidden mb-6 md:mb-0 ${
             isEven ? '' : 'md:[direction:ltr]'
-          }`}
-          aria-hidden="true"
-        />
+          } ${!project.screenshot ? 'shimmer' : ''}`}
+        >
+          {project.screenshot && (
+            <img
+              src={project.screenshot}
+              alt={`Screenshot of ${project.title}`}
+              className="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          )}
+        </div>
 
         {/* Text content */}
         <div className={isEven ? '' : 'md:[direction:ltr]'}>
