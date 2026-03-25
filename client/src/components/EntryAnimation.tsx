@@ -204,7 +204,7 @@ export default function EntryAnimation({ onComplete }: EntryAnimationProps) {
         className="mt-4 text-sm font-mono text-text-muted tracking-widest text-center px-6"
         style={{ willChange: 'transform, opacity' }}
       >
-        Builder · Tinkerer · Engineer
+        Builder · Problem Solver · Engineer
       </p>
 
       {/* Scroll indicator */}
