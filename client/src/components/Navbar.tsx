@@ -4,10 +4,11 @@ const NAV_LINKS = [
   { label: 'Projects', href: '#projects' },
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Drive Smart', href: '/drive-smart/', external: true },
   { label: 'Contact', href: '#contact' },
 ] as const
 
-const SECTION_IDS = NAV_LINKS.map((l) => l.href.slice(1))
+const SECTION_IDS = NAV_LINKS.filter((l) => !('external' in l && l.external)).map((l) => l.href.slice(1))
 
 interface NavbarProps {
   /**
@@ -116,19 +117,17 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-6 list-none m-0 p-0">
-          {NAV_LINKS.map(({ label, href }) => {
-            const id = href.slice(1)
-            const isActive = activeSection === id
+          {NAV_LINKS.map((link) => {
+            const isExternal = 'external' in link && link.external
+            const id = isExternal ? '' : link.href.slice(1)
+            const isActive = !isExternal && activeSection === id
             return (
-              <li key={href}>
+              <li key={link.href}>
                 <a
                   data-nav-link
-                  href={href}
+                  href={link.href}
                   style={hiddenStyle}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleNavClick(href)
-                  }}
+                  {...(isExternal ? {} : { onClick: (e: React.MouseEvent) => { e.preventDefault(); handleNavClick(link.href) } })}
                   className={`
                     relative text-sm transition-colors duration-200 pb-0.5
                     ${isActive
@@ -137,7 +136,7 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
                     }
                   `}
                 >
-                  {label}
+                  {link.label}
                 </a>
               </li>
             )
@@ -198,17 +197,15 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
         }}
       >
         <ul className="flex flex-col items-center gap-2 list-none m-0 p-0 w-full max-w-xs">
-          {NAV_LINKS.map(({ label, href }) => {
-            const id = href.slice(1)
-            const isActive = activeSection === id
+          {NAV_LINKS.map((link) => {
+            const isExternal = 'external' in link && link.external
+            const id = isExternal ? '' : link.href.slice(1)
+            const isActive = !isExternal && activeSection === id
             return (
-              <li key={href} className="w-full">
+              <li key={link.href} className="w-full">
                 <a
-                  href={href}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleNavClick(href)
-                  }}
+                  href={link.href}
+                  {...(isExternal ? {} : { onClick: (e: React.MouseEvent) => { e.preventDefault(); handleNavClick(link.href) } })}
                   className={`
                     flex items-center justify-center w-full min-h-[56px] px-6
                     text-2xl font-heading font-bold tracking-tight
@@ -216,7 +213,7 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
                     ${isActive ? 'text-accent-warm' : 'text-text hover:text-accent-warm'}
                   `}
                 >
-                  {label}
+                  {link.label}
                 </a>
               </li>
             )
