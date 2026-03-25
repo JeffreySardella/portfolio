@@ -168,6 +168,16 @@ function Station({ station, index }: { station: (typeof stations)[number]; index
 export default function HeroSection() {
   return (
     <section id="hero" aria-label="Hero">
+      {/* Static name — visible when scrolling back to top (entry animation overlay is gone by then) */}
+      <div className="h-screen flex flex-col items-center justify-center">
+        <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-text text-center px-6">
+          JEFFREY SARDELLA
+        </h1>
+        <p className="mt-4 text-sm font-mono text-text-muted tracking-widest text-center px-6">
+          Builder · Problem Solver · Engineer
+        </p>
+      </div>
+
       {stations.map((station, i) => (
         <Station key={station.id} station={station} index={i} />
       ))}
