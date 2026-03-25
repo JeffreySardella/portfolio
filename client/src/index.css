@@ -1,21 +1,29 @@
 @import "tailwindcss";
 
+/* Fontsource imports */
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/jetbrains-mono/400.css";
+
 @theme {
-  --color-primary: #6366f1;
-  --color-primary-dark: #4f46e5;
-  --color-primary-light: #818cf8;
-  --color-accent: #f59e0b;
-  --color-accent-light: #fbbf24;
-  --color-card: #ffffff;
-  --color-card-hover: #fafafa;
-  --color-bg: #f0eee6;
-  --color-bg-dark: #e8e5db;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6b7280;
+  --color-bg: #0a0a0a;
+  --color-bg-surface: #141414;
+  --color-bg-elevated: #1e1e1e;
+  --color-text: #f5f5f5;
+  --color-text-muted: #a0a0a0;
+  --color-accent-warm: #f59e0b;
+  --color-accent-warm-hover: #d97706;
+  --color-accent-cool: #3b82f6;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
 }
 
 body {
@@ -23,77 +31,62 @@ body {
   min-height: 100vh;
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Bento card base */
-.bento-card {
-  background-color: var(--color-card);
-  border-radius: 1.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Focus visible ring — WCAG 2.2 AA */
+:focus-visible {
+  outline: 2px solid var(--color-accent-warm);
+  outline-offset: 2px;
 }
 
-.bento-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: var(--color-accent-warm);
+  color: var(--color-bg);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: top 0.2s;
 }
 
-/* Marquee for tech stack */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.skip-link:focus {
+  top: 16px;
 }
 
-.animate-marquee {
-  animation: marquee 25s linear infinite;
+/* Shimmer placeholder for loading images */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
+.shimmer {
+  background: linear-gradient(90deg, var(--color-bg-surface) 25%, var(--color-bg-elevated) 50%, var(--color-bg-surface) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
 }
 
-/* Gradient blob */
-@keyframes blob {
-  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-.animate-blob {
-  animation: blob 7s ease-in-out infinite;
+/* Scrollbar hiding for photo strip */
+.hide-scrollbar {
+  scrollbar-width: none;
 }
-
-/* Status dot pulse */
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-
-.animate-pulse-dot {
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-/* Animated hero gradient */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.hero-gradient {
-  background: linear-gradient(-45deg, #4f46e5, #6366f1, #0ea5e9, #6366f1);
-  background-size: 300% 300%;
-  animation: gradient-shift 8s ease infinite;
-}
-
-/* Scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
