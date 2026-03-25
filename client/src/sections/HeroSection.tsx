@@ -43,8 +43,14 @@ function JourneyCard({
       ref={ref}
       className={`relative rounded-lg overflow-hidden ${station.bgClass} group`}
     >
-      {/* Photo placeholder — will be replaced with real photos */}
-      <div className="aspect-[4/3] w-full shimmer" />
+      <div className="aspect-[4/3] w-full">
+        <img
+          src={station.photo}
+          alt={station.label}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
 
       {/* Content overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
@@ -108,7 +114,7 @@ export default function HeroSection() {
           The Journey
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {stations.map((station, i) => (
             <JourneyCard key={station.id} station={station} index={i} />
           ))}

@@ -49,6 +49,7 @@ export const projects: Project[] = [
       'Full-stack GitHub analytics dashboard with commit heatmaps, language breakdowns, and repo stats. Background jobs sync data hourly via Hangfire with Polly retry logic. GitHub OAuth + JWT auth.',
     challenge:
       'Hardest part was designing the snapshot system — pre-computing daily aggregates so the dashboard loads instantly instead of querying months of raw commit data on every page load.',
+    screenshot: '/photos/projects/gitpulse.png',
     techTags: ['ASP.NET Core', 'React', 'TypeScript', 'PostgreSQL', 'Hangfire', 'Chart.js'],
     githubUrl: 'https://github.com/JeffreySardella/GitPulse',
     featured: true,
@@ -59,6 +60,7 @@ export const projects: Project[] = [
       'AI 3D model generation system built at Hornet Hacks 4.0. Agents iteratively generate and score OpenSCAD code, with multi-level regression and generalization testing.',
     challenge:
       'Built the entire training pipeline in 48 hours at a hackathon. The scoring system had to evaluate 3D geometry quality from 4-angle renders — we had to invent the rubric from scratch.',
+    screenshot: '/photos/projects/3dai.gif',
     techTags: ['TypeScript', 'Node.js', 'OpenSCAD', 'Google AI API', 'Docker'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: true,

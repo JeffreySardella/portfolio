@@ -1,7 +1,7 @@
 const PHOTOS = [
   { caption: 'Homelab', src: '/photos/beyond-code/homelab-server.jpg' },
   { caption: 'Network', src: '/photos/beyond-code/network-panel.jpg' },
-  { caption: 'Soldering', src: '/photos/beyond-code/led-perfboard.jpg' },
+  { caption: 'Ren24DC', src: '/photos/beyond-code/renard-ren24dc.jpg' },
   { caption: '3D Printing', src: '/photos/beyond-code/3d-prints.jpg' },
   { caption: 'PC Build', src: '/photos/beyond-code/pc-build-rgb.jpg' },
   { caption: 'Sunflower PC', src: '/photos/beyond-code/sunflower-pc.jpg' },

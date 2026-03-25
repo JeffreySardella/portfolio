@@ -4,6 +4,7 @@ const NAV_LINKS = [
   { label: 'Projects', href: '#projects' },
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
+  { label: 'CascadeGuard', href: 'https://cascadeguard.sardella.dev/', external: true },
   { label: 'Drive Smart', href: '/drive-smart/', external: true },
   { label: 'Contact', href: '#contact' },
 ] as const
