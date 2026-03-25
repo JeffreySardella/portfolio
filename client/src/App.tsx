@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useLenis } from './hooks/useLenis'
 import Navbar from './components/Navbar'
 import EntryAnimation from './components/EntryAnimation'
+import HeroSection from './sections/HeroSection'
 
 // Determine at module level so it doesn't change on re-render
 const SKIP_ANIMATION =
@@ -26,16 +27,7 @@ function App() {
       )}
 
       <main>
-        <section id="hero" aria-label="Hero" className="h-screen flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold font-heading text-text tracking-tight">
-              JEFFREY SARDELLA
-            </h1>
-            <p className="mt-4 text-text-muted font-mono text-sm tracking-widest">
-              Builder · Tinkerer · Engineer
-            </p>
-          </div>
-        </section>
+        <HeroSection />
 
         <section id="projects" aria-label="Projects" className="py-20 scroll-mt-20">
           <div className="max-w-[1200px] mx-auto px-6">
