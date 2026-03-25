@@ -60,6 +60,14 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'CascadeGuard',
+    description:
+      'Detects prescribing cascades — when one drug is prescribed to treat side effects of another — using 65 validated patterns + 28M FDA adverse event pairs.',
+    techTags: ['TypeScript', 'React', 'FDA OpenData'],
+    githubUrl: 'https://github.com/JeffreySardella',
+    featured: false,
+  },
+  {
     title: 'SmartTripPlanner',
     description:
       'Local AI trip planner with agent loop that researches destinations, checks calendar, validates travel times. 41 unit tests.',
