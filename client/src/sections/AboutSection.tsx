@@ -1,206 +1,70 @@
-const skills = [
-  { category: 'Languages', items: ['C# (6 yrs)', 'Python (4 yrs)', 'SQL (3+ yrs)', 'JavaScript (2+ yrs)', 'PHP', 'R', 'HTML/CSS'], gradient: 'from-violet-50 to-purple-50', border: 'border-violet-100' },
-  { category: 'Frameworks', items: ['ASP.NET Core', '.NET MVC', 'React', 'Vue.js', 'Entity Framework', 'pandas', 'NumPy', 'Pygame', 'Tailwind', 'Bootstrap'], gradient: 'from-orange-50 to-amber-50', border: 'border-orange-100' },
-  { category: 'Data & Cloud', items: ['SQL Server', 'Stored Procedures', 'Relational Modeling', 'Azure Fundamentals', 'REST APIs', 'Auth/RBAC'], gradient: 'from-blue-50 to-indigo-50', border: 'border-blue-100' },
-  { category: 'Tools', items: ['Git', 'GitHub', 'Visual Studio', 'VS Code', 'Postman', 'Agile/Scrum', 'Claude Code'], gradient: 'from-rose-50 to-pink-50', border: 'border-rose-100' },
+import PhotoStrip from '../components/PhotoStrip'
+import GitHubHeatmap from '../components/GitHubHeatmap'
+
+const QUICK_FACTS = [
+  { label: 'DEGREE', value: 'B.S. Computer Science, Sac State (2026)' },
+  { label: 'CERTS', value: 'AZ-900 · DP-900 · GitHub Foundations' },
+  { label: 'LOCATION', value: 'Rocklin, CA' },
+  { label: 'STATUS', value: 'Open to work — state IT, full-stack, and freelance' },
+  { label: 'LANGUAGES', value: 'C# (6yr) · Python (4yr) · SQL (3yr) · JS (2yr)' },
 ]
 
-const experience = [
-  {
-    title: 'AI Solutions Engineer (Contract)',
-    company: 'Drover Insights LLC',
-    location: 'Remote — California',
-    dates: 'Mar 2026 - Present',
-    bullets: [
-      'Designing and developing AI-powered automation tools and internal software for a business consulting firm serving small and mid-size clients',
-      'Built a React/TypeScript analytics dashboard integrating GA4, Search Console, Google Ads, and Meta Ads through Supabase Edge Function API proxies with Claude API-powered insights, CRM Kanban board, and scheduled reports',
-      'Building a Python-based training and evaluation pipeline that scores AI agent performance against defined tasks and iteratively improves agent configurations',
-    ],
-  },
-  {
-    title: 'IT Assistant & Operations Support',
-    company: 'Pool Time Pool and Spa',
-    location: 'Rancho Cordova, CA',
-    dates: 'Jan 2021 - Jun 2021',
-    bullets: [
-      'Configured software to streamline company job estimates and bidding accuracy',
-      'Managed digital transformation by transitioning paper records to searchable PDF and Excel formats',
-      'Provided technical support for Windows systems to maintain department productivity',
-    ],
-  },
-  {
-    title: 'Shift Manager',
-    company: 'Burger and Cream',
-    location: 'Auburn, CA',
-    dates: 'Nov 2015 - Dec 2020',
-    bullets: [
-      'Supervised diverse teams and managed daily operations in a high-volume environment',
-      'Troubleshot POS systems and technical equipment to minimize service disruptions',
-    ],
-  },
-]
-
-function AboutSection() {
+export default function AboutSection() {
   return (
-    <section id="about" className="py-8 scroll-mt-20">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* About text - spans 2 cols */}
-        <div className="bento-card md:col-span-2 p-8">
-          <p className="text-xs text-text-muted uppercase tracking-widest mb-4">About me</p>
-          <h2 className="text-2xl font-bold mb-4">
-            I build things for the web<span className="text-primary">.</span>
-          </h2>
-          <div className="space-y-3 text-text-muted leading-relaxed">
-            <p>
-              Computer Science professional with over 6 years of technical experience in
-              object-oriented programming and 4 years of data-driven development. I have a
-              proven track record building multi-tier applications and secure REST APIs while
-              maintaining rigorous data integrity.
+    <section id="about" aria-label="About" className="scroll-mt-20">
+      <div className="max-w-[1200px] mx-auto px-6 py-20">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-text">About</h2>
+
+        {/* Photo + bio + facts */}
+        <div className="md:grid md:grid-cols-[auto_1fr_1fr] gap-12 mt-10 items-start">
+          {/* Headshot */}
+          <div className="flex justify-center md:justify-start mb-8 md:mb-0">
+            <img
+              src="/headshot.jpg"
+              alt="Jeffrey Sardella"
+              width={150}
+              height={150}
+              className="rounded-full border-2 border-border"
+            />
+          </div>
+
+          {/* Bio */}
+          <div>
+            <p className="text-text-muted leading-relaxed text-lg">
+              I started writing C# at a burger joint because I was tired of calculating labor by
+              hand. That turned into wiring networks at a pool company, shipping multiplayer
+              minigames for a Toontown community, and now building AI training pipelines under
+              contract.
             </p>
-            <p>
-              My project experience includes a multi-tier healthcare application (ASP.NET Core,
-              SQL Server, Flutter) and a forum platform (PHP, Vue.js) — covering the full
-              software development lifecycle from database design to deployment.
-            </p>
-            <p>
-              Earning <span className="text-text font-medium">Microsoft Azure
-              certifications (AZ-900, DP-900)</span> and <span className="text-text font-medium">GitHub Foundations</span>.
-              Looking for full-stack or backend roles in
-              <span className="text-text font-medium"> .NET</span> and
-              <span className="text-text font-medium"> React</span> stacks.
+            <p className="text-text-muted leading-relaxed text-lg mt-4">
+              I have a CS degree from Sac State, three Microsoft/GitHub certs, and a garage full of
+              half-finished projects. I just like making things work.
             </p>
           </div>
-        </div>
 
-        {/* Quick stats card */}
-        <div className="bento-card p-6 bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-100">
-          <p className="text-xs text-text-muted uppercase tracking-widest mb-4">At a glance</p>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <div className="text-3xl font-bold text-emerald-600">6+</div>
-              <div className="text-sm text-text-muted">Years in C#</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-600">4+</div>
-              <div className="text-sm text-text-muted">Years Python & SQL</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-600">12+</div>
-              <div className="text-sm text-text-muted">Projects built</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-600">3</div>
-              <div className="text-sm text-text-muted">Certifications</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-600">2+</div>
-              <div className="text-sm text-text-muted">Years REST APIs</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-600">B.S.</div>
-              <div className="text-sm text-text-muted">Computer Science</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Skills grid */}
-        {skills.map((group) => (
-          <div
-            key={group.category}
-            className={`bento-card p-6 bg-gradient-to-br ${group.gradient} ${group.border}`}
-          >
-            <p className="text-xs text-text-muted uppercase tracking-widest mb-3">{group.category}</p>
-            <div className="flex flex-wrap gap-2">
-              {group.items.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 bg-white/80 rounded-lg text-sm font-medium text-text hover:bg-white transition-colors cursor-default border border-black/5"
-                >
-                  {skill}
-                </span>
+          {/* Quick facts */}
+          <div className="mt-8 md:mt-0">
+            <dl className="flex flex-col gap-4">
+              {QUICK_FACTS.map(({ label, value }) => (
+                <div key={label} className="flex gap-4 items-start">
+                  <dt className="font-mono text-accent-warm text-xs tracking-wider w-24 flex-shrink-0 pt-0.5">
+                    {label}
+                  </dt>
+                  <dd className="text-text text-sm">{value}</dd>
+                </div>
               ))}
-            </div>
-          </div>
-        ))}
-
-        {/* Beyond code card */}
-        <div className="bento-card md:col-span-3 p-6 bg-gradient-to-br from-slate-50 to-gray-100 border-slate-200">
-          <p className="text-xs text-text-muted uppercase tracking-widest mb-4">Beyond code</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="flex items-start gap-3">
-              <span className="text-xl">🌐</span>
-              <div>
-                <p className="font-medium text-sm">Network Setup</p>
-                <p className="text-xs text-text-muted">Designed and installed a small business network — router, switches, Ethernet runs, and IP cameras</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-xl">🔧</span>
-              <div>
-                <p className="font-medium text-sm">Electronics & Soldering</p>
-                <p className="text-xs text-text-muted">Soldering, circuit board assembly, modifying electronics, and building DIY controllers (Renard SS24)</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-xl">🖥️</span>
-              <div>
-                <p className="font-medium text-sm">PC Building</p>
-                <p className="text-xs text-text-muted">Built and configured numerous custom PCs — component selection, assembly, OS setup, and troubleshooting</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-xl">🏠</span>
-              <div>
-                <p className="font-medium text-sm">Homelab</p>
-                <p className="text-xs text-text-muted">NAS, pfSense router, Pi-hole/AdGuard DNS, VPN, and self-hosted services on a home network</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-xl">🎮</span>
-              <div>
-                <p className="font-medium text-sm">Game Modding</p>
-                <p className="text-xs text-text-muted">Years of creating mods, content packs, and contributing to open-source gaming communities</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-xl">🖨️</span>
-              <div>
-                <p className="font-medium text-sm">3D Printing</p>
-                <p className="text-xs text-text-muted">Designing and printing custom parts, enclosures, and prototypes</p>
-              </div>
-            </div>
+            </dl>
           </div>
         </div>
 
-        {/* Work experience - full width */}
-        <div className="bento-card md:col-span-3 p-8">
-          <p className="text-xs text-text-muted uppercase tracking-widest mb-4">Professional experience</p>
-          <div className="space-y-6">
-            {experience.map((job) => (
-              <div key={job.title} className="flex flex-col sm:flex-row gap-4">
-                <div className="sm:w-48 flex-shrink-0">
-                  <p className="text-sm font-medium text-text">{job.dates}</p>
-                  <p className="text-xs text-text-muted">{job.location}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold">{job.title}</h3>
-                  <p className="text-sm text-primary mb-2">{job.company}</p>
-                  <ul className="space-y-1">
-                    {job.bullets.map((bullet) => (
-                      <li key={bullet} className="text-sm text-text-muted flex items-start gap-2">
-                        <span className="text-primary mt-1 flex-shrink-0">&#8226;</span>
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* GitHub activity heatmap */}
+        <div className="mt-12">
+          <GitHubHeatmap />
         </div>
+
+        {/* Photo strip */}
+        <PhotoStrip />
       </div>
     </section>
   )
 }
-
-export default AboutSection

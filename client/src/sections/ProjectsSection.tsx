@@ -1,220 +1,33 @@
-const projects = [
-  {
-    title: 'Medical Application',
-    description:
-      'Multi-tier healthcare app with patient management, appointment scheduling, and medical records. Senior capstone project built with a team using Agile.',
-    tech: ['ASP.NET MVC', 'C#', 'SQL Server', 'PostgreSQL', 'REST API'],
-    color: 'bg-blue-50',
-    emoji: '🏥',
-  },
-  {
-    title: '3DAI',
-    description:
-      'Multi-level AI training pipeline for 3D model generation, built at a hackathon. Agents iteratively generate and score OpenSCAD code with human-in-the-loop approval, photo-based regression testing, and generalization testing on unseen objects. Includes cross-training scorecards and a Google AI API integration with token-optimized skill mapping.',
-    tech: ['TypeScript', 'Node.js', 'OpenSCAD', 'Google AI API', 'Docker'],
-    github: 'https://github.com/zacbemis/3DAI',
-    color: 'bg-teal-50',
-    emoji: '🧊',
-  },
-  {
-    title: 'Drive Smart',
-    description:
-      'Educational website teaching real-world defensive driving tips that traditional driver\'s ed doesn\'t cover. Topics include following distance, highway ramps, weather driving, zipper merging, and more.',
-    tech: ['WordPress', 'Custom Theme', 'CSS', 'JavaScript', 'Responsive Design'],
-    live: 'https://sardella.dev/drive-smart/',
-    color: 'bg-amber-50',
-    emoji: '🚗',
-  },
-  {
-    title: 'Toontown Mini-Games',
-    description:
-      'Implemented gameplay logic and event systems for two interactive mini-games in a Unity3D recreation of Toontown. Optimized mechanics and performance while collaborating with a multi-developer team.',
-    tech: ['Unity3D', 'C#', 'Game Dev'],
-    live: 'https://toon.gg',
-    color: 'bg-yellow-50',
-    emoji: '🎮',
-  },
-  {
-    title: 'OWP Forum Website',
-    description:
-      'RESTful API and community forum for the Office of Water Programs at Sacramento State. Building backend CRUD operations, relational database architecture, and Vue.js frontend integration.',
-    tech: ['PHP', 'Vue.js', 'REST API', 'SQL', 'Auth/Middleware'],
-    color: 'bg-green-50',
-    emoji: '💧',
-  },
-  {
-    title: 'Web Load Tester',
-    description:
-      'Concurrent load testing tool using Java virtual threads to simulate high-volume traffic against web endpoints. Measures response times, throughput, and failure rates under stress.',
-    tech: ['Java', 'Virtual Threads', 'Concurrency', 'Performance Testing'],
-    color: 'bg-red-50',
-    emoji: '⚡',
-  },
-  {
-    title: 'Restaurant App',
-    description:
-      'Android mobile app for browsing menus, placing orders, and managing restaurant information. Built as a personal project to explore native Android development.',
-    tech: ['Android Studio', 'Java', 'Mobile Dev'],
-    color: 'bg-cyan-50',
-    emoji: '🍽️',
-  },
-  {
-    title: 'Portfolio Website',
-    description:
-      'This site! A bento-grid portfolio built with React and TypeScript. Features a Formspree-powered contact form and Cloudflare Pages hosting.',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/JeffreySardella/portfolio',
-    color: 'bg-purple-50',
-    emoji: '✨',
-  },
-  {
-    title: 'Discord Voice Word Tracker',
-    description:
-      'Discord bot that records voice chat and transcribes each user\'s speech entirely on-device — no external APIs. Posts a per-user word count and top 10 most-used words to a text channel after each session.',
-    tech: ['Python', 'Pycord', 'Faster-Whisper', 'Discord API'],
-    github: 'https://github.com/JeffreySardella/Discord-Word-Tracker',
-    color: 'bg-indigo-50',
-    emoji: '🎙️',
-  },
-  {
-    title: 'PogoFest Ticket Alerts Bot',
-    description:
-      'Discord bot that monitors the Pokémon GO official site every 3 minutes and instantly alerts servers the moment GO Fest 2026 tickets go on sale. Supports per-server channel and role configuration.',
-    tech: ['Python', 'discord.py', 'BeautifulSoup4', 'SQLite', 'aiohttp'],
-    github: 'https://github.com/JeffreySardella/PogoFestTicketsDiscordBot',
-    color: 'bg-orange-50',
-    emoji: '🎟️',
-  },
-  {
-    title: 'SmartTripPlanner',
-    description:
-      'Local AI trip planner that uses an agent loop to research destinations, check Google Calendar availability, validate travel times, and push optimized itineraries to your calendar. Runs on a local LLM via Ollama — no cloud AI required.',
-    tech: ['ASP.NET Core', 'Blazor', 'Ollama', 'Google Calendar API', 'SQLite', 'EF Core'],
-    github: 'https://github.com/JeffreySardella/SmartTripPlanner',
-    color: 'bg-emerald-50',
-    emoji: '🗺️',
-  },
-  {
-    title: 'X Country Filter',
-    description:
-      'Chrome extension that filters posts on X (Twitter) by the geographic origin of each account. Intercepts API data, resolves locations to country codes, and hides or collapses posts based on allowlist/blocklist preferences.',
-    tech: ['JavaScript', 'Chrome Extensions', 'MutationObserver', 'Content Scripts'],
-    github: 'https://github.com/JeffreySardella/X-Country-Filter',
-    color: 'bg-sky-50',
-    emoji: '🌍',
-  },
-]
+import { projects } from '../data/projects'
+import ProjectCard from '../components/ProjectCard'
+import ProjectGridCard from '../components/ProjectGridCard'
 
-function ProjectsSection() {
+const featuredProjects = projects.filter((p) => p.featured)
+const moreProjects = projects.filter((p) => !p.featured)
+
+export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-8 scroll-mt-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {/* Section header - full width */}
-        <div className="md:col-span-2 lg:col-span-3 px-2 mb-2">
-          <p className="text-xs text-text-muted uppercase tracking-widest mb-1">What I've built</p>
-          <h2 className="text-2xl font-bold">
-            Projects<span className="text-primary">.</span>
-          </h2>
+    <section id="projects" aria-label="Projects" className="py-20 scroll-mt-20">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-text">Projects</h2>
+
+        {/* Featured projects — full-width alternating layout */}
+        <div className="mt-12">
+          {featuredProjects.map((project, i) => (
+            <ProjectCard key={project.title} project={project} index={i} />
+          ))}
         </div>
 
-        {/* Featured project - large card */}
-        <div className="bento-card md:row-span-2 p-0 overflow-hidden">
-          <div className={`${projects[0].color} p-8 min-h-[200px] flex items-center justify-center`}>
-            <span className="text-7xl">{projects[0].emoji}</span>
-          </div>
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">{projects[0].title}</h3>
-            <p className="text-sm text-text-muted mb-4 leading-relaxed">{projects[0].description}</p>
-            <div className="flex flex-wrap gap-1.5 mb-4">
-              {projects[0].tech.map((t) => (
-                <span key={t} className="px-2.5 py-1 bg-bg rounded-md text-xs font-medium text-text-muted">
-                  {t}
-                </span>
-              ))}
-            </div>
-            <div className="flex gap-4">
-              {projects[0].github && (
-                <a
-                  href={projects[0].github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
-                >
-                  GitHub
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-              )}
-              {projects[0].live && (
-                <a
-                  href={projects[0].live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
-                >
-                  Live Site
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-              )}
-            </div>
-          </div>
+        {/* More projects — compact grid */}
+        <h3 className="text-xl font-heading font-bold text-text-muted mt-16 mb-8">
+          More Projects
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {moreProjects.map((project) => (
+            <ProjectGridCard key={project.title} project={project} />
+          ))}
         </div>
-
-        {/* Other project cards */}
-        {projects.slice(1).map((project) => (
-          <div key={project.title} className="bento-card p-6">
-            <div className="flex items-start gap-4 mb-3">
-              <div className={`w-12 h-12 rounded-xl ${project.color} flex items-center justify-center text-2xl flex-shrink-0`}>
-                {project.emoji}
-              </div>
-              <div>
-                <h3 className="font-bold mb-1">{project.title}</h3>
-                <p className="text-sm text-text-muted leading-relaxed">{project.description}</p>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-1.5 mb-3">
-              {project.tech.map((t) => (
-                <span key={t} className="px-2.5 py-1 bg-bg rounded-md text-xs font-medium text-text-muted">
-                  {t}
-                </span>
-              ))}
-            </div>
-            <div className="flex gap-4">
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
-                >
-                  GitHub
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-              )}
-              {project.live && (
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-primary transition-colors"
-                >
-                  Live Site
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   )
 }
-
-export default ProjectsSection
