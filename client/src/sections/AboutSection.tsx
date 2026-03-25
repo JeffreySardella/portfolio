@@ -1,4 +1,5 @@
 import PhotoStrip from '../components/PhotoStrip'
+import GitHubHeatmap from '../components/GitHubHeatmap'
 
 const QUICK_FACTS = [
   { label: 'DEGREE', value: 'B.S. Computer Science, Sac State (2026)' },
@@ -43,6 +44,11 @@ export default function AboutSection() {
               ))}
             </dl>
           </div>
+        </div>
+
+        {/* GitHub activity heatmap */}
+        <div className="mt-12">
+          <GitHubHeatmap />
         </div>
 
         {/* Photo strip */}

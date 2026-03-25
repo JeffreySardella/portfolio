@@ -23,9 +23,9 @@ export const stations: Station[] = [
   },
   {
     id: 'station-3',
-    date: '2021 → 2026',
+    date: '2016 → 2026',
     label: 'EDUCATION PATH',
-    caption: 'A.S. Sierra College → B.S. Sacramento State',
+    caption: 'A.S. Sierra College (2016-2024) → B.S. Sac State (2024-2026)',
     bgClass: 'bg-gradient-to-br from-emerald-950/40 to-bg-surface',
   },
   {

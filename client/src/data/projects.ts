@@ -1,8 +1,8 @@
 export interface Project {
   title: string
   description: string
+  challenge?: string // "what was hard" — replaces SDLC tags
   techTags: string[]
-  sdlcPhases: string[]
   githubUrl?: string
   liveUrl?: string
   featured: boolean
@@ -10,38 +10,52 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'GitPulse',
+    description:
+      'Full-stack GitHub analytics dashboard with commit heatmaps, language breakdowns, and repo stats. Background jobs sync data hourly via Hangfire with Polly retry logic. GitHub OAuth + JWT auth.',
+    challenge:
+      'Hardest part was designing the snapshot system — pre-computing daily aggregates so the dashboard loads instantly instead of querying months of raw commit data on every page load.',
+    techTags: ['ASP.NET Core', 'React', 'TypeScript', 'PostgreSQL', 'Hangfire', 'Chart.js'],
+    githubUrl: 'https://github.com/JeffreySardella/GitPulse',
+    featured: true,
+  },
+  {
     title: 'OWP Forum',
     description:
-      'Designed, developed, and implemented a RESTful API in PHP Slim with full CRUD across a four-tier role-based access control system for a client serving 14,000+ professionals annually. Built WCAG 2.2-compliant Vue.js frontend components.',
+      'Forum platform for an organization that trains 14,000+ water professionals annually. Four-tier RBAC system (Admin, Mod, User, Guest), OTP email auth, and WCAG 2.2-compliant frontend.',
+    challenge:
+      'Building the permission middleware was tricky — every route needed to check role + ownership + resource state, and the client kept changing the permission matrix mid-sprint.',
     techTags: ['PHP Slim', 'Vue.js', 'T-SQL', 'REST API', 'GitHub Actions'],
-    sdlcPhases: ['Requirements', 'Design', 'Development', 'Testing', 'Deployment', 'Documentation'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: true,
   },
   {
     title: 'Medical Web Application',
     description:
-      'Led a 6-person Agile team developing a multi-tier healthcare application. Designed normalized SQL Server schema with stored procedures, built role-based authentication, and managed full software development lifecycle from requirements to deployment.',
+      'Healthcare app with patient records, appointment scheduling, prescription tracking, and secure messaging. Led a 6-person Agile team through the full lifecycle.',
+    challenge:
+      'First time leading a team. Had to learn to delegate instead of doing everything myself, and mentored a teammate on SQL injection prevention after catching vulnerabilities in their code.',
     techTags: ['ASP.NET MVC', 'C#', 'SQL Server', 'REST API'],
-    sdlcPhases: ['Requirements', 'Design', 'Development', 'Testing', 'Documentation'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: true,
   },
   {
     title: 'Drover Analytics Dashboard',
     description:
-      'Built a production React/TypeScript analytics dashboard integrating GA4, Search Console, Google Ads, and Meta Ads through Supabase Edge Function API proxies. Includes Claude API-powered insights and CRM Kanban board.',
+      'Production analytics dashboard pulling data from GA4, Search Console, Google Ads, and Meta Ads through Supabase Edge Function proxies. Claude API generates insights from the data.',
+    challenge:
+      'Each ad platform returns data in completely different formats and time zones. Normalizing everything into a unified view without losing precision was a rabbit hole.',
     techTags: ['React', 'TypeScript', 'Supabase', 'Claude API'],
-    sdlcPhases: ['Requirements', 'Design', 'Development', 'Testing', 'Deployment'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: true,
   },
   {
     title: '3DAI',
     description:
-      'Built a multi-level training pipeline for an AI 3D model generation system at Hornet Hacks 4.0. Level 1 agents iteratively generate and score OpenSCAD code, with regression and generalization testing at higher levels.',
+      'AI 3D model generation system built at Hornet Hacks 4.0. Agents iteratively generate and score OpenSCAD code, with multi-level regression and generalization testing.',
+    challenge:
+      'Built the entire training pipeline in 48 hours at a hackathon. The scoring system had to evaluate 3D geometry quality from 4-angle renders — we had to invent the rubric from scratch.',
     techTags: ['TypeScript', 'Node.js', 'OpenSCAD', 'Google AI API', 'Docker'],
-    sdlcPhases: ['Design', 'Development', 'Testing'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: true,
   },
@@ -51,7 +65,6 @@ export const projects: Project[] = [
       'Local AI trip planner with agent loop that researches destinations, checks calendar, validates travel times. 41 unit tests.',
     techTags: ['ASP.NET Core', 'Blazor', 'Ollama', 'SQLite'],
     githubUrl: 'https://github.com/JeffreySardella/SmartTripPlanner',
-    sdlcPhases: [],
     featured: false,
   },
   {
@@ -60,7 +73,6 @@ export const projects: Project[] = [
       'Captures per-user audio in Discord and transcribes speech on-device via Faster-Whisper. Privacy-first.',
     techTags: ['Python', 'Pycord', 'Faster-Whisper'],
     githubUrl: 'https://github.com/JeffreySardella/Discord-Word-Tracker',
-    sdlcPhases: [],
     featured: false,
   },
   {
@@ -69,7 +81,6 @@ export const projects: Project[] = [
       'Chrome extension filtering X posts by geographic origin via API interception and MutationObserver.',
     techTags: ['JavaScript', 'Chrome Extensions'],
     githubUrl: 'https://github.com/JeffreySardella/X-Country-Filter',
-    sdlcPhases: [],
     featured: false,
   },
   {
@@ -78,7 +89,6 @@ export const projects: Project[] = [
       'Discord bot that monitors ticket availability and sends alerts when drops are detected.',
     techTags: ['Python', 'discord.py', 'BeautifulSoup4', 'SQLite'],
     githubUrl: 'https://github.com/JeffreySardella/PogoFestTicketsDiscordBot',
-    sdlcPhases: [],
     featured: false,
   },
   {
@@ -87,7 +97,6 @@ export const projects: Project[] = [
       'Shipped Pizzatron 3000 multiplayer minigame in Unity with networking via Krypton library.',
     techTags: ['Unity3D', 'C#', 'Krypton'],
     liveUrl: 'https://toon.gg',
-    sdlcPhases: [],
     featured: false,
   },
   {
@@ -96,7 +105,6 @@ export const projects: Project[] = [
       'Defensive driving tips site built with custom WordPress theme, exported to Cloudflare Pages.',
     techTags: ['WordPress', 'PHP', 'HTML/CSS'],
     liveUrl: '/drive-smart/',
-    sdlcPhases: [],
     featured: false,
   },
   {
@@ -104,7 +112,6 @@ export const projects: Project[] = [
     description: 'Android restaurant ordering and management application.',
     techTags: ['Android Studio', 'Java'],
     githubUrl: 'https://github.com/JeffreySardella',
-    sdlcPhases: [],
     featured: false,
   },
   {
@@ -112,7 +119,6 @@ export const projects: Project[] = [
     description: 'Performance testing tool using Java virtual threads for concurrent load generation.',
     techTags: ['Java', 'Virtual Threads'],
     githubUrl: 'https://github.com/JeffreySardella',
-    sdlcPhases: [],
     featured: false,
   },
 ]

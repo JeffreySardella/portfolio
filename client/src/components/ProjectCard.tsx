@@ -58,18 +58,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
           <p className="mt-4 text-text-muted leading-relaxed">{project.description}</p>
 
-          {/* SDLC phase tags */}
-          {project.sdlcPhases.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-4">
-              {project.sdlcPhases.map((phase) => (
-                <span
-                  key={phase}
-                  className="border border-accent-warm/30 text-accent-warm text-xs font-mono px-2 py-0.5 rounded"
-                >
-                  {phase}
-                </span>
-              ))}
-            </div>
+          {/* What was hard */}
+          {project.challenge && (
+            <p className="mt-3 text-sm text-text-muted/80 italic border-l-2 border-accent-warm/30 pl-3">
+              {project.challenge}
+            </p>
           )}
 
           {/* Tech tags */}

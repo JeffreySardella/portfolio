@@ -49,7 +49,7 @@ export default function ContactSection() {
 
       <div className="max-w-[1200px] mx-auto px-6 py-20">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-text mb-12">
-          Let's build something.
+          Got a project in mind?
         </h2>
 
         <div className="md:grid md:grid-cols-2 gap-12">
