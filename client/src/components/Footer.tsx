@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer>
+    <footer aria-label="Site footer">
       <div className="max-w-[1200px] mx-auto px-6 py-8 border-t border-border">
         <p className="text-center text-text-muted text-sm">
           © 2026 Jeffrey Sardella · sardella.dev ·{' '}
