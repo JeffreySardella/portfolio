@@ -4,7 +4,7 @@ const QUICK_FACTS = [
   { label: 'DEGREE', value: 'B.S. Computer Science, Sac State (2026)' },
   { label: 'CERTS', value: 'AZ-900 · DP-900 · GitHub Foundations' },
   { label: 'LOCATION', value: 'Rocklin, CA' },
-  { label: 'STATUS', value: 'Open to work — ITA / ITS1 roles' },
+  { label: 'STATUS', value: 'Open to work — state IT, full-stack, and freelance' },
   { label: 'LANGUAGES', value: 'C# (6yr) · Python (4yr) · SQL (3yr) · JS (2yr)' },
 ]
 

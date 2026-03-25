@@ -56,8 +56,8 @@ export default function ContactSection() {
           {/* Left: social links */}
           <div>
             <p className="text-text-muted text-base leading-relaxed mb-8">
-              I'm currently open to ITA / ITS1 roles and interesting freelance projects. Drop me a
-              message or find me on any of these platforms.
+              Open to full-time, state IT, and freelance opportunities. Drop me a message or find
+              me on any of these platforms.
             </p>
             <ul className="flex flex-col gap-1" aria-label="Social links">
               {SOCIAL_LINKS.map(({ label, href, icon }) => (

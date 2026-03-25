@@ -187,7 +187,7 @@ function DesktopStation({ station, index, drivingTween }: DesktopStationProps) {
   return (
     <div
       id={station.id}
-      className={`relative w-screen h-full flex-shrink-0 flex items-end ${station.bgClass}`}
+      className={`relative w-[70vw] h-full flex-shrink-0 flex items-end ${station.bgClass}`}
     >
       {/* Background parallax layer */}
       <div
@@ -318,7 +318,7 @@ export default function HeroSection() {
         <div
           ref={panelRef}
           className="flex h-full will-change-transform"
-          style={{ width: `${stations.length * 100}vw` }}
+          style={{ width: `${stations.length * 70}vw` }}
         >
           {stations.map((station, i) => (
             <DesktopStation

@@ -42,36 +42,36 @@ export default function EntryAnimation({ onComplete }: EntryAnimationProps) {
     gsap.set(subtitle, { opacity: 0, y: 12 })
     gsap.set(chevron, { opacity: 0, y: 0 })
 
-    // --- Build the entry timeline ---
-    const tl = gsap.timeline({ delay: 0.5 })
+    // --- Build the entry timeline (fast — under 1s total before interactive) ---
+    const tl = gsap.timeline({ delay: 0.15 })
     entryTlRef.current = tl
 
-    // 1. Name fades in + rises
+    // 1. Name fades in + rises (snappy)
     tl.to(name, {
       opacity: 1,
       y: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: 'power2.out',
     })
 
-    // 2. Subtitle fades in ~300ms after name starts
+    // 2. Subtitle fades in overlapping with name
     tl.to(
       subtitle,
       {
         opacity: 1,
         y: 0,
-        duration: 0.6,
+        duration: 0.4,
         ease: 'power2.out',
       },
-      '-=0.5' // overlaps 0.5s into name's 0.8s → appears at t=0.3s after name starts
+      '-=0.25'
     )
 
-    // 3. Chevron appears ~1.5s after name appeared, then pulses
+    // 3. Chevron appears quickly after subtitle, then pulses
     tl.to(
       chevron,
       {
         opacity: 1,
-        duration: 0.4,
+        duration: 0.3,
         ease: 'power2.out',
         onComplete: () => {
           chevronPulseRef.current = gsap.to(chevron, {
@@ -83,7 +83,7 @@ export default function EntryAnimation({ onComplete }: EntryAnimationProps) {
           })
         },
       },
-      '+=1.1' // 1.1s gap after subtitle ends ≈ 1.5s after name start
+      '-=0.1'
     )
 
     // --- One-time scroll listener to trigger exit ---
