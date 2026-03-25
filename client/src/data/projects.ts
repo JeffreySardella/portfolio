@@ -107,18 +107,4 @@ export const projects: Project[] = [
     liveUrl: '/drive-smart/',
     featured: false,
   },
-  {
-    title: 'Restaurant App',
-    description: 'Android restaurant ordering and management application.',
-    techTags: ['Android Studio', 'Java'],
-    githubUrl: 'https://github.com/JeffreySardella',
-    featured: false,
-  },
-  {
-    title: 'Web Load Tester',
-    description: 'Performance testing tool using Java virtual threads for concurrent load generation.',
-    techTags: ['Java', 'Virtual Threads'],
-    githubUrl: 'https://github.com/JeffreySardella',
-    featured: false,
-  },
 ]
