@@ -27,6 +27,7 @@ export const projects: Project[] = [
       'Healthcare app with patient records, appointment scheduling, prescription tracking, and secure messaging. Led a 6-person Agile team through the full lifecycle.',
     challenge:
       'First time leading a team. Had to learn to delegate instead of doing everything myself, and mentored a teammate on SQL injection prevention after catching vulnerabilities in their code.',
+    screenshot: '/photos/projects/medical-app.png',
     techTags: ['ASP.NET MVC', 'C#', 'SQL Server', 'REST API'],
     githubUrl: 'https://github.com/JeffreySardella',
     featured: true,
