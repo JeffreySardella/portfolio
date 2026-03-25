@@ -5,159 +5,60 @@ import { stations } from '../data/stations'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// ─── Helper: render label text as individual animated character spans ─────────
+// ─── Journey card (compact timeline item) ────────────────────────────────────
 
-function AnimatedLabel({
-  text,
-  className,
-  animRef,
+function JourneyCard({
+  station,
+  index,
 }: {
-  text: string
-  className?: string
-  animRef: React.RefObject<HTMLHeadingElement | null>
+  station: (typeof stations)[number]
+  index: number
 }) {
-  return (
-    <h2 ref={animRef} className={className} aria-label={text}>
-      {text.split('').map((char, i) => (
-        <span
-          // eslint-disable-next-line react/no-array-index-key
-          key={i}
-          style={{ display: 'inline-block' }}
-          aria-hidden="true"
-        >
-          {char === ' ' ? '\u00a0' : char}
-        </span>
-      ))}
-    </h2>
-  )
-}
-
-// ─── Single station (vertical, scroll-triggered animations) ──────────────────
-
-function Station({ station, index }: { station: (typeof stations)[number]; index: number }) {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const dateRef = useRef<HTMLParagraphElement>(null)
-  const labelRef = useRef<HTMLHeadingElement>(null)
-  const captionRef = useRef<HTMLParagraphElement>(null)
-  const ctaRef = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion || !sectionRef.current) return
+    if (prefersReducedMotion || !ref.current) return
 
     const ctx = gsap.context(() => {
-      const trigger: ScrollTrigger.Vars = {
-        trigger: sectionRef.current!,
-        start: 'top 75%',
-        once: true,
-      }
-
-      // Date fade-in
-      if (dateRef.current) {
-        gsap.from(dateRef.current, {
-          opacity: 0,
-          y: 15,
-          duration: 0.6,
-          ease: 'power2.out',
-          scrollTrigger: trigger,
-        })
-      }
-
-      // Label — character-by-character reveal
-      if (labelRef.current) {
-        const chars = labelRef.current.querySelectorAll('span')
-        if (chars.length > 0) {
-          gsap.from(chars, {
-            opacity: 0,
-            y: 20,
-            duration: 0.4,
-            stagger: 0.03,
-            ease: 'power2.out',
-            delay: 0.15,
-            scrollTrigger: trigger,
-          })
-        }
-      }
-
-      // Caption fade-in
-      if (captionRef.current) {
-        gsap.from(captionRef.current, {
-          opacity: 0,
-          y: 20,
-          duration: 0.6,
-          delay: 0.3,
-          ease: 'power2.out',
-          scrollTrigger: trigger,
-        })
-      }
-
-      // CTA buttons fade-in (station 4 only)
-      if (ctaRef.current) {
-        gsap.from(ctaRef.current, {
-          opacity: 0,
-          y: 15,
-          duration: 0.5,
-          delay: 0.5,
-          ease: 'power2.out',
-          scrollTrigger: trigger,
-        })
-      }
+      gsap.from(ref.current!, {
+        opacity: 0,
+        y: 25,
+        duration: 0.6,
+        delay: index * 0.12,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: ref.current!,
+          start: 'top 85%',
+          once: true,
+        },
+      })
     })
 
     return () => ctx.revert()
-  }, [])
+  }, [index])
 
   return (
     <div
-      ref={sectionRef}
-      className={`relative min-h-[70vh] flex items-end ${station.bgClass}`}
+      ref={ref}
+      className={`relative rounded-lg overflow-hidden ${station.bgClass} group`}
     >
-      {/* Bottom vignette */}
-      <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent pointer-events-none" />
+      {/* Photo placeholder — will be replaced with real photos */}
+      <div className="aspect-[4/3] w-full shimmer" />
 
-      {/* Decorative station number — top right */}
-      <div
-        className="absolute top-8 right-8 font-mono text-text/5 text-[8rem] md:text-[10rem] font-bold leading-none select-none pointer-events-none"
-        aria-hidden="true"
-      >
-        0{index + 1}
-      </div>
+      {/* Content overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
 
-      {/* Content — bottom left */}
-      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-6 pb-12 md:px-16 md:pb-20 pt-24">
-        <p
-          ref={dateRef}
-          className="font-mono text-accent-warm text-sm tracking-widest mb-3 uppercase"
-        >
+      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
+        <p className="font-mono text-accent-warm text-xs tracking-widest mb-1 uppercase">
           {station.date}
         </p>
-
-        <AnimatedLabel
-          text={station.label}
-          className="font-heading text-3xl md:text-5xl font-bold text-text leading-tight mb-4"
-          animRef={labelRef}
-        />
-
-        <p ref={captionRef} className="text-text-muted text-lg max-w-md">
+        <h3 className="font-heading text-lg md:text-xl font-bold text-text leading-tight mb-1">
+          {station.label}
+        </h3>
+        <p className="text-text-muted text-sm leading-snug">
           {station.caption}
         </p>
-
-        {station.id === 'station-4' && (
-          <div ref={ctaRef} className="flex flex-wrap gap-4 mt-8">
-            <a
-              href="#projects"
-              className="px-6 py-3 bg-accent-warm text-bg font-semibold text-sm rounded hover:bg-accent-warm-hover transition-colors focus-visible:outline-2 focus-visible:outline-accent-warm"
-            >
-              See Projects ↓
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 border border-border text-text font-semibold text-sm rounded hover:border-text-muted transition-colors focus-visible:outline-2 focus-visible:outline-accent-warm"
-            >
-              Get in Touch
-            </a>
-          </div>
-        )}
       </div>
     </div>
   )
@@ -166,9 +67,32 @@ function Station({ station, index }: { station: (typeof stations)[number]; index
 // ─── Main HeroSection ─────────────────────────────────────────────────────────
 
 export default function HeroSection() {
+  const ctaRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReducedMotion || !ctaRef.current) return
+
+    const ctx = gsap.context(() => {
+      gsap.from(ctaRef.current!, {
+        opacity: 0,
+        y: 15,
+        duration: 0.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: ctaRef.current!,
+          start: 'top 85%',
+          once: true,
+        },
+      })
+    })
+
+    return () => ctx.revert()
+  }, [])
+
   return (
     <section id="hero" aria-label="Hero">
-      {/* Static name — visible when scrolling back to top (entry animation overlay is gone by then) */}
+      {/* ── Full-screen name ── */}
       <div className="h-screen flex flex-col items-center justify-center">
         <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-text text-center px-6">
           JEFFREY SARDELLA
@@ -178,9 +102,34 @@ export default function HeroSection() {
         </p>
       </div>
 
-      {stations.map((station, i) => (
-        <Station key={station.id} station={station} index={i} />
-      ))}
+      {/* ── Compact journey strip ── */}
+      <div className="max-w-[1200px] mx-auto px-6 pb-16">
+        <p className="text-xs font-mono text-text-muted uppercase tracking-widest mb-6">
+          The Journey
+        </p>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {stations.map((station, i) => (
+            <JourneyCard key={station.id} station={station} index={i} />
+          ))}
+        </div>
+
+        {/* CTAs below the journey strip */}
+        <div ref={ctaRef} className="flex flex-wrap gap-4 mt-10">
+          <a
+            href="#projects"
+            className="px-6 py-3 bg-accent-warm text-bg font-semibold text-sm rounded hover:bg-accent-warm-hover transition-colors focus-visible:outline-2 focus-visible:outline-accent-warm"
+          >
+            See Projects ↓
+          </a>
+          <a
+            href="#contact"
+            className="px-6 py-3 border border-border text-text font-semibold text-sm rounded hover:border-text-muted transition-colors focus-visible:outline-2 focus-visible:outline-accent-warm"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
     </section>
   )
 }
