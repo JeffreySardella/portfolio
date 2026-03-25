@@ -42,36 +42,36 @@ export default function EntryAnimation({ onComplete }: EntryAnimationProps) {
     gsap.set(subtitle, { opacity: 0, y: 12 })
     gsap.set(chevron, { opacity: 0, y: 0 })
 
-    // --- Build the entry timeline (fast — under 1s total before interactive) ---
-    const tl = gsap.timeline({ delay: 0.15 })
+    // --- Build the entry timeline — let the name breathe before scroll starts ---
+    const tl = gsap.timeline({ delay: 0.4 })
     entryTlRef.current = tl
 
-    // 1. Name fades in + rises (snappy)
+    // 1. Name fades in + rises
     tl.to(name, {
       opacity: 1,
       y: 0,
-      duration: 0.5,
+      duration: 0.7,
       ease: 'power2.out',
     })
 
-    // 2. Subtitle fades in overlapping with name
+    // 2. Subtitle fades in after name settles
     tl.to(
       subtitle,
       {
         opacity: 1,
         y: 0,
-        duration: 0.4,
+        duration: 0.5,
         ease: 'power2.out',
       },
-      '-=0.25'
+      '-=0.2'
     )
 
-    // 3. Chevron appears quickly after subtitle, then pulses
+    // 3. Hold a beat, then chevron appears + pulses
     tl.to(
       chevron,
       {
         opacity: 1,
-        duration: 0.3,
+        duration: 0.4,
         ease: 'power2.out',
         onComplete: () => {
           chevronPulseRef.current = gsap.to(chevron, {
@@ -83,7 +83,7 @@ export default function EntryAnimation({ onComplete }: EntryAnimationProps) {
           })
         },
       },
-      '-=0.1'
+      '+=0.4'
     )
 
     // --- One-time scroll listener to trigger exit ---
@@ -129,50 +129,50 @@ export default function EntryAnimation({ onComplete }: EntryAnimationProps) {
       },
     })
 
-    // -- Step 1: Overlay name fades up and out (0.4s)
+    // -- Step 1: Overlay name fades up and out (slower, more graceful)
     exitTl.to(name, {
       opacity: 0,
-      y: -20,
-      duration: 0.4,
+      y: -30,
+      duration: 0.7,
       ease: 'power2.in',
     })
 
-    // -- Step 2: Overlay background fades out (0.6s), starts slightly before step 1 ends
+    // -- Step 2: Overlay background fades out (longer crossfade to workbench)
     exitTl.to(
       overlay,
       {
         opacity: 0,
-        duration: 0.6,
+        duration: 1.0,
         ease: 'power2.out',
       },
-      '-=0.15'
+      '-=0.3'
     )
 
-    // -- Step 3: Navbar logo cross-fades in simultaneously with overlay fade
+    // -- Step 3: Navbar logo cross-fades in during overlay fade
     if (navLogo) {
       exitTl.to(
         navLogo,
         {
           opacity: 1,
-          duration: 0.5,
+          duration: 0.6,
           ease: 'power2.out',
         },
-        '<' // starts at same time as overlay fade
+        '<+0.3'
       )
     }
 
-    // -- Step 4: Nav links stagger in from right, starting slightly after logo
+    // -- Step 4: Nav links stagger in from right
     if (navLinks.length > 0) {
       exitTl.to(
         navLinks,
         {
           opacity: 1,
           x: 0,
-          duration: 0.4,
-          stagger: 0.07,
+          duration: 0.5,
+          stagger: 0.08,
           ease: 'power2.out',
         },
-        '<+0.1'
+        '<+0.15'
       )
     }
   }
