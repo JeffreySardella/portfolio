@@ -15,9 +15,20 @@ export default function AboutSection() {
       <div className="max-w-[1200px] mx-auto px-6 py-20">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-text">About</h2>
 
-        {/* Two-column layout */}
-        <div className="md:grid md:grid-cols-2 gap-12 mt-10">
-          {/* Left: bio */}
+        {/* Photo + bio + facts */}
+        <div className="md:grid md:grid-cols-[auto_1fr_1fr] gap-12 mt-10 items-start">
+          {/* Headshot */}
+          <div className="flex justify-center md:justify-start mb-8 md:mb-0">
+            <img
+              src="/headshot.jpg"
+              alt="Jeffrey Sardella"
+              width={150}
+              height={150}
+              className="rounded-full border-2 border-border"
+            />
+          </div>
+
+          {/* Bio */}
           <div>
             <p className="text-text-muted leading-relaxed text-lg">
               I started writing C# at a burger joint because I was tired of calculating labor by
@@ -31,7 +42,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Right: quick facts */}
+          {/* Quick facts */}
           <div className="mt-8 md:mt-0">
             <dl className="flex flex-col gap-4">
               {QUICK_FACTS.map(({ label, value }) => (
