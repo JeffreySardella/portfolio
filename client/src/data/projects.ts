@@ -10,16 +10,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'GitPulse',
-    description:
-      'Full-stack GitHub analytics dashboard with commit heatmaps, language breakdowns, and repo stats. Background jobs sync data hourly via Hangfire with Polly retry logic. GitHub OAuth + JWT auth.',
-    challenge:
-      'Hardest part was designing the snapshot system — pre-computing daily aggregates so the dashboard loads instantly instead of querying months of raw commit data on every page load.',
-    techTags: ['ASP.NET Core', 'React', 'TypeScript', 'PostgreSQL', 'Hangfire', 'Chart.js'],
-    githubUrl: 'https://github.com/JeffreySardella/GitPulse',
-    featured: true,
-  },
-  {
     title: 'OWP Forum',
     description:
       'Forum platform for an organization that trains 14,000+ water professionals annually. Four-tier RBAC system (Admin, Mod, User, Guest), OTP email auth, and WCAG 2.2-compliant frontend.',
@@ -47,6 +37,16 @@ export const projects: Project[] = [
       'Each ad platform returns data in completely different formats and time zones. Normalizing everything into a unified view without losing precision was a rabbit hole.',
     techTags: ['React', 'TypeScript', 'Supabase', 'Claude API'],
     githubUrl: 'https://github.com/JeffreySardella',
+    featured: true,
+  },
+  {
+    title: 'GitPulse',
+    description:
+      'Full-stack GitHub analytics dashboard with commit heatmaps, language breakdowns, and repo stats. Background jobs sync data hourly via Hangfire with Polly retry logic. GitHub OAuth + JWT auth.',
+    challenge:
+      'Hardest part was designing the snapshot system — pre-computing daily aggregates so the dashboard loads instantly instead of querying months of raw commit data on every page load.',
+    techTags: ['ASP.NET Core', 'React', 'TypeScript', 'PostgreSQL', 'Hangfire', 'Chart.js'],
+    githubUrl: 'https://github.com/JeffreySardella/GitPulse',
     featured: true,
   },
   {
