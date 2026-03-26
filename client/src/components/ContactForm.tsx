@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 
-const formspreeId = import.meta.env.VITE_FORMSPREE_ID || 'mjgolzlrl'
+const formspreeId = import.meta.env.VITE_FORMSPREE_ID || 'mjgezlrl'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 

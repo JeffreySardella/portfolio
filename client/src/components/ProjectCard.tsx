@@ -47,12 +47,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           className={`aspect-[16/10] bg-bg-surface rounded-lg overflow-hidden mb-6 md:mb-0 ${
             isEven ? '' : 'md:[direction:ltr]'
           } ${!project.screenshot ? 'shimmer' : ''}`}
+          style={project.screenshotBg ? { backgroundColor: project.screenshotBg } : undefined}
         >
           {project.screenshot && (
             <img
               src={project.screenshot}
               alt={`Screenshot of ${project.title}`}
-              className="w-full h-full object-cover object-top"
+              className={`w-full h-full ${project.screenshotFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+              style={{ objectPosition: project.screenshotPosition ?? 'top' }}
               loading="lazy"
             />
           )}

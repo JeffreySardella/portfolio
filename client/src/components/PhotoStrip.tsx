@@ -5,6 +5,9 @@ const PHOTOS = [
   { caption: '3D Printing', src: '/photos/beyond-code/3d-prints.jpg' },
   { caption: 'PC Build', src: '/photos/beyond-code/pc-build-rgb.jpg' },
   { caption: 'Sunflower PC', src: '/photos/beyond-code/sunflower-pc.jpg' },
+  { caption: 'PCB Teardown', src: '/photos/beyond-code/pcb-teardown.jpg' },
+  { caption: 'Desk Setup', src: '/photos/beyond-code/desk-setup.jpg' },
+  { caption: 'LED Perfboard', src: '/photos/beyond-code/led-perfboard.jpg' },
 ]
 
 export default function PhotoStrip() {

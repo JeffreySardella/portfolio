@@ -145,7 +145,7 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
           <li>
             <a
               data-nav-link
-              href="/Jeffrey_Sardella_Resume.pdf"
+              href="/Jeffrey_resume.pdf"
               download
               style={hiddenStyle}
               className="text-sm text-text-muted hover:text-text transition-colors duration-200"
@@ -221,7 +221,7 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
           })}
           <li className="w-full">
             <a
-              href="/Jeffrey_Sardella_Resume.pdf"
+              href="/Jeffrey_resume.pdf"
               download
               onClick={closeMenu}
               className="flex items-center justify-center w-full min-h-[56px] px-6 text-2xl font-heading font-bold tracking-tight text-text hover:text-accent-warm transition-colors duration-200"
