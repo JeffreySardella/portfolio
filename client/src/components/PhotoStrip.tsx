@@ -1,3 +1,5 @@
+import { useRef, useEffect } from 'react'
+
 const PHOTOS = [
   { caption: 'Homelab', src: '/photos/beyond-code/homelab-server.jpg' },
   { caption: 'Network', src: '/photos/beyond-code/network-panel.jpg' },
@@ -11,12 +13,35 @@ const PHOTOS = [
 ]
 
 export default function PhotoStrip() {
+  const stripRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = stripRef.current
+    if (!el) return
+
+    const handleWheel = (e: WheelEvent) => {
+      const maxScroll = el.scrollWidth - el.clientWidth
+      if (maxScroll <= 0) return
+
+      const atStart = el.scrollLeft <= 0 && e.deltaY < 0
+      const atEnd = el.scrollLeft >= maxScroll - 1 && e.deltaY > 0
+      if (atStart || atEnd) return
+
+      e.preventDefault()
+      el.scrollLeft += e.deltaY
+    }
+
+    el.addEventListener('wheel', handleWheel, { passive: false })
+    return () => el.removeEventListener('wheel', handleWheel)
+  }, [])
+
   return (
     <div className="mt-16">
       <p className="text-sm font-mono text-text-muted uppercase tracking-widest mb-4">
         Beyond Code
       </p>
       <div
+        ref={stripRef}
         className="flex gap-4 overflow-x-auto hide-scrollbar"
         style={{ scrollSnapType: 'x mandatory' }}
       >

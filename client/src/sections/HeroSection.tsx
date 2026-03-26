@@ -5,6 +5,13 @@ import { stations } from '../data/stations'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// Should we play the intro animation?
+const ANIMATE_ENTRY =
+  typeof window !== 'undefined' &&
+  !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+  window.location.hash === '' &&
+  window.scrollY === 0
+
 // ─── Journey card (compact timeline item) ────────────────────────────────────
 
 function JourneyCard({
@@ -70,10 +77,73 @@ function JourneyCard({
   )
 }
 
+// ─── Scroll chevron ──────────────────────────────────────────────────────────
+
+function ChevronDownIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  )
+}
+
 // ─── Main HeroSection ─────────────────────────────────────────────────────────
 
 export default function HeroSection() {
+  const nameRef = useRef<HTMLHeadingElement>(null)
+  const subtitleRef = useRef<HTMLParagraphElement>(null)
+  const chevronRef = useRef<HTMLDivElement>(null)
   const ctaRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!ANIMATE_ENTRY) return
+
+    const name = nameRef.current
+    const subtitle = subtitleRef.current
+    const chevron = chevronRef.current
+    if (!name || !subtitle || !chevron) return
+
+    // Start hidden
+    gsap.set(name, { opacity: 0, y: 24 })
+    gsap.set(subtitle, { opacity: 0, y: 12 })
+    gsap.set(chevron, { opacity: 0 })
+
+    // Animate in
+    const tl = gsap.timeline({ delay: 0.4 })
+
+    tl.to(name, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' })
+    tl.to(subtitle, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.2')
+    tl.to(chevron, {
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power2.out',
+      onComplete: () => {
+        gsap.to(chevron, { y: 10, duration: 0.9, ease: 'sine.inOut', yoyo: true, repeat: -1 })
+      },
+    }, '+=0.4')
+
+    // Fade chevron out on first scroll
+    const handleScroll = () => {
+      gsap.to(chevron, { opacity: 0, duration: 0.3, ease: 'power2.out' })
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true, once: true })
+
+    return () => {
+      tl.kill()
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -99,13 +169,31 @@ export default function HeroSection() {
   return (
     <section id="hero" aria-label="Hero">
       {/* ── Full-screen name ── */}
-      <div className="h-screen flex flex-col items-center justify-center">
-        <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-text text-center px-6">
+      <div className="relative h-screen flex flex-col items-center justify-center">
+        <h1
+          ref={nameRef}
+          className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-text text-center px-6"
+        >
           JEFFREY SARDELLA
         </h1>
-        <p className="mt-4 text-sm font-mono text-text-muted tracking-widest text-center px-6">
+        <p
+          ref={subtitleRef}
+          className="mt-4 text-sm font-mono text-text-muted tracking-widest text-center px-6"
+        >
           Builder · Problem Solver · Engineer
         </p>
+
+        {/* Scroll hint */}
+        <div
+          ref={chevronRef}
+          className="absolute bottom-12 flex flex-col items-center gap-1.5"
+          style={ANIMATE_ENTRY ? { opacity: 0 } : undefined}
+        >
+          <span className="text-[10px] font-mono text-text-muted tracking-[0.2em] uppercase">
+            scroll
+          </span>
+          <ChevronDownIcon className="text-text-muted" />
+        </div>
       </div>
 
       {/* ── Compact journey strip ── */}
