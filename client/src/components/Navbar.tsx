@@ -9,18 +9,9 @@ const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ] as const
 
-const SECTION_IDS = NAV_LINKS.filter((l) => !('external' in l && l.external)).map((l) => l.href.slice(1))
+const SECTION_IDS = ['hero', ...NAV_LINKS.filter((l) => !('external' in l && l.external)).map((l) => l.href.slice(1))]
 
-interface NavbarProps {
-  /**
-   * When true, navbar logo and links start invisible (opacity-0).
-   * The EntryAnimation component will animate them in as part of its exit sequence.
-   * When false (or after animation completes), they're fully visible.
-   */
-  hideUntilAnimated?: boolean
-}
-
-export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState<string>('')
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -65,6 +56,15 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
     return () => observer.disconnect()
   }, [])
 
+  // Update URL hash to reflect current section
+  useEffect(() => {
+    if (!activeSection) return
+    const hash = activeSection === 'hero' ? '' : `#${activeSection}`
+    if (window.location.hash !== hash) {
+      history.replaceState(null, '', hash || window.location.pathname)
+    }
+  }, [activeSection])
+
   // Lock body scroll while mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
@@ -88,12 +88,6 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
     ? 'bg-bg/80 backdrop-blur-[12px] border-b border-border'
     : 'bg-transparent border-b border-transparent'
 
-  // When hideUntilAnimated=true, logo & links start opacity-0.
-  // The EntryAnimation GSAP exit tween targets [data-nav-logo] / [data-nav-link]
-  // and sets autoAlpha to 1, so they become visible during the exit sequence.
-  // We rely on GSAP's autoAlpha (which controls both opacity AND visibility)
-  // rather than Tailwind classes so we don't need React re-renders.
-  const hiddenStyle = hideUntilAnimated ? { opacity: 0 } : undefined
 
   return (
     <>
@@ -106,7 +100,7 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
         <a
           data-nav-logo
           href="#hero"
-          style={hiddenStyle}
+
           className="font-mono text-text text-sm font-medium tracking-wide hover:text-accent-warm transition-colors duration-200 mr-auto"
           onClick={(e) => {
             e.preventDefault()
@@ -127,7 +121,7 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
                 <a
                   data-nav-link
                   href={link.href}
-                  style={hiddenStyle}
+        
                   {...(isExternal ? {} : { onClick: (e: React.MouseEvent) => { e.preventDefault(); handleNavClick(link.href) } })}
                   className={`
                     relative text-sm transition-colors duration-200 pb-0.5
@@ -147,7 +141,7 @@ export default function Navbar({ hideUntilAnimated = false }: NavbarProps) {
               data-nav-link
               href="/Jeffrey_resume.pdf"
               download
-              style={hiddenStyle}
+    
               className="text-sm text-text-muted hover:text-text transition-colors duration-200"
             >
               Resume ↓
