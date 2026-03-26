@@ -3,6 +3,9 @@ export interface Project {
   description: string
   challenge?: string // "what was hard" — replaces SDLC tags
   screenshot?: string // path to screenshot image
+  screenshotPosition?: string // CSS object-position value (default: 'top')
+  screenshotFit?: 'cover' | 'contain' // CSS object-fit value (default: 'cover')
+  screenshotBg?: string // CSS background color for contain mode
   techTags: string[]
   githubUrl?: string
   liveUrl?: string
@@ -18,7 +21,7 @@ export const projects: Project[] = [
       'Building the permission middleware was tricky — every route needed to check role + ownership + resource state, and the client kept changing the permission matrix mid-sprint.',
     screenshot: '/photos/projects/owp-forum.png',
     techTags: ['PHP Slim', 'Vue.js', 'T-SQL', 'REST API', 'GitHub Actions'],
-    githubUrl: 'https://github.com/JeffreySardella',
+    githubUrl: 'https://github.com/MaxShkrabak/OWP-Forum',
     featured: true,
   },
   {
@@ -27,9 +30,12 @@ export const projects: Project[] = [
       'Healthcare app with patient records, appointment scheduling, prescription tracking, and secure messaging. Led a 6-person Agile team through the full lifecycle.',
     challenge:
       'First time leading a team. Had to learn to delegate instead of doing everything myself, and mentored a teammate on SQL injection prevention after catching vulnerabilities in their code.',
-    screenshot: '/photos/projects/medical-app.png',
+    screenshot: '/photos/projects/medical-app.webp',
+    screenshotFit: 'contain',
+    screenshotPosition: 'center',
+    screenshotBg: '#e8f4f8',
     techTags: ['ASP.NET MVC', 'C#', 'SQL Server', 'REST API'],
-    githubUrl: 'https://github.com/JeffreySardella',
+    githubUrl: 'https://github.com/gbkabel/MedicalApp',
     featured: true,
   },
   {
@@ -40,7 +46,6 @@ export const projects: Project[] = [
       'Each ad platform returns data in completely different formats and time zones. Normalizing everything into a unified view without losing precision was a rabbit hole.',
     screenshot: '/photos/projects/drover-dashboard.png',
     techTags: ['React', 'TypeScript', 'Supabase', 'Claude API'],
-    githubUrl: 'https://github.com/JeffreySardella',
     featured: true,
   },
   {
@@ -61,8 +66,9 @@ export const projects: Project[] = [
     challenge:
       'Built the entire training pipeline in 48 hours at a hackathon. The scoring system had to evaluate 3D geometry quality from 4-angle renders — we had to invent the rubric from scratch.',
     screenshot: '/photos/projects/3dai.gif',
+    screenshotPosition: 'center',
     techTags: ['TypeScript', 'Node.js', 'OpenSCAD', 'Google AI API', 'Docker'],
-    githubUrl: 'https://github.com/JeffreySardella',
+    githubUrl: 'https://github.com/zacbemis/3DAI',
     featured: true,
   },
   {
@@ -71,7 +77,7 @@ export const projects: Project[] = [
       'Detects prescribing cascades — when one drug is prescribed to treat side effects of another — using 65 validated patterns + 28M FDA adverse event pairs.',
     screenshot: '/photos/projects/cascadeguard.png',
     techTags: ['TypeScript', 'React', 'FDA OpenData'],
-    githubUrl: 'https://github.com/JeffreySardella',
+    githubUrl: 'https://github.com/JeffreySardella/CascadeGuard',
     featured: false,
   },
   {
@@ -80,6 +86,14 @@ export const projects: Project[] = [
       'Local AI trip planner with agent loop that researches destinations, checks calendar, validates travel times. 41 unit tests.',
     techTags: ['ASP.NET Core', 'Blazor', 'Ollama', 'SQLite'],
     githubUrl: 'https://github.com/JeffreySardella/SmartTripPlanner',
+    featured: false,
+  },
+  {
+    title: 'ItinerBot',
+    description:
+      'Discord bot that syncs with Google Calendar to send trip itineraries and ticket-sale alerts. SerpAPI integration for auto sale-time lookup.',
+    techTags: ['Python', 'discord.py', 'Google Calendar API', 'SerpAPI'],
+    githubUrl: 'https://github.com/JeffreySardella/ItinerBot',
     featured: false,
   },
   {
