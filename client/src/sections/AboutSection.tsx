@@ -31,14 +31,16 @@ export default function AboutSection() {
           {/* Bio */}
           <div>
             <p className="text-text-muted leading-relaxed text-lg">
-              I started writing C# at a burger joint because I was tired of calculating labor by
-              hand. That turned into wiring networks at a pool company, shipping multiplayer
-              minigames for a Toontown community, and now building AI training pipelines under
-              contract.
+              I started coding at 13 messing around in Xcode, picked up Unity at 14, and by 15 I
+              was digging through a massive Python codebase for a Toontown community project. When
+              I got my first real job, I wrote a C# app to automate labor calculations because I was
+              tired of doing it by hand. That led to a pool company gig where I helped them estimate
+              job costs and track field operations.
             </p>
             <p className="text-text-muted leading-relaxed text-lg mt-4">
-              I have a CS degree from Sac State, three Microsoft/GitHub certs, and a garage full of
-              half-finished projects. I just like making things work.
+              Now I'm finishing my CS degree at Sac State, building AI training pipelines under
+              contract, and working on civic data tools. Three Microsoft/GitHub certs and a garage
+              full of half-finished projects. I just like making things work.
             </p>
           </div>
 
