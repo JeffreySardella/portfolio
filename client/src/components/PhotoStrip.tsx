@@ -20,7 +20,7 @@ export default function PhotoStrip() {
   const [current, setCurrent] = useState(0)
   const [paused, setPaused] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
-  const timerRef = useRef<ReturnType<typeof setInterval>>()
+  const timerRef = useRef<ReturnType<typeof setInterval>>(undefined)
 
   // Calculate max index so the last photo is flush with the right edge
   const getMaxIndex = () => {
