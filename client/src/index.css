@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
 /* Fontsource imports */
-@import "@fontsource/space-grotesk/700.css";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
 @import "@fontsource/jetbrains-mono/400.css";
 
 @theme {
@@ -17,8 +14,8 @@
   --color-accent-cool: #3b82f6;
   --color-border: rgba(255, 255, 255, 0.08);
 
-  --font-heading: 'Space Grotesk', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Cabinet Grotesk', system-ui, sans-serif;
+  --font-body: 'Switzer', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
 }
 

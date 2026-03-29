@@ -1,0 +1,3028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan 2026 — Jeff's Field Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1410;
+  --paper: #f5f0e8;
+  --warm: #e8dfc8;
+  --red: #c0392b;
+  --gold: #b8860b;
+  --green: #2d5a3d;
+  --blue: #1a3a5c;
+  --muted: #6b5d4f;
+  --border: #c8b99a;
+  --card: #faf7f0;
+  --sidebar-w: 220px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ── SIDEBAR ── */
+#sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--ink);
+  color: var(--warm);
+  overflow-y: auto;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar-header {
+  padding: 24px 18px 16px;
+  border-bottom: 1px solid #3a2e24;
+}
+
+#sidebar-header .logo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+#sidebar-header h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+#sidebar-header .dates {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+nav { flex: 1; padding: 10px 0; }
+
+nav details { border-bottom: 1px solid #2a2018; }
+
+nav summary {
+  padding: 9px 18px;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+nav summary::-webkit-details-marker { display: none; }
+nav summary::before {
+  content: '▸';
+  font-size: 9px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+nav details[open] summary::before { transform: rotate(90deg); }
+
+nav a {
+  display: block;
+  padding: 6px 18px 6px 34px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  color: #c8b99a;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+  line-height: 1.4;
+}
+nav a:hover, nav a.active {
+  color: #fff;
+  background: #2a2018;
+}
+nav a.active { border-left: 2px solid var(--red); padding-left: 32px; }
+
+/* ── MAIN ── */
+#main {
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+  padding: 0 0 80px;
+}
+
+/* ── HERO ── */
+#hero {
+  background: var(--ink);
+  color: var(--warm);
+  padding: 60px 64px 50px;
+  position: relative;
+  overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b8860b' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+#hero .kana {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.3;
+  position: absolute;
+  right: 64px;
+  top: 30px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+#hero .eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+#hero h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 12px;
+}
+#hero .subtitle {
+  font-size: 15px;
+  color: #a09080;
+  max-width: 500px;
+}
+#hero .meta {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+#hero .meta-item { display: flex; flex-direction: column; gap: 2px; }
+#hero .meta-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+#hero .meta-val {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--gold);
+}
+
+/* ── SECTION HEADERS ── */
+.section-head {
+  padding: 40px 64px 0;
+  margin-bottom: 28px;
+  border-top: 2px solid var(--border);
+  margin-top: 48px;
+}
+.section-head:first-of-type { margin-top: 0; }
+.section-head .sec-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.section-head h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.section-head p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 6px;
+  max-width: 600px;
+}
+
+/* ── DAY CARDS ── */
+.days-grid {
+  padding: 0 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.day-card {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--card);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.day-header {
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+  user-select: none;
+  background: var(--card);
+  transition: background 0.15s;
+}
+.day-header:hover { background: var(--warm); }
+
+.day-num {
+  background: var(--ink);
+  color: var(--gold);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 14px 8px;
+  letter-spacing: 0.1em;
+  min-width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-title-block {
+  flex: 1;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.day-title-block h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.day-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.day-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.day-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+.tag-tokyo { background: #e8f0e8; color: var(--green); }
+.tag-kyoto { background: #f0e8e8; color: var(--red); }
+.tag-osaka { background: #e8edf5; color: var(--blue); }
+.tag-fuji  { background: #f5f0e0; color: var(--gold); }
+.tag-hiroshima { background: #f5ece8; color: #8b3a1a; }
+.tag-travel { background: #eeeeee; color: #555; }
+.tag-nara { background: #edf5e8; color: #3a6b1a; }
+
+.day-chevron {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.day-body {
+  display: none;
+  padding: 0 0 20px;
+  border-top: 1px solid var(--border);
+}
+.day-card.open .day-body { display: block; }
+.day-card.open .day-chevron { transform: rotate(90deg); }
+.day-card.open .day-header { background: var(--warm); }
+
+/* ── TABS ── */
+.tab-bar {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding: 0 36px;
+  background: var(--warm);
+  gap: 0;
+}
+.tab-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.active {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+.tab-pane { display: none; padding: 22px 36px 4px; }
+.tab-pane.active { display: block; }
+
+/* ── CONTENT BLOCKS ── */
+.plan-line {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+.plan-time {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  min-width: 52px;
+  padding-top: 2px;
+}
+.plan-text { font-size: 14px; line-height: 1.6; }
+.plan-text a { color: var(--blue); text-decoration: underline; font-size: 12px; }
+
+.tip-block {
+  background: #fff;
+  border-left: 3px solid var(--gold);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.tip-block .tip-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.backup-block {
+  background: #fff8f0;
+  border-left: 3px solid #d4823a;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.backup-block .tip-label { color: #d4823a; }
+
+.branch-block {
+  background: #f0f5f0;
+  border-left: 3px solid var(--green);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.branch-block .tip-label { color: var(--green); }
+
+.eat-block {
+  background: #f5f0fb;
+  border-left: 3px solid #7b4fa6;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.eat-block .tip-label { color: #7b4fa6; }
+
+ul.dot-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.dot-list li {
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+ul.dot-list li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--muted);
+  font-size: 18px;
+  top: -2px;
+}
+
+strong { font-weight: 700; }
+em { font-style: italic; color: var(--muted); }
+
+.warn {
+  display: inline;
+  background: #fef3cd;
+  border: 1px solid #e6c84a;
+  border-radius: 2px;
+  padding: 1px 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: #7a5c00;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.link-chip {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--blue);
+  text-decoration: none;
+  border: 1px solid var(--blue);
+  padding: 3px 9px;
+  border-radius: 2px;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+.link-chip:hover { opacity: 1; }
+
+/* ── CITY SECTION ── */
+.city-section { padding: 0 64px; }
+
+.city-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.city-intro-text {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.city-intro-text h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.neighborhood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.n-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.n-card-head {
+  background: var(--ink);
+  color: var(--gold);
+  padding: 12px 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.n-card-head .n-name {
+  font-size: 13px;
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+}
+.n-card-head .n-type {
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-left: auto;
+}
+
+.n-card-body {
+  padding: 14px 16px;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.n-card-body .n-vibe {
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.n-card-body .n-access {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+/* ── ESSENTIALS ── */
+.essentials-section { padding: 0 64px; }
+.essentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+.e-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+.e-card h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.e-card p, .e-card li { font-size: 13.5px; line-height: 1.65; margin-bottom: 6px; }
+.e-card ul { list-style: none; padding: 0; }
+.e-card ul li { padding-left: 14px; position: relative; }
+.e-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--muted); }
+
+/* ── QUICK REF ── */
+.quick-phrases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.phrase-row {
+  display: flex;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.phrase-jp { font-family: 'Noto Serif JP', serif; color: var(--red); min-width: 120px; }
+.phrase-en { color: var(--muted); }
+
+/* ── HAMBURGER ── */
+#hamburger {
+  display: none;
+  position: fixed;
+  top: 12px; left: 12px;
+  z-index: 200;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 800px) {
+  :root { --sidebar-w: 0px; }
+  #sidebar {
+    transform: translateX(-260px);
+    width: 260px;
+    transition: transform 0.3s;
+  }
+  #sidebar.open { transform: translateX(0); }
+  #main { margin-left: 0; }
+  #hamburger { display: block; }
+  #hero { padding: 50px 24px 36px; }
+  #hero .kana { display: none; }
+  .section-head, .days-grid, .city-section, .essentials-section { padding-left: 20px; padding-right: 20px; }
+  .city-intro { grid-template-columns: 1fr; }
+  .tab-bar { padding: 0 16px; overflow-x: auto; }
+  .tab-pane { padding: 16px 16px 4px; }
+  .plan-line { flex-direction: column; gap: 2px; }
+  .plan-time { min-width: auto; }
+}
+
+@media print {
+  #sidebar, #hamburger { display: none; }
+  #main { margin-left: 0; }
+  .day-body { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<button id="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+
+<!-- SIDEBAR NAV -->
+<aside id="sidebar">
+  <div id="sidebar-header">
+    <div class="logo">Japan 2026</div>
+    <h1>Jeff's Field Guide</h1>
+    <div class="dates">May 27 – Jun 16</div>
+  </div>
+  <nav>
+    <details open>
+      <summary>📅 Day by Day</summary>
+      <a href="#may27">May 27 — Arrival</a>
+      <a href="#may28">May 28 — Harajuku &amp; Shibuya</a>
+      <a href="#may29">May 29 — Asakusa &amp; Skytree</a>
+      <a href="#may30">May 30 — GO Fest</a>
+      <a href="#may31">May 31 — Akihabara</a>
+      <a href="#jun01">Jun 1 — PokéPark / Tower</a>
+      <a href="#jun02">Jun 2 — Kamakura</a>
+      <a href="#jun03">Jun 3 — DisneySea</a>
+      <a href="#jun04">Jun 4 — Disneyland</a>
+      <a href="#jun05">Jun 5 — Travel to Fuji</a>
+      <a href="#jun06">Jun 6 — Hike / Kyoto</a>
+      <a href="#jun07">Jun 7 — Gion Evening</a>
+      <a href="#jun08">Jun 8 — Fushimi Inari</a>
+      <a href="#jun09">Jun 9 — Kiyomizu-dera</a>
+      <a href="#jun10">Jun 10 — Arashiyama</a>
+      <a href="#jun11">Jun 11 — Nara → Osaka</a>
+      <a href="#jun12">Jun 12 — Himeji &amp; Dotonbori</a>
+      <a href="#jun13">Jun 13 — USJ</a>
+      <a href="#jun14">Jun 14 — Shinsekai → Hiroshima</a>
+      <a href="#jun15">Jun 15 — Peace Park &amp; Miyajima</a>
+      <a href="#jun16">Jun 16 — Final Day</a>
+    </details>
+    <details>
+      <summary>🗾 Tokyo</summary>
+      <a href="#tokyo-main">Overview</a>
+      <a href="#tokyo-yanaka">Yanaka (Old Tokyo)</a>
+      <a href="#tokyo-shimokitazawa">Shimokitazawa</a>
+      <a href="#tokyo-koenji">Koenji</a>
+      <a href="#tokyo-nakameguro">Nakameguro</a>
+      <a href="#tokyo-kagurazaka">Kagurazaka</a>
+      <a href="#tokyo-kiyosumi">Kiyosumi-Shirakawa</a>
+      <a href="#tokyo-kichijoji">Kichijoji</a>
+    </details>
+    <details>
+      <summary>⛩️ Kawaguchiko</summary>
+      <a href="#fuji-main">Overview &amp; Tips</a>
+      <a href="#fuji-food">Hoto &amp; Local Food</a>
+      <a href="#fuji-onsen">Tattoo-Friendly Onsen</a>
+    </details>
+    <details>
+      <summary>🏯 Kyoto</summary>
+      <a href="#kyoto-main">Overview</a>
+      <a href="#kyoto-gion">Gion &amp; Pontocho</a>
+      <a href="#kyoto-fushimi">Fushimi Sake District</a>
+      <a href="#kyoto-philosophers">Philosopher's Path</a>
+      <a href="#kyoto-hidden">Hidden Temples</a>
+      <a href="#kyoto-arashiyama">Arashiyama Hidden</a>
+    </details>
+    <details>
+      <summary>🐙 Osaka</summary>
+      <a href="#osaka-main">Overview</a>
+      <a href="#osaka-dotonbori">Dotonbori Deep Dive</a>
+      <a href="#osaka-uranamba">Ura Namba</a>
+      <a href="#osaka-tenma">Tenma &amp; Fukushima</a>
+      <a href="#osaka-shinsekai">Shinsekai</a>
+    </details>
+    <details>
+      <summary>☮️ Hiroshima</summary>
+      <a href="#hiroshima-main">Overview</a>
+      <a href="#hiroshima-miyajima">Miyajima Tips</a>
+    </details>
+    <details>
+      <summary>📋 Essentials</summary>
+      <a href="#trains">Trains &amp; Suica</a>
+      <a href="#money">Money &amp; ATMs</a>
+      <a href="#food">Food Guide</a>
+      <a href="#nightlife">Nightlife</a>
+      <a href="#arcades">Arcades</a>
+      <a href="#pokemon">Pokémon</a>
+      <a href="#disney">Disney Tips</a>
+      <a href="#usj">USJ Tips</a>
+      <a href="#onsen">Onsen Guide</a>
+      <a href="#shopping">Shopping</a>
+      <a href="#etiquette">Etiquette</a>
+      <a href="#phrases">Key Phrases</a>
+      <a href="#rainy">Rainy Day</a>
+    </details>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<main id="main">
+
+<!-- HERO -->
+<section id="hero">
+  <div class="kana">日本<br>旅行</div>
+  <div class="eyebrow">sardella.dev/japantrip</div>
+  <h2>Japan 2026<br>Field Guide</h2>
+  <p class="subtitle">21 days. 5 cities. Every backup plan, hidden gem, and insider tip — all in one place.</p>
+  <div class="meta">
+    <div class="meta-item"><span class="meta-label">Depart</span><span class="meta-val">May 27</span></div>
+    <div class="meta-item"><span class="meta-label">Return</span><span class="meta-val">Jun 16</span></div>
+    <div class="meta-item"><span class="meta-label">Days</span><span class="meta-val">21</span></div>
+    <div class="meta-item"><span class="meta-label">Cities</span><span class="meta-val">Tokyo · Fuji · Kyoto · Osaka · Hiroshima</span></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     DAY BY DAY
+═══════════════════════════════════════════ -->
+<div class="section-head" id="days">
+  <div class="sec-eyebrow">Part I</div>
+  <h2>Day by Day</h2>
+  <p>Tap any day to expand. Each day has the plan, tips, backup options if something falls through, branch-out ideas if you have extra time, and what to eat.</p>
+</div>
+
+<div class="days-grid">
+
+<!-- ── MAY 27 ── -->
+<div class="day-card" id="may27">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 1</div>
+    <div class="day-title-block">
+      <h3>✈️ Tokyo — Arrival &amp; Ikebukuro</h3>
+      <div class="day-meta">
+        <span class="day-date">May 27</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">~4 PM</span><span class="plan-text">Land at Narita (NRT). Clear customs — have your customs declaration card ready on the plane.</span></div>
+      <div class="plan-line"><span class="plan-time">4–5 PM</span><span class="plan-text">Pick up <strong>pocket WiFi</strong> at Klook counter (arrivals hall, before customs exit). Activate eSIM. Buy Welcome Suica at JR East counter if not set up on phone.</span></div>
+      <div class="plan-line"><span class="plan-time">5–6:30 PM</span><span class="plan-text">Narita Express (N'EX) to Ikebukuro (~90 min). <a href="https://www.jreast.co.jp/e/nex/" target="_blank">Book N'EX →</a></span></div>
+      <div class="plan-line"><span class="plan-time">6:30 PM</span><span class="plan-text">Check in: <strong>三陽荘</strong>, 1-12-15 Ikebukuro, Toshima.</span></div>
+      <div class="plan-line"><span class="plan-time">7 PM</span><span class="plan-text">Light dinner — <strong>pull cash from 7-Eleven ATM tonight.</strong> Most reliable for foreign cards. Do not save this for tomorrow.</span></div>
+      <div class="plan-line"><span class="plan-time">9 PM</span><span class="plan-text">Convenience store run. Stock water and snacks for tomorrow.</span></div>
+      <div class="plan-line"><span class="plan-time">9:30 PM</span><span class="plan-text"><strong>IN BED.</strong> Jet lag is real. Do not stay out.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 First Night Rules</div>
+        <ul class="dot-list">
+          <li>Get cash from 7-Eleven ATM <em>tonight</em>, not tomorrow when you're rushing</li>
+          <li>Download Google Maps offline for Japan before you land</li>
+          <li>Set Suica on Apple/Google Pay — faster than tapping physical card</li>
+          <li>Jet lag rule: stay up until 9:30 PM local time, no matter what</li>
+          <li>Don't eat a big meal — your stomach is confused. Matsuya gyudon (~¥500) or convenience store is perfect</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Ikebukuro For Later in the Trip</div>
+        <ul class="dot-list">
+          <li><strong>Gashapon Department Store</strong> (Sunshine City) — world's largest gachapon, 3,000–4,000 machines, ¥300–400/capsule</li>
+          <li><strong>Namco Nanja Town</strong> (Sunshine City B2) — indoor theme park, Gyoza Stadium with regional gyoza from all over Japan</li>
+          <li><strong>Sunshine 60 Observatory</strong> (251m) — less crowded than Skytree, panoramic views</li>
+          <li><strong>Animate Ikebukuro</strong> — 8 floors of anime merch, the biggest in Tokyo</li>
+          <li><strong>Otome Road</strong> — east of Sunshine City, all the doujin/BL/manga specialty shops</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Flight is Delayed</div>
+        <p>Pocket WiFi desks often close by 10 PM. If you arrive very late, use eSIM data that night and pick up WiFi first thing tomorrow morning at Ikebukuro Station service counter. Don't panic — your hotel has WiFi.</p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Jet Lag Hits Tomorrow</div>
+        <p>Tomorrow (May 28) is Harajuku/Shibuya — flexible day. Push it back an hour if needed. The city doesn't close. Meiji Shrine is a gentle first stop that works any time of day.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ If You Have Energy Tonight</div>
+        <p>Walk <strong>Sunshine City</strong> (open until 8 PM) for a quick orientation to Ikebukuro. Gashapon Department Store closes at 8 PM — quick first gachapon fix. Stay local. Don't go to Shibuya tonight.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Tonight: Keep It Simple</div>
+        <ul class="dot-list">
+          <li><strong>Matsuya</strong> — gyudon beef bowl ~¥500, open 24 hrs, walk-in, no Japanese needed (ticket machine)</li>
+          <li><strong>Sushiro</strong> — conveyor sushi near Ikebukuro Station, reasonable and filling</li>
+          <li><strong>7-Eleven</strong> — onigiri + hot coffee + egg salad sandwich is an underrated airport recovery meal</li>
+          <li>Skip alcohol tonight. Your body is confused enough.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAY 28 ── -->
+<div class="day-card" id="may28">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 2</div>
+    <div class="day-title-block">
+      <h3>🌸 Harajuku &amp; Shibuya</h3>
+      <div class="day-meta">
+        <span class="day-date">May 28</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">7:30 AM</span><span class="plan-text">Optional: JR to Shin-Misato for <strong>Costco Japan</strong>. US membership works. Hot dog + drink ~¥600. Stock trip snacks for Disney days.</span></div>
+      <div class="plan-line"><span class="plan-time">10:30 AM</span><span class="plan-text">Train to Harajuku (Yamanote Line).</span></div>
+      <div class="plan-line"><span class="plan-time">11 AM</span><span class="plan-text"><strong>Meiji Shrine.</strong> Forested path → main torii → main hall → inner garden. ~1 hr. FREE. <a href="https://www.meijijingu.or.jp/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">12:15 PM</span><span class="plan-text">Walk <strong>Omotesando Ave</strong> → <strong>Takeshita Street.</strong> Crepes, Cotton Candy, wild fashion.</span></div>
+      <div class="plan-line"><span class="plan-time">1:30 PM</span><span class="plan-text">Lunch near Harajuku Station.</span></div>
+      <div class="plan-line"><span class="plan-time">2:30 PM</span><span class="plan-text">Train to Shibuya (2 min on Yamanote).</span></div>
+      <div class="plan-line"><span class="plan-time">3 PM</span><span class="plan-text"><strong>Shibuya Scramble Crossing.</strong> Ground level first. Then aerial view: Starbucks Tsutaya (free, window seats) or Shibuya Sky (~¥2,000). <a href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank">Book Shibuya Sky →</a></span></div>
+      <div class="plan-line"><span class="plan-time">4 PM</span><span class="plan-text">Shibuya: Center-gai, Don Quijote, Tower Records (look for J-pop floor).</span></div>
+      <div class="plan-line"><span class="plan-time">6:30 PM</span><span class="plan-text">Dinner in Shibuya area.</span></div>
+      <div class="plan-line"><span class="plan-time">8 PM</span><span class="plan-text"><strong>Nonbei Yokocho</strong> — tiny lantern-lit bar alley behind Tower Records. Best 7–10 PM.</span></div>
+      <div class="plan-line"><span class="plan-time">10 PM</span><span class="plan-text">Return to Ikebukuro. Early night — Asakusa is a 7:30 AM start.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Shibuya Hidden</div>
+        <ul class="dot-list">
+          <li><strong>Nonbei Yokocho</strong> — behind Tower Records, narrow alley of tiny bars. Best 7–10 PM. Say "ippon kudasai" (one glass please)</li>
+          <li><strong>Daikanyama</strong> — 15 min walk south. Canal walks, boutiques, % Arabica coffee queue</li>
+          <li><strong>Nakameguro</strong> — 5 more min from Daikanyama. Best riverside canal in Tokyo, great for drinks</li>
+          <li><strong>Shimokitazawa</strong> — 10 min from Shibuya on Keio Inokashira Line. Vintage clothing capital of Tokyo, hundreds of second-hand shops, live music bars</li>
+          <li><strong>Tomigaya</strong> — just north of Yoyogi Park. Called "Shibuya for adults" by locals. Scandinavian coffee shops, no tourists</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Meiji Shrine Tips</div>
+        <ul class="dot-list">
+          <li>Arrive before noon to avoid tour groups</li>
+          <li>The inner garden (Gyoen) costs ¥500 but has the iris garden (in bloom in June!)</li>
+          <li>Wine barrels and sake barrels at the entrance are real gifts to the shrine — don't miss reading the labels</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If It's Raining</div>
+        <p>Meiji Shrine is beautiful in light rain. Bring umbrella. Omotesando has covered shopping. Shibuya Scramble is still excellent in rain — more atmospheric. Shibuya Sky is outdoors though — skip if heavy rain, get refund online (up to 24h before).</p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Jet Lag Hits and You Need a Slow Day</div>
+        <p>Do just Harajuku in the morning. Spend the afternoon walking Omotesando's designer boutiques and side streets (no rushing required). Skip Shibuya for another day — you'll pass through it many times on the Yamanote loop.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ If You Have Extra Time — Shimokitazawa</div>
+        <p>From Shibuya, take the Keio Inokashira Line (2 stops, ~5 min, ¥140) to Shimokitazawa. The streets are too narrow for cars. Spend 2 hours: Flamingo vintage shop, Bonus Track courtyard (books + bars + pop-ups), any random record shop. Dinner at an izakaya here instead of Shibuya — more local, cheaper.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ If You Want Luxury Shopping</div>
+        <p>Omotesando Hills mall is on the main drag — Prada, Louis Vuitton, Issey Miyake. The architecture (Tadao Ando) is worth seeing even if you don't buy. Also: the side streets between Omotesando and Harajuku have the best emerging Japanese designers.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Harajuku / Shibuya Eats</div>
+        <ul class="dot-list">
+          <li><strong>Harajuku Crepes</strong> — Takeshita Street stalls. Angel Heart or Marion Crepes. Strawberry + cream + custard.</li>
+          <li><strong>Gyukatsu Motomura</strong> (Shibuya) — beef cutlet you cook yourself on a mini grill. Queue outside worth it. <a href="https://www.gyukatsu-motomura.com/" target="_blank">→</a></li>
+          <li><strong>Ichiran Ramen</strong> — solo booth ramen, customize spice + richness + noodle. English menu. <a href="https://ichiran.com/" target="_blank">→</a></li>
+          <li><strong>Fuunji</strong> (Shinjuku, evening) — famous tsukemen dipping ramen. Be prepared to queue 20–40 min.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAY 29 ── -->
+<div class="day-card" id="may29">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 3</div>
+    <div class="day-title-block">
+      <h3>⛩️ Asakusa &amp; Tokyo Skytree</h3>
+      <div class="day-meta">
+        <span class="day-date">May 29</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">7:30 AM</span><span class="plan-text">Depart. Yamanote to Ueno → Ginza Line to Asakusa (~30 min).</span></div>
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text"><strong>Senso-ji Temple.</strong> Arrive early — nearly empty before 8 AM. Thunder Gate (Kaminarimon) → Nakamise shopping street → main hall. FREE. <a href="https://www.senso-ji.jp/english/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">9:45 AM</span><span class="plan-text"><strong>Kappabashi Kitchen Street</strong> (10-min walk west). Kama-Asa knives (century-old shop, English staff). Fake food displays make great gifts. <a href="https://www.kappabashi.or.jp/en/" target="_blank">Map →</a></span></div>
+      <div class="plan-line"><span class="plan-time">11 AM</span><span class="plan-text">Walk to Skytree along the Sumida River (~20 min).</span></div>
+      <div class="plan-line"><span class="plan-time">11:30 AM</span><span class="plan-text"><strong>Tokyo Skytree.</strong> Book ahead. Tembo Deck (350m) ~¥3,100. Galleria (+450m) add ~¥1,000. <span class="warn">⚠️ Book before leaving home</span><br><a href="https://www.tokyo-skytree.jp/en/ticket/" target="_blank">Tickets →</a></span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text">Lunch at Solamachi (base mall) — huge food hall with options for everyone.</span></div>
+      <div class="plan-line"><span class="plan-time">2 PM</span><span class="plan-text">Train to Shinjuku (~35 min).</span></div>
+      <div class="plan-line"><span class="plan-time">2:30 PM</span><span class="plan-text"><strong>Tokyo Metropolitan Government Building</strong> (west exit of Shinjuku) — FREE observation deck. Open until 10:30 PM. Best free view in Tokyo.</span></div>
+      <div class="plan-line"><span class="plan-time">4 PM</span><span class="plan-text">Shinjuku: Kabukicho neon walk, Omoide Yokocho exploration.</span></div>
+      <div class="plan-line"><span class="plan-time">6–9 PM</span><span class="plan-text"><strong>Omoide Yokocho</strong> (Memory Lane) — yakitori skewers under the tracks. Arrive 6 PM before it fills. <em>Order: momo, tsukune, negima. Say "shio" (salt) or "tare" (sweet soy).</em></span></div>
+      <div class="plan-line"><span class="plan-time">9 PM</span><span class="plan-text"><strong>Golden Gai</strong> (~5-min walk) — 200 tiny bars across 6 alleys. Some have ¥500–1,000 cover — ask before sitting. Best 9 PM–1 AM.</span></div>
+      <div class="plan-line"><span class="plan-time">10 PM</span><span class="plan-text">Back to Ikebukuro. IN BED by 11 PM — GO Fest tomorrow.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Senso-ji Tips</div>
+        <ul class="dot-list">
+          <li>Fortune sticks (omikuji) ¥100 — if you get a bad fortune, tie it to the rack and leave it there</li>
+          <li>The incense smoke (draftsman) — wave it over yourself for health and good luck</li>
+          <li>Best photo angle: stand at the far end of Nakamise looking back at the Thunder Gate</li>
+          <li>Nakamise shops open around 10 AM — don't rush to buy at 8 AM, just walk through</li>
+          <li>Try ningyo-yaki (doll-shaped cakes, ¥200) and kaminari okoshi (rice crackers)</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Golden Gai Tips</div>
+        <ul class="dot-list">
+          <li>Bars hold 5–10 people. If a bar is full, just move on — there are 200</li>
+          <li>Ask "cover charge arimasu ka?" (is there a cover?) before sitting</li>
+          <li>Most bars have a theme: jazz, anime, horror, cats, etc. Pick by vibe</li>
+          <li>Dragonfly bar is the most tourist-friendly for first-timers if you're nervous</li>
+          <li>After Golden Gai: walk through Kabukicho for the neon spectacle, just don't engage with touts</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Skytree Tickets are Sold Out</div>
+        <p>Tokyo Metropolitan Government Building is free and nearly as high — go there instead. Or: Sunshine 60 in Ikebukuro (close to hotel, ¥700). Or Shibuya Sky if you skipped it yesterday.</p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Rain</div>
+        <p>Senso-ji is atmospheric in rain. Kappabashi is entirely covered. Solamachi at Skytree base is a massive indoor mall. Golden Gai is indoors. This is actually a great rainy day plan as-is.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Yanaka — Old Tokyo (Add Between Asakusa and Skytree)</div>
+        <p>From Asakusa, walk north 25 min or take Ginza Line 2 stops to Ueno then walk to Yanaka. This is the most intact Edo-era neighborhood in Tokyo — survived both the 1923 earthquake and WWII bombing. Yanaka Ginza shopping street, 70+ temples, Nezu Shrine (mini Fushimi Inari, rarely crowded). Kayaba Coffee for a century-old kissaten. <em>Look for the cats — Yanaka is known as Tokyo's Cat Town.</em></p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Kagurazaka (Evening Alternative to Shinjuku)</div>
+        <p>Former geisha district between Shinjuku and Iidabashi. The stone alleys (yokocho) behind the main street hide old ryotei restaurants, jazz bars, and tiny French cafés. Akagi Jinja shrine has a stunningly modern Kengo Kuma design. Best for a slower evening walk.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Asakusa / Shinjuku Eats</div>
+        <ul class="dot-list">
+          <li><strong>Kaminari Okoshi</strong> — rice crackers from stalls on Nakamise, made right there</li>
+          <li><strong>Omoide Yokocho</strong> — yakitori skewers ¥200–400 each. Order 5–8 sticks to fill up</li>
+          <li><strong>Ichiran Ramen</strong> near Shinjuku — solo booth, fully customizable, excellent after Golden Gai</li>
+          <li><strong>Tsunahachi</strong> (Shinjuku) — tempura set since 1923, lunch sets from ¥1,500</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAY 30 – GO FEST ── -->
+<div class="day-card" id="may30">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 4</div>
+    <div class="day-title-block">
+      <h3>🎮 Pokémon GO Fest — Odaiba</h3>
+      <div class="day-meta">
+        <span class="day-date">May 30</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">7 AM</span><span class="plan-text">Wake up. Real breakfast. Charge ALL devices including portable battery. Use YOUR OWN eSIM today — don't share pocket WiFi.</span></div>
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text">Depart for Odaiba. Yamanote to Osaki → Rinkai Line to Tokyo Teleport Station (~20 min).</span></div>
+      <div class="plan-line"><span class="plan-time">9 AM</span><span class="plan-text"><strong>GO Fest opens.</strong> Priority: rare spawns → Special Research → habitat rotations. Incense running constantly. Check the habitat schedule in the app.</span></div>
+      <div class="plan-line"><span class="plan-time">12 PM</span><span class="plan-text">Lunch: DiverCity food court OR Aqua City Ramen Street (regional ramen from all over Japan). <a href="https://www.divercity-tokyo.com/en/" target="_blank">DiverCity →</a></span></div>
+      <div class="plan-line"><span class="plan-time">~5 PM</span><span class="plan-text">GO Fest winds down. Dinner in Odaiba area.</span></div>
+      <div class="plan-line"><span class="plan-time">Evening</span><span class="plan-text"><strong>Go-Kart (optional):</strong> City Circuit Tokyo Bay — NO LICENSE NEEDED, EV karts, 2-min from Tokyo Teleport Station. <a href="https://city-circuit.com/" target="_blank">Book →</a></span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 GO Fest Strategy</div>
+        <ul class="dot-list">
+          <li>Check habitat rotation schedule in-app the night before. Know which habitats run when.</li>
+          <li>Agree on a meet-up spot if you split up — Unicorn Gundam plaza is easy landmark</li>
+          <li>Bring a physical portable charger AND a USB-C cable. Your phone will die.</li>
+          <li>The event area is large — wear comfortable shoes, bring water</li>
+          <li>Check Discord/Reddit for raid trains (organized groups hopping from raid to raid)</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Odaiba While You're There</div>
+        <ul class="dot-list">
+          <li><strong>Unicorn Gundam Statue</strong> (DiverCity) — transforms at 11 AM, 1 PM, 3 PM, 5 PM. Night shows every 30 min 7–9:30 PM. FREE.</li>
+          <li><strong>Doraemon Times Square</strong> — outside DiverCity, plays the theme hourly 10 AM–11 PM</li>
+          <li><strong>Small Worlds Tokyo</strong> — world's largest indoor miniature theme park, near Kokusai-tenjijo Station. Worth seeing if you finish early.</li>
+          <li><strong>Tokyo Statue of Liberty + Rainbow Bridge</strong> — on the Odaiba waterfront, great photo backdrop</li>
+          <li><em>Note: teamLab Planets is in TOYOSU (not Odaiba) — different stop on the Yurikamome</em></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Weather is Bad</div>
+        <p>GO Fest is outdoors but continues in rain. Bring a poncho or compact umbrella. The indoor Aqua City and DiverCity malls are covered. You can still catch Pokémon under awnings. The event does NOT cancel for rain.</p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Phone Dies Mid-Day</div>
+        <p>DiverCity 3F has a paid charging station. Aqua City has a coin locker area with USB ports. Keep the portable battery charged from the night before — this is the highest-stakes day for battery.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ teamLab Planets — Toyosu (Evening Add-On)</div>
+        <p>If you have tickets and energy after GO Fest: Yurikamome Line from Odaiba-Kaihinkoen to Shin-Toyosu (8 min). teamLab Planets is a barefoot water walk experience — different from Borderless, more focused, takes ~90 min. Book in advance. Plain/dark clothes for best photos.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Go-Kart Instead of Kart + Dinner</div>
+        <p>City Circuit Tokyo Bay: EV karts, no license needed, 2-min from Tokyo Teleport. Street Kart through Shibuya requires IDP (license) and is more of a spectacle — only do if you got the IDP from AAA.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Odaiba Eats</div>
+        <ul class="dot-list">
+          <li><strong>Aqua City Ramen Street</strong> — basement level, 8+ regional ramen styles. Tsukemen, tonkotsu, miso. Best ramen variety in one spot.</li>
+          <li><strong>DiverCity Food Court</strong> — large, quick, good variety. Don't miss the Ichiran branch here.</li>
+          <li><strong>Decks Tokyo Beach</strong> mall — has a Hong Kong food street theme area on the upper floors, kitschy but fun</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAY 31 ── -->
+<div class="day-card" id="may31">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 5</div>
+    <div class="day-title-block">
+      <h3>🕹️ Akihabara + teamLab Borderless</h3>
+      <div class="day-meta">
+        <span class="day-date">May 31</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">10 AM</span><span class="plan-text">Late start (recovery from GO Fest). Train to Akihabara (Yamanote, ~15 min).</span></div>
+      <div class="plan-line"><span class="plan-time">10:30 AM</span><span class="plan-text">Akihabara route: Walk Chuo-dori for orientation → Yodobashi Akiba (electronics) → Radio Kaikan (10 floors, figures/models/vintage) → <strong>Super Potato</strong> (1-11-2 Sotokanda, 3F) — retro games, playable → Mandarake (3-11-12 Sotokanda, 8 floors of used manga + figures) → GiGO arcades.</span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text"><strong>Maid Cafe</strong> (BOOK IN ADVANCE). @Home Cafe or Maidreamin. ~1 hr session, ¥1,000–1,500 min order. <a href="https://www.cafe-athome.com/" target="_blank">@Home →</a> <a href="https://maidreamin.com/en/" target="_blank">Maidreamin →</a></span></div>
+      <div class="plan-line"><span class="plan-time">3 PM</span><span class="plan-text">Pokémon Center Akihabara. <a href="https://www.pokemon.co.jp/shop/pokecen/akihabara/" target="_blank">→</a></span></div>
+      <div class="plan-line"><span class="plan-time">4:30 PM</span><span class="plan-text">Depart to teamLab Borderless. Hibiya Line to Kamiyacho Station, Exit 5, 4-min walk. <span class="warn">⚠️ TIMED ENTRY — must book</span></span></div>
+      <div class="plan-line"><span class="plan-time">5 PM</span><span class="plan-text"><strong>teamLab Borderless.</strong> ~¥3,800+. Allow 2–2.5 hrs. Wear plain/dark clothes for photos. Location: Azabudai Hills. <a href="https://borderless.teamlab.art/" target="_blank">Tickets →</a></span></div>
+      <div class="plan-line"><span class="plan-time">7:30 PM</span><span class="plan-text">Dinner near teamLab or back to Akihabara for late arcades (open midnight+).</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Arcade Deep Tips</div>
+        <ul class="dot-list">
+          <li>Watch others play UFO catcher before spending — see how the crane is positioned</li>
+          <li>Ask staff "okuroi onegaishimasu" — they can reposition prizes, some will do it</li>
+          <li>Spend max ¥500–1,000 per machine before moving on</li>
+          <li>Try: Taiko no Tatsujin (taiko drums), maimai DX, CHUNITHM — all iconic Japanese rhythm games</li>
+          <li>Purikura photo booths are on upper floors of most Round1 locations — great group souvenir</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 teamLab Borderless Tips</div>
+        <ul class="dot-list">
+          <li>Plain/dark clothes — you want the art to project onto you, not your loud t-shirt</li>
+          <li>No shoes in several rooms — wear slip-on shoes or sandals</li>
+          <li>The lamp forest room and floating flowers room are the best for photos</li>
+          <li>Arrive 10 min before your slot — they're strict</li>
+          <li>Takes 2–2.5 hrs to see everything. Don't rush the first room.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If teamLab is Sold Out</div>
+        <p>teamLab Planets in Toyosu is a different (and slightly smaller) experience — often has more availability. Book same-day on the website. Alternatively, spend the evening in Akihabara doing arcades until midnight — equally memorable.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Koenji (Alternative If Already Done Akihabara)</div>
+        <p>If you've seen Akihabara enough: Koenji is Tokyo's underground music/punk scene. Central Line from Akihabara, 15 min. Browse vintage shops on Etoile Street, grab vinyl at Record BOY, have dinner at an izakaya under the tracks. Completely different energy from Akihabara — more local, less tourist.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Nakano Broadway (Akihabara Alternative)</div>
+        <p>Nakano Broadway is 1 stop west of Shinjuku on the Chuo Line. Less tourists than Akihabara but huge collection of rare figures, vintage games, Mandarake has multiple stores here. Better for rare/vintage finds than current merchandise.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Akihabara / Roppongi Eats</div>
+        <ul class="dot-list">
+          <li><strong>AKB48 Café</strong> — touristy, but you're already in Akihabara, no judgment</li>
+          <li><strong>Gonpachi Nishi-Azabu</strong> — the "Kill Bill" restaurant near Roppongi. Great yakitori. <a href="https://gonpachi.jp/nishi-azabu/" target="_blank">→</a></li>
+          <li><strong>Random Akihabara izakaya under the train tracks</strong> — the stretch of bars underneath the elevated railway between Akihabara and Ochanomizu is excellent late-night. Just walk in.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 1 ── -->
+<div class="day-card" id="jun01">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 6</div>
+    <div class="day-title-block">
+      <h3>🎡 Yomiuriland / PokéPark KANTO</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 1</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text">Depart for Yomiuriland. Keio Line from Shinjuku to Keio-Yomiuriland (direct, ~25 min) → ropeway or bus to gate.</span></div>
+      <div class="plan-line"><span class="plan-time">9:30 AM</span><span class="plan-text"><strong>PokéPark KANTO</strong> at Yomiuriland (confirm international ticket availability — alert was set for Apr 10). Check: <a href="https://www.yomiuriland.com/en/" target="_blank">yomiuriland.com →</a></span></div>
+      <div class="plan-line"><span class="plan-time">2 PM</span><span class="plan-text">Pokémon Center with Tower: Check current location and verify it's still open. Has been at various locations — confirm before going.</span></div>
+      <div class="plan-line"><span class="plan-time">5 PM</span><span class="plan-text">Return to Ikebukuro. Dinner nearby. In bed by 9:30 — Tokyo Disney starts early tomorrow.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Yomiuriland Tips</div>
+        <ul class="dot-list">
+          <li>Confirm PokéPark KANTO is running during your dates — it's a limited collaboration event</li>
+          <li>Buy combo tickets online in advance — park entry + PokéPark pass</li>
+          <li>Weekday = much less crowded than weekend</li>
+          <li>The BanBan coaster is excellent even without the Pokémon overlay</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If PokéPark KANTO isn't Available</div>
+        <p>Make this a <strong>Tokyo recovery day</strong>: slow start, Ikebukuro Pokémon Center Mega Tokyo, Sunshine City (Gashapon + Nanja Town), easy dinner. Save energy for the two Disney days that follow. Or use the day to go to Ueno: National Museum, Ueno Zoo, and walk Yanaka for the old Tokyo experience.</p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If It's Raining</div>
+        <p>Yomiuriland has covered areas but the main attractions are outdoors. Heavy rain = skip it and do the Ikebukuro Gashapon / Nanja Town / Animate day instead — all fully indoor.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Kichijoji (After Yomiuriland)</div>
+        <p>Keio Line goes through Kichijoji — one of Tokyo's most loved neighborhoods. Inokashira Park has rowboats (¥700/hr) and a small zoo. Satou Kichijoji has legendary beef croquettes (queue around the block, worth it). Great evening option before Disney days.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Jun 1 Eats</div>
+        <ul class="dot-list">
+          <li>Eat inside Yomiuriland during the day</li>
+          <li>Return to Ikebukuro for a good carb-loading dinner before Disney: Sushiro conveyor sushi or local ramen</li>
+          <li>Pack snacks and a real water bottle — theme park prices are steep</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 2 – KAMAKURA ── -->
+<div class="day-card" id="jun02">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 7</div>
+    <div class="day-title-block">
+      <h3>🌿 Kamakura Day Trip</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 2</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">8:30 AM</span><span class="plan-text">Depart Ikebukuro. Shonan Shinjuku Line direct to Kamakura (~60 min, ~¥1,000). Get off at <strong>Kita-Kamakura</strong> (one stop early) for the best approach.</span></div>
+      <div class="plan-line"><span class="plan-time">9:30 AM</span><span class="plan-text"><strong>Hase-dera Temple.</strong> Hydrangeas at peak bloom in June — 2,500 plants, 40+ varieties. <span class="warn">⚠️ Arrive before 10 AM — timed entry for the hydrangea path fills by 11 AM</span>. ¥400. <a href="https://www.hasedera.jp/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">11 AM</span><span class="plan-text"><strong>Great Buddha (Kotoku-in).</strong> 13m bronze. ¥300. Go inside for ¥50 extra. <a href="https://www.kotoku-in.jp/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">12 PM</span><span class="plan-text">Lunch on Komachi-dori street. Try <em>shirasudon</em> — whitebait rice bowl, Kamakura's local specialty.</span></div>
+      <div class="plan-line"><span class="plan-time">1:30 PM</span><span class="plan-text"><strong>Zeniarai Benzaiten.</strong> FREE. Hidden cave shrine — wash money for good fortune. Walk through the narrow tunnel. Atmospheric even if you don't believe it.</span></div>
+      <div class="plan-line"><span class="plan-time">3 PM</span><span class="plan-text">Optional: Enoshima Island by Enoden train (20 min). Sea caves, lighthouse, ocean views. Enoshima-Kamakura Freepass: ¥1,640 from Shinjuku (includes unlimited Enoden + round trip).</span></div>
+      <div class="plan-line"><span class="plan-time">5:30 PM</span><span class="plan-text">Return to Ikebukuro. In bed by 10 PM — DisneySea is a 7 AM departure tomorrow.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Kamakura Hidden Gems</div>
+        <ul class="dot-list">
+          <li><strong>Meigetsu-in Temple</strong> (Kita-Kamakura) — famous round window that frames the garden. Peak hydrangea bloom 2nd week of June. ¥500. Much less crowded than Hase-dera.</li>
+          <li><strong>Sasuke Inari Shrine</strong> — a mini Fushimi Inari hidden in the hills. Almost no tourists. Free.</li>
+          <li><strong>Hokokuji Temple</strong> — small bamboo grove (quieter than Arashiyama). ¥400, or ¥1,000 with matcha in the grove. The matcha version is worth it.</li>
+          <li><strong>Daibutsu Hiking Trail</strong> (from Kita-Kamakura) — 3km through wooded hills, leads to Zeniarai Benzaiten and then the Great Buddha. Takes ~2 hrs total.</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Getting Around Kamakura</div>
+        <ul class="dot-list">
+          <li>Enoden tram is the scenic coastal way to get between Kamakura and Enoshima — worth taking even without the freepass</li>
+          <li>Hase-dera area and Great Buddha are 20-min walk from Kamakura Station or 5-min on Enoden</li>
+          <li>The Kita-Kamakura approach: get off one stop early and walk 30 min south through quiet residential/temple streets to Kamakura Station</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 Option B: Harry Potter Studio Tour</div>
+        <p>Warner Bros. Studio Tour Tokyo is 20 min from Ikebukuro on the Seibu Ikebukuro Line (Toshimaen Station). <strong>No walk-in tickets — must book ahead.</strong> Adults ~¥7,000. 4–5 hrs. Good rainy day option since it's indoors. <a href="https://www.wbstudiotour.jp/en/tickets/" target="_blank">Book →</a></p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Hase-dera Hydrangea Queue is Too Long</div>
+        <p>Walk to Meigetsu-in instead — it's in Kita-Kamakura and has the famous round window plus hydrangeas. Far fewer people. Then Sasuke Inari for the quiet woodland shrine feeling. You get the same hydrangea season experience without the 90-min wait.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Enoshima Island</div>
+        <p>20 min from Kamakura on the Enoden tram. An island connected by a bridge with sea caves (Iwaya Caves, ¥500), a lighthouse (¥360), and ocean views. Best for afternoon after you've done Hase-dera and the Great Buddha. The seafood on the island bridge approach is excellent — grilled octopus, raw clams.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Kamakura Eats</div>
+        <ul class="dot-list">
+          <li><strong>Shirasudon</strong> — baby whitebait over rice. Kamakura's local food. Tons of spots on Komachi-dori.</li>
+          <li><strong>Matcha soft serve</strong> — every other shop on Komachi-dori. Get one.</li>
+          <li><strong>Warashibe</strong> — wagashi (traditional Japanese sweets) shop on Komachi-dori. Seasonal treats.</li>
+          <li><strong>Mizuya Chaya</strong> — thatched-roof restaurant near Kasuga Taisha in Nara, but also: look for equivalent rustic spots near Hase-dera with great udon.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 3+4 – DISNEY ── -->
+<div class="day-card" id="jun03">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 8</div>
+    <div class="day-title-block">
+      <h3>🏰 Tokyo DisneySea</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 3</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">6:30 AM</span><span class="plan-text">Wake up. Eat a real breakfast.</span></div>
+      <div class="plan-line"><span class="plan-time">7 AM</span><span class="plan-text">Depart. Yamanote to Maihama Station (~40 min from Shinjuku), then Disney Resort Line monorail to DisneySea (~8 min). <span class="warn">⚠️ Tickets must be pre-purchased — NOT sold at the gate</span> <a href="https://reserve.tokyodisneyresort.jp/en/ticket/" target="_blank">Buy →</a></span></div>
+      <div class="plan-line"><span class="plan-time">8:30 AM</span><span class="plan-text">Arrive at gate. Queue up. Park opens at 9 AM — be at the gate 30 min early.</span></div>
+      <div class="plan-line"><span class="plan-time">9 AM</span><span class="plan-text"><strong>Park opens. Rush to Fantasy Springs FIRST</strong> (newest, most popular area). Use the app to grab Priority Access times immediately. Hit Frozen, Rapunzel, and Peter Pan in that order before queues explode.</span></div>
+      <div class="plan-line"><span class="plan-time">11 AM</span><span class="plan-text">Journey to the Center of the Earth (signature ride) and 20,000 Leagues Under the Sea.</span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text">Lunch inside park. Mediterranean Harbor dining.</span></div>
+      <div class="plan-line"><span class="plan-time">2–7 PM</span><span class="plan-text">Remaining attractions: Indiana Jones, Toy Story Mania, Tower of Terror.</span></div>
+      <div class="plan-line"><span class="plan-time">8 PM</span><span class="plan-text">Evening show if running (check app the night before).</span></div>
+      <div class="plan-line"><span class="plan-time">9 PM</span><span class="plan-text">Return to hotel. In bed by 10:30 — Disneyland tomorrow.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 DisneySea Strategy</div>
+        <ul class="dot-list">
+          <li>Open the Tokyo Disney Resort app before entering — have your account ready</li>
+          <li>Fantasy Springs Priority Access opens when the park does — grab it the MOMENT gates open</li>
+          <li>Journey to the Center of the Earth has no Skip equivalent — go at opening or accept a long wait</li>
+          <li>June is rainy season — bring a compact poncho or umbrella. Many rides are indoors anyway.</li>
+          <li>The park food is legitimately good. Mickey-shaped churros, Mediterranean Harbor seafood, Duffy merchandise everywhere.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Fantasy Springs Wait Times are Insane</div>
+        <p>Do the port-of-call areas in the morning while crowds concentrate in Fantasy Springs. Come back to Fantasy Springs in the evening when it thins. The 3 Fantasy Springs rides are great but the park around them is also excellent — don't let the queue FOMO ruin the day.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ DisneySea Merchandise Notes</div>
+        <p>DisneySea-exclusive merchandise is only sold here — Duffy and Friends (a huge thing in Japan, even if you don't know them), port-specific food items, JDM Disney items not available in the US. Budget ¥3,000–8,000 for merch if you care about it. The shops at the gate close after the park — buy before 8 PM.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 DisneySea Eats</div>
+        <ul class="dot-list">
+          <li><strong>Vulcania</strong> (Lost River Delta) — Portuguese-inspired hot meals, quieter restaurant</li>
+          <li><strong>Miguel's El Dorado Cantina</strong> — nachos and tacos, quick service in American Waterfront</li>
+          <li><strong>Turtle Talk snack cart</strong> — grab gyoza, shrimp cocktails, churros while walking</li>
+          <li><em>Tip: Pack a couple of onigiri or snacks in your bag — park food is ¥800–1,800 per item</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-card" id="jun04">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 9</div>
+    <div class="day-title-block">
+      <h3>🏰 Tokyo Disneyland</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 4</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">7 AM</span><span class="plan-text">Same depart as yesterday. Maihama → Disney Resort Line monorail → Disneyland gate.</span></div>
+      <div class="plan-line"><span class="plan-time">8:30 AM</span><span class="plan-text">At gate. Park opens 9 AM.</span></div>
+      <div class="plan-line"><span class="plan-time">9 AM</span><span class="plan-text"><strong>Rush to Tomorrowland</strong> — Space Mountain and Buzz Lightyear while queues are short. Then Fantasyland: Pooh's Hunny Hunt (TDL exclusive, no US equivalent) and Haunted Mansion.</span></div>
+      <div class="plan-line"><span class="plan-time">11 AM</span><span class="plan-text">Pirates of the Caribbean, Big Thunder Mountain.</span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text">Lunch and rest. Check parade times on the app for afternoon.</span></div>
+      <div class="plan-line"><span class="plan-time">3 PM</span><span class="plan-text">Afternoon parade — worth seeing once, even if you think you're above it. The floats are genuinely impressive.</span></div>
+      <div class="plan-line"><span class="plan-time">5–9 PM</span><span class="plan-text">Evening: ride the shorter-queue attractions, grab any merch, evening electrical parade if running.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Disneyland Tips</div>
+        <ul class="dot-list">
+          <li><strong>Pooh's Hunny Hunt</strong> — trackless ride, no queue skip available. Go immediately at opening or accept 90+ min wait.</li>
+          <li>Tokyo Disneyland is larger than the original Anaheim park — budget your walking accordingly</li>
+          <li>The Japan-exclusive merch is the real reason to buy here. TDL-specific designs not sold elsewhere.</li>
+          <li>June weather: possibly rainy, definitely humid. Light layers + poncho.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Disney Fatigue Hits</div>
+        <p>Two full Disney days back-to-back is a lot. If by day 2 the group is exhausted, it's perfectly fine to do a half-day: morning rush for the top 2 rides, then leave at noon, and spend the afternoon at Kiyosumi-Shirakawa (Tokyo's third wave coffee district, very calm).</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Ikspiari (Disney Shopping Complex)</div>
+        <p>Ikspiari is the outdoor mall attached to Disneyland — you can enter without a park ticket. Good for last-minute Japan Disney merch without the park entry cost. Near Maihama Station.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Disneyland Eats</div>
+        <ul class="dot-list">
+          <li><strong>Blue Bayou</strong> — sit-down inside Pirates of the Caribbean. Book ahead in the app. Atmospheric and the food is decent.</li>
+          <li><strong>Sweetheart Café</strong> (Fantasyland) — great quick-service options</li>
+          <li>Turkey legs — yes they exist in Tokyo Disneyland too. Worth it.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 5 – FUJI ── -->
+<div class="day-card" id="jun05">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 10</div>
+    <div class="day-title-block">
+      <h3>🗻 Travel to Kawaguchiko</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 5</span>
+        <span class="day-tag tag-fuji">Fuji</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">7 AM</span><span class="plan-text">Pack up and check out of Ikebukuro hotel. Check SeeMtFuji app for visibility forecast.</span></div>
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text">Depart for Kawaguchiko. <strong>Option A (recommended):</strong> Highway bus from Shinjuku Expressway Bus Terminal (~2 hrs, ~¥2,000). <a href="https://highway-buses.jp/en/" target="_blank">Book →</a> <strong>Option B (JR Pass):</strong> JR to Otsuki → Fujikyuko Line to Kawaguchiko (~2.5 hrs total).</span></div>
+      <div class="plan-line"><span class="plan-time">10:30 AM</span><span class="plan-text">Arrive. Check in or drop bags at COZY FUJI VIEW STAY (3571-5 Funatsu).</span></div>
+      <div class="plan-line"><span class="plan-time">11 AM</span><span class="plan-text"><strong>Hike decision:</strong> Clear sky = start B-Course hike. Cloudy = lakeside walk + onsen today, hike tomorrow if weather improves.</span></div>
+      <div class="plan-line"><span class="plan-time">PM</span><span class="plan-text">If clear: Hike. Kawaguchi Post Office → Hahanoshirataki Waterfall → Asama Shrine → torii gate with Fuji backdrop. ~4–5 hrs round trip.</span></div>
+      <div class="plan-line"><span class="plan-time">Evening</span><span class="plan-text">Hoto noodles for dinner. Hot spring if energy allows.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Kawaguchiko Tips</div>
+        <ul class="dot-list">
+          <li>June Fuji visibility: ~20% chance of a clear view. Don't plan the trip around seeing it — plan to have a great time regardless.</li>
+          <li>Best photo spot: <strong>Oishi Park</strong> north shore — early morning calm water reflections of Fuji</li>
+          <li><strong>Kachi Kachi Ropeway</strong> — up Mt. Tenjo for lake + Fuji views if visible. Worth it even in clouds for the view down to the lake.</li>
+          <li><strong>Kawaguchiko Herb Festival</strong> — lavender at Oishi Park blooms mid-June through mid-July. You're arriving right at the start. Free to walk through.</li>
+          <li><strong>Shingen-mochi</strong> — kinako + brown sugar syrup sweet. The Yamanashi souvenir. Buy a box at any station shop.</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Tattoo-Friendly Onsen</div>
+        <ul class="dot-list">
+          <li><strong>Ooike Hotel</strong> — fully tattoo-friendly, rotenburo (outdoor bath) with Fuji view. Best choice if Fuji is visible.</li>
+          <li><strong>Hotel Koryu</strong> — also tattoo-friendly, good value day-use rates</li>
+          <li><strong>Rakuyu</strong> — day-use facility with private bathing option available</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Fuji is Completely Socked In</div>
+        <p>The hike is still beautiful in cloud — forested trail, waterfalls, shrine atmosphere. The torii gate photo without Fuji is still a great shot. Do the lakeside walk in the morning (flat, 2 hrs, pretty regardless of weather) and save energy for the Hoto noodle lunch. Onsen in the afternoon. The lake is genuinely beautiful even without the mountain.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Chureito Pagoda</div>
+        <p>15 min by Fujikyuko train to Shimoyoshida Station, then 400 steps up to the pagoda. The most iconic Fuji photo (red pagoda + mountain) was taken here. Only worth doing if Fuji is visible. June visibility odds are low — check SeeMtFuji before committing the climb.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Kubota Itchiku Art Museum</div>
+        <p>On the west shore of the lake. Extraordinary kimono art collection in a building inspired by Gaudi. The architecture alone is worth seeing. ¥1,300. Good if you want to fill an afternoon without hiking.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Kawaguchiko — Must Eat</div>
+        <ul class="dot-list">
+          <li><strong>Hoto Fudo</strong> — the classic. Thick flat udon in miso broth with pumpkin and mountain vegetables, served in an iron pot. Made with Fuji spring water. 400-year tradition. Lines out the door but it moves. <a href="https://www.houtou-fudo.jp/" target="_blank">→</a></li>
+          <li><strong>Funari</strong> — alternative to Hoto Fudo, Fuji view from the restaurant, gold hoto specialty</li>
+          <li><strong>Yoshida Udon</strong> — super firm chewy noodles with shredded cabbage and spicy ginger paste. Completely different from Hoto. Local salaryman lunch.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 6 ── -->
+<div class="day-card" id="jun06">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 11</div>
+    <div class="day-title-block">
+      <h3>🏔️ Fuji Hike Flex / Travel to Kyoto</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 6</span>
+        <span class="day-tag tag-fuji">Fuji</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">6:30 AM</span><span class="plan-text">Check SeeMtFuji app first. Best views before 9 AM.</span></div>
+      <div class="plan-line"><span class="plan-time">7 AM</span><span class="plan-text">If not hiked yet: B-Course from Kawaguchi Post Office. Bring water, snacks, layers, rain jacket. ~4–5 hrs loop. If already hiked: early Oishi Park lakeside walk for Fuji morning reflections.</span></div>
+      <div class="plan-line"><span class="plan-time">12 PM</span><span class="plan-text">Hoto noodles lunch. Pack up and check out.</span></div>
+      <div class="plan-line"><span class="plan-time">2–3 PM</span><span class="plan-text">Depart for Kyoto: Fujikyuko Line to Otsuki → JR Azusa to Shinjuku (~2 hrs) → Shinkansen to Kyoto from Tokyo Station. Total: ~4–5 hrs. OR: direct highway bus from Kawaguchiko Station.</span></div>
+      <div class="plan-line"><span class="plan-time">7–8 PM</span><span class="plan-text">Arrive Kyoto. Check in near Kyoto Station. Light dinner, in bed.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Luggage Forwarding</div>
+        <p>Ask front desk the night before about <em>takkyubin</em> luggage forwarding to your Kyoto hotel. ~¥2,000/bag, arrives next morning. Walk lighter to the train.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Exhausted / Disney Fatigue Carried Over</div>
+        <p>Skip the morning hike and use this as a full transit day. Slow morning, Oishi Park lakeside walk (flat, 45 min), Hoto Fudo lunch, then straight to Kyoto. You've been going hard for 10 days — no shame in a recovery travel day.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Kawaguchiko Herb Festival (Before Leaving)</div>
+        <p>If your timing allows before checkout: the lavender at Oishi Park (north shore) starts blooming in mid-June. Early June may have it just starting. Free to walk through the park. 10-min from the station by rental bicycle (¥300/hr at the station).</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Transition Day</div>
+        <ul class="dot-list">
+          <li>Hoto Fudo or Funari for a final Kawaguchiko lunch — do this before leaving</li>
+          <li>Kyoto arrival: convenience store dinner is fine. You'll be eating very well for the next 4 days.</li>
+          <li>Station ekiben (bento boxes) on the Shinkansen are underrated — buy before boarding at the station shop</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 7 – KYOTO GION ── -->
+<div class="day-card" id="jun07">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 12</div>
+    <div class="day-title-block">
+      <h3>🏮 Kyoto — Gion &amp; Nishiki</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 7</span>
+        <span class="day-tag tag-kyoto">Kyoto</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">9 AM</span><span class="plan-text">Sleep in — recovery day. Hotel breakfast or nearby kissaten (old-school coffee shop).</span></div>
+      <div class="plan-line"><span class="plan-time">10 AM</span><span class="plan-text"><strong>Nishiki Market</strong> — Kyoto's Kitchen. 5-block covered market. Try tamagoyaki, pickled veg, fresh tofu, yatsuhashi (cinnamon mochi), soy milk donuts. <a href="https://www.kyoto-nishiki.or.jp/en/" target="_blank">Map →</a></span></div>
+      <div class="plan-line"><span class="plan-time">11:30 AM</span><span class="plan-text">Walk north to Gion.</span></div>
+      <div class="plan-line"><span class="plan-time">12 PM</span><span class="plan-text">Lunch in Gion. Omen (thick udon, English menu). <a href="https://www.omen.co.jp/" target="_blank">→</a></span></div>
+      <div class="plan-line"><span class="plan-time">1:30 PM</span><span class="plan-text"><strong>Hanamikoji Street.</strong> Main geisha district. Walk slowly. Best maiko spotting: 4:30–6:00 PM.</span></div>
+      <div class="plan-line"><span class="plan-time">2:30 PM</span><span class="plan-text"><strong>Shinbashi-dori + Shirakawa canal.</strong> Stone lanterns + canal reflections. Most photogenic street in Kyoto.</span></div>
+      <div class="plan-line"><span class="plan-time">5:30 PM</span><span class="plan-text">Return to Gion for lantern golden hour (dusk is stunning in June).</span></div>
+      <div class="plan-line"><span class="plan-time">6:30 PM</span><span class="plan-text"><strong>Kawayuka dinner on Pontocho.</strong> Must book ahead. Ask: "Kawayuka no seki desu ka?" Budget ¥3,000–5,000/person. Seat charge ¥500–1,100 extra is worth every yen.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Pontocho / Kawayuka Tips</div>
+        <ul class="dot-list">
+          <li>Kawayuka = seasonal riverside terrace dining over the Kamo River, May–September. ONE OF THE BEST experiences in Japan. Do not skip this.</li>
+          <li>Only ~100 restaurants have kawayuka platforms — always ask "Kawayuka no seki desu ka?" when booking</li>
+          <li>Pontocho Izumoya has 100 riverside seats and lunch from ¥3,190. For dinner, also try Pontocho Robin.</li>
+          <li>Red lanterns with a chidori (plover bird) symbol = authentic Pontocho establishment</li>
+          <li>Pontocho gets 1/5 the traffic of Gion — better chance of seeing actual geiko here after 6 PM</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Kimono Rental (Optional — Book Now)</div>
+        <ul class="dot-list">
+          <li>~¥3,000–5,000 including hair styling</li>
+          <li>Book a few days ahead — popular near Gion</li>
+          <li>Most shops: 9–10 AM open, return by 6 PM</li>
+          <li>Left side over right (right over left = funeral kimono — don't mix this up)</li>
+          <li><a href="https://www.kyoto-kimono-rental.com/" target="_blank">One option →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Kawayuka is Fully Booked</div>
+        <p>Walk along the Kamo River bank at dusk — locals sit on the riverside steps with food and drinks. It's a charming, free alternative. Grab takeout from Nishiki Market and join them. Very Kyoto.</p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Heavy Rain</div>
+        <p>Kawayuka restaurants may close platforms in heavy rain (check day-of). If cancelled, go to an indoor Pontocho restaurant instead — many are atmospheric even without the terrace. Nishiki Market is entirely covered. Gion in rain is moody and beautiful.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Yasaka Shrine (Free, Open 24 hrs)</div>
+        <p>Adjacent to Gion, beautifully lantern-lit at night. The gate at the west end of Shijo-dori is one of Kyoto's great evening photos. Maruyama Park behind it has a huge weeping cherry tree (not in bloom in June but the park is lovely) and local families relaxing.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Ichiwa Mochi (Oldest Restaurant in Japan)</div>
+        <p>Near Imamiya Shrine, north of central Kyoto (15 min by bus or taxi). Ichiwa has been serving aburi mochi (charcoal-grilled rice cakes with sweet miso dipping sauce) for over 1,000 years. ¥700 for a serving. An astonishing piece of living history.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Kyoto Day 1 Eats</div>
+        <ul class="dot-list">
+          <li><strong>Nishiki Market:</strong> Grilled mochi, yatsuhashi, fresh tofu skewers, pickled vegetables, soy milk donuts — snack your way through all 5 blocks</li>
+          <li><strong>Omen</strong> (Gion) — thick Kyoto udon with seasonal veg, very local. Queue possible but fast.</li>
+          <li><strong>Kawayuka dinner</strong> — seasonal kaiseki-style or modern Kyoto cuisine on the riverside platform. Budget accordingly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 8 – FUSHIMI INARI ── -->
+<div class="day-card" id="jun08">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 13</div>
+    <div class="day-title-block">
+      <h3>⛩️ Fushimi Inari + Sake District</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 8</span>
+        <span class="day-tag tag-kyoto">Kyoto</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">5:30 AM</span><span class="plan-text">Wake up. Today requires an early start.</span></div>
+      <div class="plan-line"><span class="plan-time">6 AM</span><span class="plan-text">JR Nara Line from Kyoto Station to Inari Station (~5 min, ¥150). 1-min walk to gate.</span></div>
+      <div class="plan-line"><span class="plan-time">6:15 AM</span><span class="plan-text"><strong>Fushimi Inari Taisha.</strong> FREE, open 24 hrs. Hike to Yotsutsuji (~45 min up) minimum for city views. Full loop ~2–3 hrs. Gates are DONATED — donor name inscribed on back. Kitsune (fox) statues = messengers of Inari, god of rice/harvest/business. <a href="https://inari.jp/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">8:30 AM</span><span class="plan-text">Optional: Tofuku-ji Temple (10-min walk from Fushimi Inari). Zen gardens, four stone garden rooms. ¥600. Quieter than the main sites.</span></div>
+      <div class="plan-line"><span class="plan-time">10:30 AM</span><span class="plan-text">Return to Kyoto Station. Brunch. Then: <strong>Fushimi Sake District</strong> (15 min south by train). White-walled breweries along canals, subtle rice-fermentation aroma in the air.</span></div>
+      <div class="plan-line"><span class="plan-time">11:30 AM</span><span class="plan-text">Gekkeikan Okura Sake Museum — ¥600 including sake sample. <a href="https://www.gekkeikan.co.jp/enjoy/museum/" target="_blank">→</a> Fushimi Sake Village — 18+ breweries represented, tastings available.</span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text">Lunch in Fushimi or back near Kyoto Station.</span></div>
+      <div class="plan-line"><span class="plan-time">PM</span><span class="plan-text">Philosopher's Path (optional). Or afternoon free / tea ceremony.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Fushimi Inari Tips</div>
+        <ul class="dot-list">
+          <li>The lower gates (first 20 min) get all the tourist photos — go to Yotsutsuji (4-way junction) for the best crowded-free perspective</li>
+          <li>June = lush green forest and potential mist. Stunning even if cloudy — maybe especially.</li>
+          <li>Try inari sushi (fried tofu rice balls) at the stalls at the bottom — named after this shrine</li>
+          <li>Hidden bamboo forest at the base of the mountain — a few minutes off the main path, look for the fork just above the main gate complex</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Fushimi Sake District Tips</div>
+        <ul class="dot-list">
+          <li>The water here (fushimizu) is famous — it's why 18+ sake breweries exist in one small district</li>
+          <li>Teradaya Inn is nearby — a famous inn where a historical samurai battle took place (Ryoma Sakamoto stayed here)</li>
+          <li>Canal boat cruise available in Fushimi (seasonal) — very peaceful</li>
+          <li>Best time to visit: morning or early afternoon when the breweries are actively working</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Fushimi Inari is Packed (It Will Be)</div>
+        <p>Go earlier. The key insight: the tourist crowds thin out dramatically above Yotsutsuji. Most people go 20 minutes in, take their photo, and leave. Above that point, you may have the trail nearly to yourself. Push to the summit (233m) — it takes ~90 min total and the upper shrines are practically deserted.</p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Rain</div>
+        <p>Rain + torii gates + mist = incredible atmospheric photos. Bring a compact umbrella. The path is well-maintained. This is actually better in light rain than clear sun — the light is more interesting and tourists thin out.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Philosopher's Path (Afternoon)</div>
+        <p>Canal-side walking path, ~2km, connects Nanzen-ji to Ginkaku-ji (Silver Pavilion). Lined with 500 cherry trees (bare in June but the path is beautiful). Stop at Honen-in — a hidden temple with mossy thatched gate, free, almost no tourists, deeply serene. Then Ginkaku-ji at the northern end.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Tea Ceremony (Book 1–2 Days Ahead)</div>
+        <p>Authentic matcha tea ceremony near Gion. ~30–45 min. Camellia Tea Experience is English-friendly and highly rated. ¥2,000–4,000. <a href="https://camellia-tea.com/" target="_blank">Camellia →</a></p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Fushimi Area Eats</div>
+        <ul class="dot-list">
+          <li><strong>Inari sushi</strong> — from the stalls at the base of Fushimi Inari. Named after the shrine.</li>
+          <li><strong>Sake tasting flight</strong> at Fushimi — the Fushimi Sake Village has 18+ breweries represented, seasonal sake available. ¥300–600 per taste.</li>
+          <li><strong>Yudofu</strong> (hot tofu in dashi broth) is a Kyoto specialty — many restaurants near Nanzeki and Fushimi serve it. Simple, delicious, warming.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 9 ── -->
+<div class="day-card" id="jun09">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 14</div>
+    <div class="day-title-block">
+      <h3>🏯 Kiyomizu-dera &amp; Historic Streets</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 9</span>
+        <span class="day-tag tag-kyoto">Kyoto</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">7:30 AM</span><span class="plan-text">Depart hotel. Bus or 30-min walk to Kiyomizu-dera area. <strong>Must arrive before crowds.</strong></span></div>
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text"><strong>Kiyomizu-dera Temple.</strong> ¥500. Wooden stage juts over the hillside — no nails. Waterfall: drink from ONE spout. Jishu Shrine (love shrine) within grounds. <a href="https://www.kiyomizudera.or.jp/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">9:30 AM</span><span class="plan-text"><strong>Sannenzaka → Ninenzaka.</strong> Stone-paved Edo-period lanes. June = hydrangeas lining the paths. Shops: matcha KitKat gift boxes, ceramics, fans, lacquerware.</span></div>
+      <div class="plan-line"><span class="plan-time">10:30 AM</span><span class="plan-text"><strong>Kodai-ji Temple.</strong> Zen garden, bamboo grove, moss. ~¥600. Very calm. <a href="https://www.kodaiji.com/e_index.html" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">11:30 AM</span><span class="plan-text">Lunch in Higashiyama lanes.</span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text">Afternoon free. Rest if needed — Arashiyama is an early start tomorrow.</span></div>
+      <div class="plan-line"><span class="plan-time">7 PM</span><span class="plan-text">Dinner (kaiseki splurge if booked; otherwise Nishiki Market area).</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Kiyomizu-dera Tips</div>
+        <ul class="dot-list">
+          <li>Waterfall: three spouts — health, love, or wisdom. Legend says drinking from all three = greedy. Pick one.</li>
+          <li>The wooden stage is "supported without nails" — a woodworking system, not magic. Still impressive.</li>
+          <li>Best photo angle: from the Koyasu Pagoda (at the far right of the grounds, looking back at the main hall over the trees)</li>
+          <li>June hydrangeas on Sannenzaka/Ninenzaka are beautiful — lining both sides of the stone lane</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Hidden Gems Nearby</div>
+        <ul class="dot-list">
+          <li><strong>Ninenzaka Starbucks</strong> — 100-year-old machiya townhouse, worth a stop just to see the interior even if you don't want Starbucks</li>
+          <li><strong>Yasaka Shrine</strong> — FREE, open 24 hrs, beautifully lit at dusk. Maruyama Park behind it is where locals relax</li>
+          <li><strong>Genko-an Temple</strong> (north Kyoto, worth a special trip) — has blood-stained battle ceilings AND two windows: round "Window of Enlightenment" and square "Window of Confusion"</li>
+          <li><strong>Honen-in</strong> — mossy thatched gate temple on the Philosopher's Path. Free, almost no tourists, deeply peaceful</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Kiyomizu is Too Crowded</div>
+        <p>Go earlier (gate opens 6 AM in summer). Or skip the main hall queue and do Sannenzaka → Ninenzaka → Kodai-ji first, then return to Kiyomizu in the early afternoon when the tour bus crowd has moved on.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Kaiseki Dinner Splurge (Book Tonight)</div>
+        <p>One kaiseki (multi-course traditional Kyoto dinner) is the definitive food experience here. Budget ¥8,000–15,000/person. Book 1–3 days ahead. Kikunoi (Michelin 2-star) <a href="https://kikunoi.jp/en/" target="_blank">→</a> or Nakamura-ro (1,000-year-old historic establishment in Gion) <a href="https://www.nakamuraro.com/" target="_blank">→</a>. Alternatively, ask hotel concierge.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Otagi Nenbutsu-ji (Arashiyama, Worth a Detour)</div>
+        <p>End of the Saga Toriimoto preserved street in Arashiyama — 1,200 stone Rakan (Buddhist disciple) statues, each with a unique personality. Some are grinning, some look drunk, some are playing instruments. Carved by amateur pilgrims. Blissfully quiet. ¥500. Good if you're doing Arashiyama early to prep for tomorrow.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Higashiyama / Gion Eats</div>
+        <ul class="dot-list">
+          <li><strong>Sannenzaka / Ninenzaka:</strong> Matcha soft serve (everywhere), yatsuhashi mochi (the Kyoto souvenir — try before you buy a box), tofu skin (yuba) skewers</li>
+          <li><strong>Omen</strong> (Gion, on Ninenzaka approach) — thick hand-cut udon, seasonal veg toppings, very Kyoto</li>
+          <li><strong>Kagizen Yoshifusa</strong> — the oldest sweets shop in Gion, kuzukiri (arrowroot jelly dessert) in a tatami-mat room</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 10 – ARASHIYAMA ── -->
+<div class="day-card" id="jun10">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 15</div>
+    <div class="day-title-block">
+      <h3>🎋 Arashiyama</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 10</span>
+        <span class="day-tag tag-kyoto">Kyoto</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">7 AM</span><span class="plan-text">JR Sagano Line from Kyoto Station to Saga-Arashiyama (~15 min, ~¥240).</span></div>
+      <div class="plan-line"><span class="plan-time">7:30 AM</span><span class="plan-text"><strong>Bamboo Grove.</strong> FREE, open 24 hrs. Walk north from the main gate. Before 8 AM it's empty and genuinely magical.</span></div>
+      <div class="plan-line"><span class="plan-time">8:15 AM</span><span class="plan-text"><strong>Tenryu-ji Temple garden.</strong> One of Kyoto's finest zen gardens. ¥500. <a href="https://www.tenryuji.com/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">9:30 AM</span><span class="plan-text"><strong>Iwatayama Monkey Park.</strong> 20-min hike from river. ¥550. Humans in cage, monkeys outside — uniquely backwards. <a href="https://www.arashiyama-monkeypark.jp/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">11 AM</span><span class="plan-text">Katsura River walk. Rental rowboats (~¥1,500/hr) if you want.</span></div>
+      <div class="plan-line"><span class="plan-time">12 PM</span><span class="plan-text">Lunch in Arashiyama. % Arabica for coffee after.</span></div>
+      <div class="plan-line"><span class="plan-time">1:30 PM</span><span class="plan-text"><strong>Sagano Scenic Railway.</strong> <span class="warn">⚠️ Book in advance (alert set May 9)</span>. 7.3km gorge train through river canyon. ~25 min. <a href="https://www.sagano-kanko.co.jp/en/" target="_blank">Book →</a></span></div>
+      <div class="plan-line"><span class="plan-time">3 PM</span><span class="plan-text">Return to Kyoto. Arrange luggage forwarding to Osaka hotel tonight. In bed early — Nara + Osaka travel day tomorrow.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Arashiyama Hidden Spots</div>
+        <ul class="dot-list">
+          <li><strong>Jojakko-ji Temple</strong> — stone steps through moss and maple trees, nearly no tourists, ¥500. Walk 10 min from the bamboo grove into the hills.</li>
+          <li><strong>Nison-in Temple</strong> — long maple-tree lined approach (Momijino-baba), peaceful, ¥500</li>
+          <li><strong>Okochi Sanso Villa</strong> — samurai film actor's estate, panoramic Kyoto views, ¥1,000 including tea and sweets in the tea house. Worth it.</li>
+          <li><strong>Torokko Romantic Train Station</strong> — the start of the Sagano Scenic Railway, great atmospheric photos even if you don't ride</li>
+          <li><strong>Otagi Nenbutsu-ji</strong> — 1,200 quirky stone statues at the end of Saga Toriimoto preserved street. See yesterday's tips.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Sagano Railway is Sold Out</div>
+        <p>The Hozugawa River Boat Ride is a 2-hr journey by traditional wooden boat down the gorge from Kameoka to Arashiyama. ~¥4,100. More immersive than the train but longer and one-direction. Very seasonal — check availability. Alternatively, do the Jojakko-ji + Nison-in hidden temple walk instead and skip the transport entirely.</p>
+      </div>
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Bamboo Grove is Already Packed</div>
+        <p>Walk 10 min further to Jojakko-ji and then continue up the mountain path — there's a secondary bamboo section that almost no tourists know about. More atmospheric than the main path.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Philosopher's Path Full Walk (If You Skipped It)</div>
+        <p>From Nanzen-ji to Ginkaku-ji, ~2km. Stop at Honen-in (mossy gate temple, free, serene). End at Ginkaku-ji (Silver Pavilion, ¥500). The full path takes 1.5 hrs at a slow pace. Worth doing on the way back from Arashiyama if you have afternoon energy.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Arashiyama Eats</div>
+        <ul class="dot-list">
+          <li><strong>Yoshimura</strong> — soba with a mountain/river view. Great atmosphere. <a href="https://www.yoshimura-gr.com/" target="_blank">→</a></li>
+          <li><strong>% Arabica Kyoto</strong> — the most instagrammed coffee in Japan, riverside location. Worth the queue for the setting even if you're not a coffee person. <a href="https://arabica.coffee/en/" target="_blank">→</a></li>
+          <li><strong>Sagano-yu</strong> — tofu and yuba (soy skin) kaiseki in a renovated bathhouse. Atmospheric and reasonable.</li>
+          <li>Station ekiben for the Shinkansen tomorrow: buy before the Sagano train ride and eat on the way</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 11 – NARA → OSAKA ── -->
+<div class="day-card" id="jun11">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 16</div>
+    <div class="day-title-block">
+      <h3>🦌 Nara Day Trip → Osaka</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 11</span>
+        <span class="day-tag tag-nara">Nara</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">7:30 AM</span><span class="plan-text">Check out of Kyoto hotel. Luggage forwarded or bring to station lockers.</span></div>
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text">Kintetsu Rapid Express from Kyoto Station to <strong>Kintetsu-Nara Station</strong> (~35 min, ~¥720). <em>Important: Kintetsu is closer to the park than JR Nara Station.</em></span></div>
+      <div class="plan-line"><span class="plan-time">8:45 AM</span><span class="plan-text">Buy deer crackers (shika senbei, ¥200) before the deer see you. Hold them low and hidden.</span></div>
+      <div class="plan-line"><span class="plan-time">9 AM</span><span class="plan-text"><strong>Kasuga Taisha Shrine.</strong> 3,000 stone lanterns lining the forested approach. Free entry; inner sanctuary ¥500. Go early for lantern path without crowds. Deer hide between the lanterns — best photo spot.</span></div>
+      <div class="plan-line"><span class="plan-time">10 AM</span><span class="plan-text"><strong>Nara Deer Park.</strong> 1,200+ wild deer roam freely. Deer will bow if you bow first. Keep food bags closed — they will steal things.</span></div>
+      <div class="plan-line"><span class="plan-time">10:30 AM</span><span class="plan-text"><strong>Nandaimon Gate</strong> (largest wooden gate in Japan, 25m) → <strong>Todai-ji.</strong> ¥600. World's largest bronze Buddha. Look for the pillar with the hole at the base — same size as the Buddha's nostril. Crawl through for enlightenment. <a href="https://www.todaiji.or.jp/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">12 PM</span><span class="plan-text"><strong>Nigatsu-do</strong> (sub-temple behind Todai-ji, 10-min walk). FREE. Sweeping panoramic view over the Nara basin from the balcony. Completely underrated. Most tourists skip it.</span></div>
+      <div class="plan-line"><span class="plan-time">12:30 PM</span><span class="plan-text">Lunch in Nara. Return to Kyoto Station to pick up bags, then: JR Rapid to Osaka (~30 min, ~¥560).</span></div>
+      <div class="plan-line"><span class="plan-time">3 PM</span><span class="plan-text">Check in near Namba or Shinsaibashi.</span></div>
+      <div class="plan-line"><span class="plan-time">6:30 PM</span><span class="plan-text">Dotonbori evening. Glico sign photo, takoyaki from Wanaka or Kukuru, walk the canal.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Deer Tips</div>
+        <ul class="dot-list">
+          <li>The deer near Todai-ji are the pushiest — everyone feeds them there. For calmer interactions, feed them away from the temple.</li>
+          <li>Bow slowly to a deer — they'll bow back. Then give them the cracker.</li>
+          <li>If surrounded, show empty hands spread wide — the deer understand this means "no more food"</li>
+          <li>Bags, maps, and loose clothing get grabbed — keep food sealed and bags zipped</li>
+          <li>Harming the deer was once punishable by death. They know it. Act accordingly.</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Nara Hidden Gems</div>
+        <ul class="dot-list">
+          <li><strong>Nigatsu-do</strong> — 10-min steep climb behind Todai-ji, FREE, panoramic view over Nara. Practically deserted compared to the main hall. DO NOT SKIP.</li>
+          <li><strong>Yoshikien Garden</strong> — 3 gardens (pond, moss, tea ceremony). FREE for foreign visitors. Just east of Todai-ji. Beautiful and completely uncrowded.</li>
+          <li><strong>Kasuga Taisha lantern forest approach</strong> — walk this early before the tour buses arrive. Stone lanterns on both sides of the wooded path are ethereal in morning light.</li>
+          <li><strong>Tamukeyama Hachiman-gu Shrine</strong> — tiny shrine behind Todai-ji near Nigatsu-do. Ema with peace doves. Almost no one visits.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Exhausted from Kyoto and Skipping Nara</div>
+        <p>Sleep in at Kyoto hotel until 10 AM. Slow Nishiki Market breakfast. Travel directly to Osaka by noon. Use the afternoon to check in, explore Dotonbori, and recover. Nara is great but if you're running on fumes after 4 Kyoto days, a slow Osaka arrival is the better call.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Naramachi (Nara's Merchant Quarter)</div>
+        <p>South of Kofuku-ji, a quiet residential district of machiya townhouses converted into cafes, craft shops, and galleries. 1–2 hrs of wandering, almost no tourists. Good contrast to the temple/deer intensity. Walk south from Nara Station.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Kofuku-ji (On the Way)</div>
+        <p>Japan's second-tallest wooden pagoda, 4-min walk from Kintetsu-Nara Station. Free grounds, ¥700 for the National Treasure Hall. Quick stop before heading to Kasuga Taisha.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Nara Eats</div>
+        <ul class="dot-list">
+          <li><strong>Shirasudon</strong> — whitebait rice bowl (Kamakura and coastal areas), not specifically Nara but some restaurants carry it</li>
+          <li><strong>Mizuya Chaya</strong> — thatched-roof restaurant near Kasuga Taisha. Udon, fast queue, outdoor forest seating. Deer may steal your lunch.</li>
+          <li><strong>Kakinoha-zushi</strong> — Nara's specialty: persimmon leaf-wrapped mackerel/salmon sushi. Distinct flavor, pressed style. Try at Hiraso near the station.</li>
+          <li><strong>Matcha soft serve</strong> — every other shop near Todai-ji. The Nara versions are good.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 12 – HIMEJI + OSAKA ── -->
+<div class="day-card" id="jun12">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 17</div>
+    <div class="day-title-block">
+      <h3>🏯 Himeji Castle + Osaka Dotonbori</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 12</span>
+        <span class="day-tag tag-osaka">Osaka</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text">JR Special Rapid from Osaka Station toward Himeji (~55 min, ~¥1,520 or JR Pass).</span></div>
+      <div class="plan-line"><span class="plan-time">9:15 AM</span><span class="plan-text"><strong>Himeji Castle.</strong> ¥1,000. Japan's most complete original castle. 15-min walk from station — you can see it the entire way. Allow 2 hrs including interior climb. <a href="https://www.himejicastle.jp/en/" target="_blank">Site →</a> Kokoen Garden adjacent (~¥310).</span></div>
+      <div class="plan-line"><span class="plan-time">12 PM</span><span class="plan-text">Lunch in Himeji. <em>Oshiro-yaki</em> (castle-shaped pancakes) or station ramen.</span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text">JR back to Osaka.</span></div>
+      <div class="plan-line"><span class="plan-time">2:15 PM</span><span class="plan-text"><strong>Osaka Castle.</strong> ¥600 for museum. Park grounds are FREE and huge — great for a walk. <a href="https://www.osakacastle.net/english/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">4 PM</span><span class="plan-text">Rest at hotel.</span></div>
+      <div class="plan-line"><span class="plan-time">6 PM</span><span class="plan-text">Dotonbori evening walk. Glico sign → Hozenji Yokocho alley → canal → Shinsaibashi arcade.</span></div>
+      <div class="plan-line"><span class="plan-time">8 PM</span><span class="plan-text"><strong>Ura Namba</strong> bars — 3 blocks south of the Dotonbori canal. Where locals actually drink. Standing bars, cheap beer, zero English menus.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Osaka Food Rules</div>
+        <ul class="dot-list">
+          <li>Takoyaki: Wanaka (soft, round style) vs Kukuru (grilled crust, different texture). Try both.</li>
+          <li>Kushikatsu: <strong>NEVER DOUBLE-DIP</strong> your skewer in the communal sauce. Use the cabbage to ladle sauce onto your skewer.</li>
+          <li>Okonomiyaki: Osaka-style = mixed together; Hiroshima-style = layered. You'll see both here.</li>
+          <li>Kuidaore (eat until you drop) is the city philosophy. Take it seriously.</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Osaka Hidden Gems</div>
+        <ul class="dot-list">
+          <li><strong>Kuromon Ichiba Market</strong> — Osaka's biggest food market, 600m, 200+ shops. Grilled scallops, sea urchin, wagyu skewers. Best in the morning (open ~9 AM–5 PM).</li>
+          <li><strong>Ura Namba</strong> — "Backstreet Namba," 3 blocks south of Dotonbori canal. Tiny standing bars, where locals go. Zero tourists, great vibe.</li>
+          <li><strong>Hozenji Yokocho</strong> — tiny moss-covered alley hidden just off Dotonbori. A small shrine with a moss-covered Buddhist statue — locals pour water on it for luck.</li>
+          <li><strong>Yaekatsu</strong> (Shinsekai kushikatsu) — more authentic than Daruma chain, fewer tourists, same quality</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Himeji is Too Far</div>
+        <p>Skip Himeji and make this a full Osaka day: Kuromon Market in the morning, Osaka Castle in the afternoon, Dotonbori at night. Himeji is 55 min each way — if the group is tired, the time saved is worth it. Osaka Castle park alone is a lovely half-day.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Fukushima / Tenma (Bar Alternatives)</div>
+        <p><strong>Fukushima</strong> neighborhood (north of Osaka Station) has Michelin restaurants, bars under elevated train tracks, and Dojima River views. More upscale local vibe. <strong>Tenma</strong> has Ura-Tenma — back-alley pubs packed with locals 6–9 PM on weeknights. More intense than Ura Namba but more authentic.</p>
+      </div>
+      <div class="branch-block">
+        <div class="tip-label">➕ Nakazakacho (Osaka's Retro Quarter)</div>
+        <p>Between Umeda and Tenjinbashi, this is Osaka's version of Yanaka — retro showa-era buildings converted into small cafes, vintage shops, and galleries. Walk here on the way back from Osaka Castle. Very unlike the rest of Osaka.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Osaka Night Eating</div>
+        <ul class="dot-list">
+          <li><strong>Takoyaki from Wanaka</strong> — softer, rounder style. Queue is the queue. Worth it.</li>
+          <li><strong>Kushikatsu Daruma</strong> (Dotonbori branch) — deep-fried skewers, 15–20 varieties. ¥2,000/person. No double-dipping.</li>
+          <li><strong>Ura Namba standing bar</strong> — order beer (nama biru) and point at the snacks. Budget ¥1,500–2,000/person for a few drinks and bites.</li>
+          <li><strong>Ganso Aji no Otokono</strong> — standing-room kushikatsu bar near Dotonbori, all Japanese menu, point and eat, very local. ¥1,000–2,000.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 13 – USJ ── -->
+<div class="day-card" id="jun13">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 18</div>
+    <div class="day-title-block">
+      <h3>🎮 Universal Studios Japan</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 13</span>
+        <span class="day-tag tag-osaka">Osaka</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">6:30 AM</span><span class="plan-text">Wake up. Eat real breakfast before leaving.</span></div>
+      <div class="plan-line"><span class="plan-time">7 AM</span><span class="plan-text">JR Yumesaki Line to Universal City Station from Osaka Station (~5 min, ~¥180).</span></div>
+      <div class="plan-line"><span class="plan-time">7:30 AM</span><span class="plan-text">Arrive at gate. Queue early — park opens before the posted time sometimes.</span></div>
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text"><strong>RUSH to Super Nintendo World FIRST.</strong> Open USJ app → grab Nintendo World timed entry ticket immediately upon entering the park. This sells out fast.</span></div>
+      <div class="plan-line"><span class="plan-time">8–10 AM</span><span class="plan-text">Nintendo World: Mario Kart: Bowser's Challenge → Yoshi's Adventure → Donkey Kong Country (newest). Power-Up Bands (~¥3,300) for interactive challenges — optional but fun.</span></div>
+      <div class="plan-line"><span class="plan-time">10:30 AM</span><span class="plan-text"><strong>Wizarding World of Harry Potter.</strong> Forbidden Journey → Flight of the Hippogriff → Butterbeer (~¥990). Ollivanders wand show.</span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text">Lunch in the park or Universal City Walk (outside, cheaper).</span></div>
+      <div class="plan-line"><span class="plan-time">2–8 PM</span><span class="plan-text">Minion Park, Hollywood area, remaining rides. Check parade times in app. No Limit parade if running.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 USJ Strategy</div>
+        <ul class="dot-list">
+          <li>Express Pass for Nintendo World sells out in HOURS after release — buy the moment the Apr 13 alert fires</li>
+          <li>Without Express Pass: run directly to Nintendo World at opening. No other stop. This is the ONLY way.</li>
+          <li>The Mario Kart ride uses AR technology + physical car movement — genuinely impressive, worth the wait</li>
+          <li>Timed entry for Nintendo World resets throughout the day — check the app every hour for newly released slots</li>
+          <li>Power-Up Bands: interactive stamp challenges throughout the area. Great if you're into it, skippable if not.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Nintendo World Timed Entry is Full</div>
+        <p>Do Harry Potter World first — Forbidden Journey is excellent and lines are shorter in the morning. Then check the app repeatedly for Nintendo World slots opening up (they do throughout the day as people's entry windows expire). Most people who go early in the day get in eventually.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Universal City Walk (Skip If Full Day at Park)</div>
+        <p>The outdoor mall outside the park entrance has restaurants, shops, and a Pokémon Center. Good for breakfast before the park opens or a cheaper dinner after. You don't need a park ticket to shop here.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 USJ Food</div>
+        <ul class="dot-list">
+          <li><strong>Butterbeer</strong> — USJ version is cold + cream topping. ¥990. Get it.</li>
+          <li><strong>Shroom Shake and Mario-themed food</strong> in Nintendo World — the developers put real creative effort into the food here. Worth trying.</li>
+          <li><strong>Universal City Walk</strong> (outside, no ticket) — cheaper food, good option for lunch if you exit and re-enter (check if allowed with your ticket type)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 14 ── -->
+<div class="day-card" id="jun14">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 19</div>
+    <div class="day-title-block">
+      <h3>🍢 Shinsekai → Hiroshima</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 14</span>
+        <span class="day-tag tag-hiroshima">Hiroshima</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">10 AM</span><span class="plan-text">Shinsekai. Retro 1950s district. Tsutenkaku Tower (exterior is the shot). Jan Jan Yokocho retro arcade alley. Imamiya Ebisu Shrine nearby (free, very local).</span></div>
+      <div class="plan-line"><span class="plan-time">12 PM</span><span class="plan-text">Lunch: Kushikatsu at the <strong>Daruma original Shinsekai location</strong>. ~15–20 varieties, ¥2,000–2,500. <a href="https://kushikatsu-daruma.com/" target="_blank">→</a> Or: Yaekatsu (fewer tourists, same quality).</span></div>
+      <div class="plan-line"><span class="plan-time">1:30 PM</span><span class="plan-text">Check out of Osaka hotel. Store or bring luggage to Shin-Osaka Station.</span></div>
+      <div class="plan-line"><span class="plan-time">2:30 PM</span><span class="plan-text">Shinkansen Shin-Osaka → Hiroshima (~50 min, Sakura or Nozomi). ~¥8,000+ or JR Pass. Book seat reservation.</span></div>
+      <div class="plan-line"><span class="plan-time">3:30 PM</span><span class="plan-text">Arrive Hiroshima. Check in at hotel.</span></div>
+      <div class="plan-line"><span class="plan-time">5 PM</span><span class="plan-text"><strong>Okonomimura — DO NOT MISS.</strong> 6-floor building, 25+ okonomiyaki stalls. Hiroshima-style = layered. This is not the same dish as Osaka okonomiyaki.</span></div>
+      <div class="plan-line"><span class="plan-time">8 PM</span><span class="plan-text">Hondori shopping arcade walk (evening, low-key). IN BED by 9:30. Tomorrow is the hardest day of the trip — it starts at 6:30 AM.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Hiroshima Food Notes</div>
+        <ul class="dot-list">
+          <li><strong>Hiroshima okonomiyaki</strong> = layered pancake (batter, cabbage, meat, noodles, egg, sauce). NOT mixed like Osaka. Totally different dish. Try BOTH cities' versions to compare.</li>
+          <li><strong>Oysters</strong> — Hiroshima produces 60% of Japan's oysters. Eat them in the city (cheap + fresh), not Miyajima (same product, tourist markup).</li>
+          <li><strong>Momiji manju</strong> — maple leaf-shaped sweet cakes filled with red bean or cream. The Hiroshima souvenir. Buy a box.</li>
+          <li>Shinsekai tip: go during the day — the area is less recommended at night without a guide</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Shinsekai Isn't Appealing</div>
+        <p>Do a final <strong>Kuromon Ichiba Market</strong> morning run instead (wagyu, sea urchin, grilled scallops), then head straight to Hiroshima. Or: Nakazakacho retro neighborhood walk if you skipped it earlier. Either way, don't skip Okonomimura in Hiroshima tonight.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Shin-Sekai Hidden Details</div>
+        <p>The <strong>Billiken statue</strong> inside Tsutenkaku Tower — rub the soles of his feet for good luck (there's a specific way to do it). The tower is worth going up to if you want the retro aerial view of the neighborhood (¥900). Jan Jan Yokocho underneath is narrow and atmospheric even just to walk.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Hiroshima Arrival Eats</div>
+        <ul class="dot-list">
+          <li><strong>Okonomimura</strong> — the whole point of tonight. Pick a stall, watch them build your okonomiyaki in layers right in front of you, eat at the teppan counter. ¥1,200–1,800.</li>
+          <li><strong>Oyster izakaya near the station</strong> — raw, grilled, fried. Hiroshima oysters are famous for good reason. Order the mushi (steamed) and yaki (grilled) versions.</li>
+          <li>Buy momiji manju from a shop near the station for tomorrow's snacks and to bring home</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 15 – HIROSHIMA + MIYAJIMA ── -->
+<div class="day-card" id="jun15">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 20</div>
+    <div class="day-title-block">
+      <h3>☮️ Peace Park + Miyajima → Tokyo</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 15</span>
+        <span class="day-tag tag-hiroshima">Hiroshima</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">Night before</span><span class="plan-text"><span class="warn">⚠️ CHECK TIDE TIMES</span> at <a href="https://gethiroshima.com/miyajima-tide-times" target="_blank">gethiroshima.com/miyajima-tide-times →</a> High tide (250cm+) = floating torii. Low tide = walk to base on the seabed.</span></div>
+      <div class="plan-line"><span class="plan-time">6:30 AM</span><span class="plan-text">Wake up. Pack EVERYTHING — won't return to this hotel. Eat real breakfast.</span></div>
+      <div class="plan-line"><span class="plan-time">7:15 AM</span><span class="plan-text">Check out. Luggage → Hiroshima Station coin lockers (~¥500–700).</span></div>
+      <div class="plan-line"><span class="plan-time">8 AM</span><span class="plan-text"><strong>Peace Memorial Park.</strong> Tram Line 2 from Hiroshima Station → Genbaku Dome-mae. Atomic Bomb Dome (FREE) → Cenotaph → Children's Peace Monument → Peace Bell. Allow 1 hr. <a href="https://www.pcf.city.hiroshima.jp/en/" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">9:15 AM</span><span class="plan-text">Motoyasu Pier (5-min walk from Peace Park). Aquanet ferry to Miyajima (~45 min, ~¥2,200). Scenic — you see the torii from the water. <a href="https://aqua-net-h.co.jp/en/" target="_blank">Book →</a> <em>JR Pass alternative: train 30 min + JR Ferry 10 min from Miyajimaguchi Station.</em></span></div>
+      <div class="plan-line"><span class="plan-time">10:15 AM</span><span class="plan-text"><strong>Itsukushima Shrine.</strong> ¥300. Torii gate. Wild deer roam — different from Nara deer, more skittish. <a href="https://www.itsukushimajinja.jp/en/index.html" target="_blank">Site →</a></span></div>
+      <div class="plan-line"><span class="plan-time">11:30 AM</span><span class="plan-text">Omotesando street. Grilled oysters, momiji manju, maple soft serve. Lunch here.</span></div>
+      <div class="plan-line"><span class="plan-time">1:30 PM</span><span class="plan-text"><strong>HARD DEPARTURE.</strong> Ferry back → train to Hiroshima Station.</span></div>
+      <div class="plan-line"><span class="plan-time">2:30 PM</span><span class="plan-text">Retrieve luggage from coin locker.</span></div>
+      <div class="plan-line"><span class="plan-time">3 PM</span><span class="plan-text">Shinkansen Hiroshima → Tokyo. ~3h50m (Nozomi) or ~4h20m (Hikari, JR Pass). <span class="warn">⚠️ Book seat reservation in advance</span>. ~¥19,000 without JR Pass.</span></div>
+      <div class="plan-line"><span class="plan-time">7–8 PM</span><span class="plan-text">Arrive Tokyo. Yamanote to Ikebukuro. Check in: 1-chōme-16-33 Ikebukuro Reimi Mondo. Konbini dinner. Long day.</span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Peace Park Tips</div>
+        <ul class="dot-list">
+          <li>Stand on the <strong>A-Bomb Dome Bridge</strong> across the river from the Dome — best angle for photos</li>
+          <li>The park is free and takes ~1 hr without the museum. Skip the museum unless it's a priority — it adds 1.5+ hrs and tomorrow is departure day</li>
+          <li>Paper cranes at the Children's Monument — you can fold a crane and add it to the pile</li>
+          <li>The Peace Bell: ring it if the queue is short. Take a moment.</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Miyajima Tips</div>
+        <ul class="dot-list">
+          <li><strong>Daisho-in Temple</strong> — 100m from the ferry, interesting statuary (spinning prayer wheels, hundreds of lanterns), much less crowded than the shrine. Very much worth 30 min.</li>
+          <li><strong>Momijidani Park</strong> — maple grove behind the village, deer wander through. Beautiful even in June.</li>
+          <li><em>Note: The 5-story pagoda is under scaffolding renovation through Dec 2026 — you'll see scaffolding in photos</em></li>
+          <li>Mt. Misen ropeway: only if you're significantly ahead of the 1:30 PM departure. Don't miss the ferry for the mountain view.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Ferry is Cancelled (Storm)</div>
+        <p>JR Ferry from Miyajimaguchi is the backup (30 min train from Hiroshima Station then 10 min ferry). If ALL ferries are cancelled (very rare), skip Miyajima and use the extra time at Peace Park or visiting the Hiroshima Castle instead (5-min from Peace Park).</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ If You Have Extra Time on Miyajima</div>
+        <p>Mt. Misen ropeway (~¥2,000 return) gives Seto Inland Sea views over hundreds of islands. Only attempt if you're at the ferry pier by 12:30 PM at the absolute latest for the 1:30 PM departure. Don't cut it close on this day.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Miyajima Eats</div>
+        <ul class="dot-list">
+          <li><strong>Grilled oysters on Omotesando</strong> — Hiroshima oysters, grilled right there. ¥400–600 each. Best in Japan for this.</li>
+          <li><strong>Momiji manju</strong> — the island shops make fresh ones. Try the cream cheese filling version (newer) vs classic red bean</li>
+          <li><strong>Anago (sea eel)</strong> — Miyajima's local specialty beyond oysters. Anago meshi (eel rice box) from Ueno restaurant is famous (queue early)</li>
+          <li>Station ekiben on the Shinkansen back — buy before boarding. Last real meal before Tokyo arrival.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── JUN 16 – FINAL DAY ── -->
+<div class="day-card" id="jun16">
+  <div class="day-header" onclick="toggleDay(this)">
+    <div class="day-num">DAY 21</div>
+    <div class="day-title-block">
+      <h3>✨ Final Day — Tokyo &amp; Departure</h3>
+      <div class="day-meta">
+        <span class="day-date">Jun 16</span>
+        <span class="day-tag tag-tokyo">Tokyo</span>
+      </div>
+    </div>
+    <div class="day-chevron">▸</div>
+  </div>
+  <div class="day-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'plan')">📅 Plan</button>
+      <button class="tab-btn" onclick="switchTab(this,'tips')">💡 Tips</button>
+      <button class="tab-btn" onclick="switchTab(this,'backup')">🔄 Backup</button>
+      <button class="tab-btn" onclick="switchTab(this,'branch')">➕ Branch Out</button>
+      <button class="tab-btn" onclick="switchTab(this,'eat')">🍜 Eat</button>
+    </div>
+    <div class="tab-pane active" data-tab="plan">
+      <div class="plan-line"><span class="plan-time">9 AM</span><span class="plan-text">Sleep in. Hotel breakfast or nearby kissaten.</span></div>
+      <div class="plan-line"><span class="plan-time">10 AM</span><span class="plan-text">Final Ikebukuro shopping sweep. <strong>Stay local, do NOT go to Shibuya or Shinjuku today.</strong></span></div>
+      <div class="plan-line"><span class="plan-time">10 AM</span><span class="plan-text"><strong>Pokémon Center Mega Tokyo</strong> (Sunshine City 2F). Final sweep. <a href="https://www.pokemon.co.jp/shop/pokecen/tokyo/" target="_blank">→</a> Gashapon Department Store. Animate Ikebukuro. Don Quijote (cheap snack souvenirs).</span></div>
+      <div class="plan-line"><span class="plan-time">11:30 AM</span><span class="plan-text"><strong>Capybara Cafe.</strong> PRE-BOOKED only — fixed slots, no walk-ins. 11:30–12:30 PM slot target. Search: "capybara cafe tokyo book"</span></div>
+      <div class="plan-line"><span class="plan-time">1 PM</span><span class="plan-text">Quick lunch in Ikebukuro.</span></div>
+      <div class="plan-line"><span class="plan-time">1:45 PM</span><span class="plan-text"><span class="warn">⚠️ HARD DEPARTURE — HEAD TO AIRPORT</span> Narita Express: Yamanote to Shinjuku → N'EX to Narita (~80 min, ~¥3,070). <strong>Depart by 1:45 PM for 6 PM flight.</strong> <a href="https://www.jreast.co.jp/e/nex/" target="_blank">Book →</a></span></div>
+      <div class="plan-line"><span class="plan-time">3:15 PM</span><span class="plan-text">Arrive Narita. Check bags. Security + immigration allow 30 min.</span></div>
+      <div class="plan-line"><span class="plan-time">4 PM</span><span class="plan-text">Airside. Duty-free shopping. Final Japanese airport meal.</span></div>
+      <div class="plan-line"><span class="plan-time">5:30 PM</span><span class="plan-text">Gate. Board.</span></div>
+      <div class="plan-line"><span class="plan-time">6 PM</span><span class="plan-text"><strong>🛫 DEPARTURE.</strong></span></div>
+    </div>
+    <div class="tab-pane" data-tab="tips">
+      <div class="tip-block">
+        <div class="tip-label">💡 Airport Duty-Free (Better Than City)</div>
+        <ul class="dot-list">
+          <li><strong>Japanese whisky</strong> — Suntory Hibiki, Nikka From the Barrel, Yamazaki 12yr. Tax-free at airport.</li>
+          <li><strong>Matcha KitKat variety boxes</strong> — often cheaper than city stores at Narita</li>
+          <li><strong>Shiroi Koibito cookies</strong> (Hokkaido specialty) — available at most major airports</li>
+          <li>Don't pack fragile items in checked bags — bags get thrown. Duty-free booze gets a protective bag from the shop, put it in carry-on.</li>
+        </ul>
+      </div>
+      <div class="tip-block">
+        <div class="tip-label">💡 Packing Out Tips</div>
+        <ul class="dot-list">
+          <li>Return pocket WiFi at the Narita arrivals counter (or airport post office)</li>
+          <li>Spend remaining yen at the airport — coin machines, vending machines, food</li>
+          <li>Keep ¥3,500 in cash for the N'EX ticket if you didn't book ahead</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="backup">
+      <div class="backup-block">
+        <div class="tip-label">🔄 If Running Behind Schedule</div>
+        <p>Skip capybara cafe (you can get a refund if cancelled 24+ hrs ahead — check the booking site). Get to the airport by 3 PM minimum. International departures at Narita need 2.5–3 hrs minimum. Do not gamble with this. Japan souvenirs can always be bought at the airport.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="branch">
+      <div class="branch-block">
+        <div class="tip-label">➕ Kiyosumi-Shirakawa (If You Want One Last Neighborhood)</div>
+        <p>Tokyo's third-wave coffee district. A quiet residential area along the Sumida River where the city's best independent coffee roasters cluster. Good for a slow morning walk. 20 min from Ikebukuro by subway. Completely the opposite energy of everything else on this trip — calm, residential, no tourists. Perfect for the last morning.</p>
+      </div>
+    </div>
+    <div class="tab-pane" data-tab="eat">
+      <div class="eat-block">
+        <div class="tip-label">🍜 Last Meals</div>
+        <ul class="dot-list">
+          <li>One final convenience store onigiri for the road — you'll appreciate it when you're back in Sacramento</li>
+          <li><strong>Narita Terminal 1</strong> has ramen and soba — last real Japanese meal airside</li>
+          <li>Final Japanese vending machine drink: Georgia canned coffee or Pocari Sweat. Classics.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /days-grid -->
+
+<!-- ═══════════════════════════════════════════
+     PART II — CITY DEEP DIVES
+═══════════════════════════════════════════ -->
+
+<!-- TOKYO -->
+<div class="section-head" id="tokyo-main">
+  <div class="sec-eyebrow">Part II — City Deep Dives</div>
+  <h2>🗾 Tokyo</h2>
+  <p>You have 10 days in Tokyo spread across the trip. Beyond the main sites, here's every neighborhood worth knowing — especially the ones that locals love and most tourists never find.</p>
+</div>
+
+<div class="city-section">
+  <div class="neighborhood-grid">
+
+    <div class="n-card" id="tokyo-yanaka">
+      <div class="n-card-head">
+        <span class="n-name">Yanaka</span>
+        <span class="n-type">Old Tokyo</span>
+      </div>
+      <div class="n-card-body">
+        <p class="n-vibe">The most intact Edo-era neighborhood in Tokyo — survived both the 1923 earthquake and WWII bombing. Known as "Tokyo's Cat Town."</p>
+        <ul class="dot-list">
+          <li>Yanaka Ginza shopping street — retro stalls selling menchi-katsu (fried meat cutlet) and wagashi (traditional sweets). Feels frozen in the 1970s.</li>
+          <li>Yanaka Cemetery — 70,000 graves, including Japan's last shogun. Cats rest on stone walls. Beautiful for a quiet walk.</li>
+          <li>Nezu Shrine — mini Fushimi Inari, red torii tunnels, none of the crowds</li>
+          <li>SCAI the Bathhouse — a historic bathhouse turned contemporary art gallery. Free, striking.</li>
+          <li>Kayaba Coffee — century-old machiya townhouse, original fixtures, hand-drip coffee, excellent for a slow morning</li>
+          <li>Over 70 historic temples within walking distance of the main street</li>
+        </ul>
+        <div class="n-access">📍 Nippori Station (JR Yamanote) or Sendagi/Nezu (Chiyoda Line)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="tokyo-shimokitazawa">
+      <div class="n-card-head">
+        <span class="n-name">Shimokitazawa</span>
+        <span class="n-type">Vintage / Music</span>
+      </div>
+      <div class="n-card-body">
+        <p class="n-vibe">Streets too narrow for cars. The vintage clothing capital of Tokyo, plus indie music venues, theater, and tiny bars. Called "Shimokita" by everyone who lives there.</p>
+        <ul class="dot-list">
+          <li>Flamingo, Selen, Little Trip to Heaven — the best vintage clothing shops</li>
+          <li>Bonus Track — an outdoor courtyard of pop-up galleries, bookshops, and bars. Very local.</li>
+          <li>Basement Bar, Three, Shelter — legendary live music venues where actual indie bands play</li>
+          <li>Hundreds of independent coffee shops and izakaya — just walk and pick one</li>
+          <li>Flea markets happen on weekends near the station — good for used records and vintage finds</li>
+          <li>Best time: any time after 4 PM. Evening is magic.</li>
+        </ul>
+        <div class="n-access">📍 Shimokitazawa Station (Keio Inokashira Line from Shibuya, 2 stops, ¥140)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="tokyo-koenji">
+      <div class="n-card-head">
+        <span class="n-name">Koenji</span>
+        <span class="n-type">Punk / Alternative</span>
+      </div>
+      <div class="n-card-body">
+        <p class="n-vibe">Grungier than Shimokitazawa. Tokyo's underground punk and alternative hub since the 1960s student movement. Record shops, tiny bars, covered shopping arcades with yakitori.</p>
+        <ul class="dot-list">
+          <li>Etoile Street — curated vintage menswear and accessories</li>
+          <li>Record BOY and UPTOWN RECORD STORE — the best vinyl hunting in Tokyo</li>
+          <li>JIROKICHI and Sub Store Tokyo — legendary underground music venues</li>
+          <li>Covered shopping arcades (shotengai) hide tiny bars, ramen stands</li>
+          <li>COFFEE AMP — excellent artisanal roastery</li>
+          <li>Evening: alleys fill with residents having yakitori and beer. Very neighborhood. Very Tokyo.</li>
+        </ul>
+        <div class="n-access">📍 Koenji Station (JR Chuo Line from Shinjuku, 5 min)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="tokyo-nakameguro">
+      <div class="n-card-head">
+        <span class="n-name">Nakameguro</span>
+        <span class="n-type">Trendy / Canal</span>
+      </div>
+      <div class="n-card-body">
+        <p class="n-vibe">The most Instagrammable riverside in Tokyo. Boutiques, cafes, and restaurants line the Meguro River canal. 5 min from Shibuya.</p>
+        <ul class="dot-list">
+          <li>Meguro River canal walk — lined with cherry trees (bare in June, still beautiful), boutiques and bars spill out onto the walking path</li>
+          <li>% Arabica flagship — the original location of Tokyo's most iconic coffee shop</li>
+          <li>Weekend artisan market along the canal</li>
+          <li>Excellent for evening drinks — many bars have terraces over the water</li>
+          <li>Daikanyama is 5 min further — Tsutaya Books (architecture is worth a visit), boutiques, slower pace</li>
+        </ul>
+        <div class="n-access">📍 Nakameguro Station (Tokyu Toyoko Line from Shibuya, 5 min)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="tokyo-kagurazaka">
+      <div class="n-card-head">
+        <span class="n-name">Kagurazaka</span>
+        <span class="n-type">Geisha / French</span>
+      </div>
+      <div class="n-card-body">
+        <p class="n-vibe">Former geisha district. Stone cobblestone alleys hide old ryotei restaurants, jazz bars, and French cafés — a genuinely bizarre and charming combination.</p>
+        <ul class="dot-list">
+          <li>Akagi Jinja — strikingly modern shrine redesigned by Kengo Kuma. Glass walls, very non-traditional.</li>
+          <li>Hidden yokocho (alleys) behind the main Waseda-dori street — explore slowly</li>
+          <li>Japanese confectionery shops mixed with French patisseries — both excellent</li>
+          <li>Jazz bars in basement spaces — proper jazz, not background music</li>
+          <li>Best at dusk when the streetlights come on and the stone lanes glow</li>
+        </ul>
+        <div class="n-access">📍 Kagurazaka Station (Tozai Line) or Iidabashi (multiple lines)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="tokyo-kiyosumi">
+      <div class="n-card-head">
+        <span class="n-name">Kiyosumi-Shirakawa</span>
+        <span class="n-type">Coffee District</span>
+      </div>
+      <div class="n-card-body">
+        <p class="n-vibe">Tokyo's third-wave coffee capital. A quiet residential area along the Sumida River where the city's best independent roasters cluster. Very calm, very local.</p>
+        <ul class="dot-list">
+          <li>Blue Bottle Coffee's first Japanese location is here (though there are now many branches)</li>
+          <li>Multiple artisan roasteries within a 3-block radius</li>
+          <li>Edo-period architecture alongside converted warehouses</li>
+          <li>Kiyosumi Garden nearby — traditional Japanese garden with stepping stones, ¥150</li>
+          <li>Best for a slow morning or afternoon when you need a break from intensity</li>
+        </ul>
+        <div class="n-access">📍 Kiyosumi-Shirakawa Station (Hanzomon or Oedo Lines)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="tokyo-kichijoji">
+      <div class="n-card-head">
+        <span class="n-name">Kichijoji</span>
+        <span class="n-type">Park / Locals' Fave</span>
+      </div>
+      <div class="n-card-body">
+        <p class="n-vibe">Consistently voted Tokyo's most desirable neighborhood to live in. Inokashira Park is the centerpiece — rowboats, a small zoo, and a temple on an island.</p>
+        <ul class="dot-list">
+          <li>Inokashira Park rowboats (¥700/30 min) — a genuinely lovely afternoon activity</li>
+          <li>Satou Kichijoji — legendary beef croquettes. Queue around the block. Eat them walking.</li>
+          <li>Harvey Nichols-esque covered shopping arcade mixed with local mom-and-pop shops</li>
+          <li>Good mix of restaurants, bars, and cafes — the evening scene is relaxed and local</li>
+          <li>Ghibli Museum is in Mitaka, a 10-min walk from the western end of Inokashira Park</li>
+        </ul>
+        <div class="n-access">📍 Kichijoji Station (JR Chuo Line from Shinjuku, 14 min)</div>
+      </div>
+    </div>
+
+  </div><!-- /neighborhood-grid -->
+</div>
+
+<!-- KAWAGUCHIKO -->
+<div class="section-head" id="fuji-main">
+  <div class="sec-eyebrow">City Deep Dive</div>
+  <h2>🗻 Kawaguchiko &amp; Mt. Fuji</h2>
+  <p>You're here Jun 5–6. June visibility of Fuji: ~20%. The area is beautiful regardless. Here's everything you need to know.</p>
+</div>
+
+<div class="city-section">
+  <div class="neighborhood-grid">
+    <div class="n-card" id="fuji-food">
+      <div class="n-card-head"><span class="n-name">Local Food</span><span class="n-type">Hoto + Yoshida</span></div>
+      <div class="n-card-body">
+        <ul class="dot-list">
+          <li><strong>Hoto noodles</strong> — thick flat udon in miso broth with pumpkin and mountain vegetables, in an iron pot. 400-year tradition made with Fuji spring water. The regional dish.</li>
+          <li><strong>Hoto Fudo</strong> — the classic restaurant, lines but worth it. ¥1,500 for the hoto set. houtou-fudo.jp</li>
+          <li><strong>Funari</strong> — alternative to Hoto Fudo, Fuji view from the restaurant, specializes in "gold hoto"</li>
+          <li><strong>Yoshida Udon</strong> — Fujiyoshida City's local dish. Super firm noodles, shredded cabbage topping, spicy ginger paste. Very different from hoto. Local lunch culture.</li>
+          <li><strong>Shingen-mochi</strong> — kinako + black sugar syrup sweet. THE Yamanashi souvenir. Buy from any station shop.</li>
+        </ul>
+        <div class="n-access">📍 Near Kawaguchiko Station</div>
+      </div>
+    </div>
+    <div class="n-card" id="fuji-onsen">
+      <div class="n-card-head"><span class="n-name">Tattoo-Friendly Onsen</span><span class="n-type">Day Use</span></div>
+      <div class="n-card-body">
+        <ul class="dot-list">
+          <li><strong>Ooike Hotel</strong> — fully tattoo-friendly, rotenburo (outdoor bath) with Fuji view when clear. Best choice.</li>
+          <li><strong>Hotel Koryu</strong> — also tattoo-friendly. Good value day-use rate.</li>
+          <li><strong>Rakuyu</strong> — day-use facility, private bathing option available. Good if others are full.</li>
+          <li>Onsen etiquette: wash completely at the shower station before entering the bath. No swimwear in traditional baths. No phones in the bathing area.</li>
+          <li>Rotenburo (outdoor bath) in the evening with Fuji view if visible = the best possible onsen experience on this trip.</li>
+        </ul>
+        <div class="n-access">📍 Various locations around the lake — confirm tattoo policy before going</div>
+      </div>
+    </div>
+    <div class="n-card">
+      <div class="n-card-head"><span class="n-name">Photo Spots</span><span class="n-type">Fuji Views</span></div>
+      <div class="n-card-body">
+        <ul class="dot-list">
+          <li><strong>Oishi Park</strong> (north shore) — best lake reflection shots. Early morning is essential for calm water. Lavender blooming mid-June through July.</li>
+          <li><strong>Chureito Pagoda</strong> — the iconic pagoda + Fuji shot. 400 steps up from Shimoyoshida Station. Only worth it if Fuji is visible (check SeeMtFuji app).</li>
+          <li><strong>Kachi Kachi Ropeway</strong> — up Mt. Tenjo for lake + Fuji views. Beautiful even without Fuji for the aerial lake perspective.</li>
+          <li><strong>Kawaguchiko Herb Festival</strong> (Oishi Park) — lavender field starts mid-June. Free to walk.</li>
+        </ul>
+        <div class="n-access">📍 North shore of Lake Kawaguchi</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KYOTO -->
+<div class="section-head" id="kyoto-main">
+  <div class="sec-eyebrow">City Deep Dive</div>
+  <h2>🏯 Kyoto</h2>
+  <p>You have 4 days here (Jun 7–10). Beyond the main temples, here are the neighborhoods and hidden spots that make Kyoto more than a day-trip destination.</p>
+</div>
+
+<div class="city-section">
+  <div class="neighborhood-grid">
+    <div class="n-card" id="kyoto-gion">
+      <div class="n-card-head"><span class="n-name">Gion &amp; Pontocho</span><span class="n-type">Geisha District</span></div>
+      <div class="n-card-body">
+        <p class="n-vibe">Gion is Kyoto's most famous district. Pontocho is its quieter, more local counterpart — 1/5 the tourists, better chance of seeing real geiko.</p>
+        <ul class="dot-list">
+          <li><strong>Hanamikoji Street</strong> — main geisha district. Best maiko/geiko spotting 4:30–6 PM.</li>
+          <li><strong>Shinbashi-dori + Shirakawa canal</strong> — most photogenic street in Kyoto. Stone lanterns + canal reflections.</li>
+          <li><strong>Pontocho Alley</strong> — 500m lantern-lit alley, restaurants open for dinner only (after 6 PM). Many have kawayuka platforms over the Kamo River.</li>
+          <li><strong>Kawayuka dining</strong> — riverside terrace restaurants, May–September only. Ask: "Kawayuka no seki desu ka?" Seat charge ¥500–1,100.</li>
+          <li><strong>Local Sake &amp; Beer Stand 336</strong> — hidden sake bar near Gion main streets. Kyoto herbal sake that's unlike anything else.</li>
+          <li><strong>Yasaka Shrine</strong> — free, open 24 hrs, lantern-lit at night. Maruyama Park behind it is where locals relax.</li>
+        </ul>
+        <div class="n-access">📍 Gion Shijo Station (Keihan Line) or bus to Shijo-Kawaramachi</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="kyoto-fushimi">
+      <div class="n-card-head"><span class="n-name">Fushimi Sake District</span><span class="n-type">Breweries + Canals</span></div>
+      <div class="n-card-body">
+        <p class="n-vibe">Most tourists visit Fushimi Inari and leave. The adjacent sake district is one of the most authentic hidden gems in all of Kyoto.</p>
+        <ul class="dot-list">
+          <li>Walking through Fushimi you'll smell the subtle aroma of fermenting rice from the breweries</li>
+          <li><strong>Gekkeikan Okura Sake Museum</strong> — ¥600 including sake tasting. English available. The water here (fushimizu) is famous.</li>
+          <li><strong>Fushimi Sake Village</strong> — 18+ breweries represented, seasonal sake tastings, canal-side setting</li>
+          <li><strong>Teradaya Inn</strong> — famous historic inn where Ryoma Sakamoto lived and survived an assassination attempt. Small museum.</li>
+          <li>Canal boat cruises available seasonally</li>
+          <li>Try: seasonal sake (changes with the time of year, rare red sake exclusive to Kyoto)</li>
+        </ul>
+        <div class="n-access">📍 15 min south of Fushimi Inari Station (JR Nara Line) or Fushimi Momoyama (Kintetsu)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="kyoto-philosophers">
+      <div class="n-card-head"><span class="n-name">Philosopher's Path</span><span class="n-type">Canal Walk</span></div>
+      <div class="n-card-body">
+        <p class="n-vibe">A 2km canal-side walking path connecting Nanzen-ji to Ginkaku-ji. Named after philosopher Nishida Kitaro who walked it daily.</p>
+        <ul class="dot-list">
+          <li>500 cherry trees (bare in June, but the path is still beautiful with hydrangeas)</li>
+          <li><strong>Honen-in</strong> — halfway along the path. Mossy thatched gate, serene moss gardens. Free, almost no tourists. One of Kyoto's most peaceful spots.</li>
+          <li><strong>Ginkaku-ji</strong> (Silver Pavilion) at the north end — ¥500. The "failed golden pavilion" (never actually covered in silver) has beautiful zen gardens.</li>
+          <li>Small studios, hidden shrines, and cafes tucked behind camellia bushes along the path</li>
+          <li><strong>Otoyo Shrine</strong> — small shrine to the left off the path, famous for mouse statues (unique in Japan)</li>
+        </ul>
+        <div class="n-access">📍 Between Nanzen-ji Station (Tozai Line) and Ginkaku-ji (bus #5 from Kyoto Station)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="kyoto-hidden">
+      <div class="n-card-head"><span class="n-name">Hidden Temples</span><span class="n-type">Off the Tourist Trail</span></div>
+      <div class="n-card-body">
+        <ul class="dot-list">
+          <li><strong>Genko-an</strong> (north Kyoto) — blood-stained battle ceilings from 1600 AND two windows: "Window of Enlightenment" (round) and "Window of Confusion" (square). ¥400. Near Kode Station.</li>
+          <li><strong>Honen-in</strong> — moss-covered thatched gate temple on the Philosopher's Path. Free entry, almost no tourists. Genuinely peaceful.</li>
+          <li><strong>Ichiwa mochi</strong> (Imamiya Shrine) — aburi mochi skewers, charcoal-grilled. Over 1,000 years old. THE oldest restaurant in Japan. ¥700 for a serving.</li>
+          <li><strong>Yasaka Koshin-do</strong> (Gion) — tiny colorful temple with hanging kukurizaru (bound monkey balls) for wishes. Very photogenic, very unknown.</li>
+          <li><strong>Kitano Tenmangu flea market</strong> — 25th of every month, antique stalls: vintage kimono, ceramics, calligraphy sets, hand-carved dolls.</li>
+        </ul>
+        <div class="n-access">📍 Scattered across Kyoto — plan 1–2 as add-ons to main temple days</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="kyoto-arashiyama">
+      <div class="n-card-head"><span class="n-name">Arashiyama Hidden</span><span class="n-type">Beyond the Bamboo</span></div>
+      <div class="n-card-body">
+        <ul class="dot-list">
+          <li><strong>Jojakko-ji Temple</strong> — stone steps through moss and maple trees, 10 min from the bamboo grove into the hills. Almost no tourists. ¥500.</li>
+          <li><strong>Otagi Nenbutsu-ji</strong> — 1,200 stone Rakan statues carved by amateur pilgrims, each with its own personality. Some look drunk. At the end of Saga Toriimoto preserved street. ¥500.</li>
+          <li><strong>Okochi Sanso Villa</strong> — samurai film actor's estate, panoramic Kyoto basin views, includes tea and sweets in the tea house. ¥1,000. Worth it.</li>
+          <li><strong>Nison-in Temple</strong> — long maple-tree lined approach called Momijino-baba. Peaceful, ¥500.</li>
+          <li><strong>Fushimi Inari secret bamboo forest</strong> — a few minutes off the main Fushimi path at the base of the mountain. Few tourists know it exists.</li>
+        </ul>
+        <div class="n-access">📍 Walk 10–20 min north/west from Arashiyama Bamboo Grove</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- OSAKA -->
+<div class="section-head" id="osaka-main">
+  <div class="sec-eyebrow">City Deep Dive</div>
+  <h2>🐙 Osaka</h2>
+  <p>You have 3 days here (Jun 11–13). Japan's kitchen, the most outgoing city, and completely different from Tokyo or Kyoto.</p>
+</div>
+
+<div class="city-section">
+  <div class="neighborhood-grid">
+
+    <div class="n-card" id="osaka-dotonbori">
+      <div class="n-card-head"><span class="n-name">Dotonbori Deep Dive</span><span class="n-type">Main District</span></div>
+      <div class="n-card-body">
+        <p class="n-vibe">The neon canal district. Overwhelming on first sight, brilliant once you know where to look. Most tourists stay on the main canal — the real spots are off it.</p>
+        <ul class="dot-list">
+          <li><strong>Glico running man sign</strong> — do the photo, it's fine, everyone does it. Then move on.</li>
+          <li><strong>Takoyaki:</strong> Wanaka (soft, round) vs Kukuru (grilled crust). Two different textures. Try both.</li>
+          <li><strong>Hozenji Yokocho</strong> — tiny hidden alley just off the main canal. A moss-covered Buddhist statue (Fudo Myo-o) that locals pour water on for luck. Atmospheric small restaurants surround it.</li>
+          <li><strong>Kushikatsu Daruma</strong> — Dotonbori branch available. NO DOUBLE-DIPPING. Use the cabbage to add sauce to your skewer.</li>
+          <li><strong>Kuromon Ichiba Market</strong> — 600m, 200+ shops, Osaka's biggest food market. Grilled scallops, fresh sea urchin, wagyu on skewers. Best in the morning (closes early afternoon).</li>
+        </ul>
+        <div class="n-access">📍 Namba Station (Midosuji Line) or walk from anywhere in Shinsaibashi/Namba area</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="osaka-uranamba">
+      <div class="n-card-head"><span class="n-name">Ura Namba</span><span class="n-type">Local Bar Streets</span></div>
+      <div class="n-card-body">
+        <p class="n-vibe">3 blocks south of the Dotonbori canal. Where Osaka people actually drink. No tourists, tiny standing bars, cheap beer, zero English menus.</p>
+        <ul class="dot-list">
+          <li>About 3 blocks south of the Dotonbori canal — just walk south from the Glico sign</li>
+          <li>Narrow back alleys with standing bars (tachinomi) crammed with salarymen</li>
+          <li>Order: "nama biru" for draft beer, point at food items on the counter or blackboard</li>
+          <li>Budget ¥1,500–2,000 for a full evening here — extremely cheap</li>
+          <li><strong>Ganso Aji no Otokono</strong> — a standing kushikatsu bar hidden in these alleys. All Japanese menu, point and eat. ¥1,000–2,000. Highly local.</li>
+          <li>Best time: 6–10 PM any day of the week</li>
+        </ul>
+        <div class="n-access">📍 Walk 3 blocks south of Dotonbori canal from Glico sign</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="osaka-tenma">
+      <div class="n-card-head"><span class="n-name">Tenma &amp; Fukushima</span><span class="n-type">Local Neighborhoods</span></div>
+      <div class="n-card-body">
+        <p class="n-vibe">The neighborhoods where Osaka actually lives. Fukushima has Michelin restaurants and bars under the train tracks. Tenma has the densest concentration of local izakaya in the city.</p>
+        <ul class="dot-list">
+          <li><strong>Fukushima</strong> — Michelin-starred restaurants mixed with casual bars under elevated train tracks. Dojima River views. More upscale local than Namba.</li>
+          <li><strong>Ura-Tenma</strong> — back-alley pubs near Tenmangu Shrine. Best 6–9 PM on weeknights. Standing-room local izakaya.</li>
+          <li><strong>Nakazakacho</strong> — between Umeda and Tenjinbashi. Showa-era buildings converted into retro cafes, vintage shops, and small galleries. The Osaka equivalent of Yanaka.</li>
+          <li>Tenjinbashi-suji Shopping Street — 2.6km, the longest covered shopping street in Japan. From Tenmabashi to Ogimachi.</li>
+        </ul>
+        <div class="n-access">📍 Fukushima Station (JR Loop Line) or Tenma Station (Osaka Tanimachi Line)</div>
+      </div>
+    </div>
+
+    <div class="n-card" id="osaka-shinsekai">
+      <div class="n-card-head"><span class="n-name">Shinsekai</span><span class="n-type">Retro District</span></div>
+      <div class="n-card-body">
+        <p class="n-vibe">Literally "New World" — built in 1912 to evoke Paris and New York. It's now gloriously retro, a bit rough around the edges, and entirely its own thing.</p>
+        <ul class="dot-list">
+          <li><strong>Tsutenkaku Tower</strong> — the 1950s-era tower is the neighborhood icon. ¥900 to go up (optional). Billiken statue inside — rub his feet for luck.</li>
+          <li><strong>Jan Jan Yokocho</strong> — narrow retro arcade-style covered street directly under the tower. Atmospheric even just to walk.</li>
+          <li><strong>Imamiya Ebisu Shrine</strong> — the shrine Osaka merchants visit for business luck. Free, very local, rarely in tourist guides.</li>
+          <li><strong>Yaekatsu</strong> — local favorite kushikatsu, fewer tourists than Daruma chain, same quality</li>
+          <li><strong>Timing note:</strong> Visit during the day. Shinsekai at night has some sketchy areas — not dangerous but less comfortable.</li>
+        </ul>
+        <div class="n-access">📍 Doubutsuen-mae Station (Midosuji or Sakaisuji Line) or Shin-Imamiya (JR)</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- HIROSHIMA -->
+<div class="section-head" id="hiroshima-main">
+  <div class="sec-eyebrow">City Deep Dive</div>
+  <h2>☮️ Hiroshima &amp; Miyajima</h2>
+  <p>You have 1 day here (Jun 14 evening + Jun 15 full day). A lot of ground to cover — read this carefully before the day.</p>
+</div>
+
+<div class="city-section">
+  <div class="neighborhood-grid">
+    <div class="n-card">
+      <div class="n-card-head"><span class="n-name">Peace Park &amp; Dome</span><span class="n-type">Essential</span></div>
+      <div class="n-card-body">
+        <ul class="dot-list">
+          <li><strong>A-Bomb Dome Bridge</strong> — stand here, across the river from the Dome, for the best photo angle. The frame perfectly centers the building.</li>
+          <li>Peace Park is FREE and takes ~1 hr without the museum. The museum adds 1.5+ hrs — good if it's a priority, skippable if you're tight on time for Miyajima.</li>
+          <li>Children's Peace Monument — 1,000 paper cranes donated by schoolchildren worldwide. You can add your own folded crane.</li>
+          <li>Peace Bell — ring it. Take a moment.</li>
+          <li>Hiroshima Peace Memorial Museum: raw and powerful. Don't go in if you're not ready for difficult content. Don't go in if you're tight on time.</li>
+        </ul>
+        <div class="n-access">📍 Tram Line 2 from Hiroshima Station → Genbaku Dome-mae</div>
+      </div>
+    </div>
+    <div class="n-card" id="hiroshima-miyajima">
+      <div class="n-card-head"><span class="n-name">Miyajima Island</span><span class="n-type">Torii Gate</span></div>
+      <div class="n-card-body">
+        <ul class="dot-list">
+          <li><strong>Tide timing is critical</strong> — check gethiroshima.com/miyajima-tide-times the night before. High tide (250cm+) = floating torii photo. Low tide = walk to the base on the seabed.</li>
+          <li><strong>5-story pagoda is under scaffolding</strong> through December 2026 — you'll see scaffolding in any photos from the shrine approach</li>
+          <li><strong>Daisho-in Temple</strong> — 100m from the ferry dock, spinning prayer wheels, hundreds of stone lanterns, almost no tourists. Much more interesting than the shrine for 30 min of exploring.</li>
+          <li><strong>Momijidani Park</strong> — maple grove behind the village, deer wander through (different from Nara deer, more skittish). Beautiful in any season.</li>
+          <li>Aquanet ferry from Peace Park (45 min) is the scenic approach — you see the torii from the water</li>
+          <li>JR Ferry from Miyajimaguchi (10 min) is faster and JR Pass covers it</li>
+          <li><strong>Grilled oysters on Omotesando street</strong> — the island specialty, eat here not in the city for the freshest preparation</li>
+        </ul>
+        <div class="n-access">📍 Ferry from Motoyasu Pier (Peace Park) or JR Ferry from Miyajimaguchi Station</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PART III — ESSENTIALS
+═══════════════════════════════════════════ -->
+<div class="section-head" id="essentials">
+  <div class="sec-eyebrow">Part III</div>
+  <h2>📋 Essentials</h2>
+  <p>Everything you need to know before leaving the hotel. Reference sections for trains, money, food, nightlife, and more.</p>
+</div>
+
+<div class="essentials-section">
+  <div class="essentials-grid">
+
+    <div class="e-card" id="trains">
+      <h4>🚆 Trains &amp; Suica</h4>
+      <ul>
+        <li>Load Suica on Apple/Google Pay before leaving home — tap your phone, way faster than a physical card</li>
+        <li>Suica works on virtually all trains, buses, and convenience stores across Japan</li>
+        <li>JR Pass: only worth it if doing the Shinkansen multiple times. For your itinerary: Tokyo→Hiroshima→Tokyo is likely worth it. Calculate before buying.</li>
+        <li>IC card tapping: tap IN and tap OUT every time. Forgetting to tap out = overcharge.</li>
+        <li>Last train: most lines stop ~midnight. Yamanote runs until 1 AM on weekends. Know this before planning late nights.</li>
+        <li>Google Maps (offline) for Japan is excellent for train routing. Download the Tokyo/Kyoto/Osaka/Hiroshima areas.</li>
+        <li>Shinkansen seat reservations: FREE with JR Pass, ~¥1,000–3,000 without. Always book ahead for long routes.</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="money">
+      <h4>💳 Money &amp; ATMs</h4>
+      <ul>
+        <li><strong>7-Eleven ATMs</strong> are the most reliable for foreign cards. Japan Post ATMs (in post offices) are also reliable.</li>
+        <li>Keep ¥10,000–20,000 cash on you at all times. Many smaller restaurants and shops are cash-only.</li>
+        <li>Tax-free shopping: spend ¥5,000+ at a single store with your passport for 10% tax exemption. Electronics stores, department stores, some pharmacies.</li>
+        <li>Coins matter: ¥500 = ~$3.50. ¥100 = ~$0.70. Vending machines, lockers, smaller purchases all use coins.</li>
+        <li>Don't tip. Ever. It's rude and confusing to service staff.</li>
+        <li>Airport duty-free: whisky (Hibiki, Nikka, Yamazaki), matcha KitKat variety boxes, Shiroi Koibito cookies.</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="food">
+      <h4>🍜 Food Guide</h4>
+      <ul>
+        <li><strong>Ramen types:</strong> tonkotsu (pork, rich), shoyu (soy, lighter), miso (Hokkaido style), shio (salt, clearest). Don't drink the soup at the end — it's too salty.</li>
+        <li><strong>Conveyor sushi (kaiten):</strong> plates are ~¥130–330. Touch the screen at your seat to order specific items. Cheaper than you think.</li>
+        <li><strong>Izakaya order:</strong> order drinks first, then food slowly throughout the evening. Standard is: beer → food → another round → more food → highball to finish.</li>
+        <li><strong>Set meals (teishoku):</strong> lunch specials are extraordinary value. Many restaurants do ¥800–1,200 sets with rice, miso soup, pickles, and the main dish.</li>
+        <li><strong>Ticket machines:</strong> most ramen shops use vending machine ordering. Pick your dish (often has photos), take the ticket to your seat or hand to staff.</li>
+        <li>Convenience store food (konbini) is genuinely good: fresh onigiri, egg salad sandwiches, hot nikuman (meat buns), decent fried chicken.</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="nightlife">
+      <h4>🌙 Nightlife</h4>
+      <ul>
+        <li><strong>Golden Gai (Shinjuku):</strong> 6 alleys, ~200 bars, each holds 5–10 people. Ask about cover charge before sitting. Best 9 PM–2 AM.</li>
+        <li><strong>Omoide Yokocho (Shinjuku):</strong> yakitori under the tracks. Arrive 6 PM. Very cramped, very good.</li>
+        <li><strong>Nonbei Yokocho (Shibuya):</strong> behind Tower Records. Lantern-lit tiny bar alley. Slightly more upscale than Golden Gai.</li>
+        <li><strong>Ura Namba (Osaka):</strong> standing bars 3 blocks south of Dotonbori. Where locals actually drink.</li>
+        <li><strong>Pontocho (Kyoto):</strong> 500m lantern alley with izakaya and bars. Best after 6 PM when restaurants open for dinner.</li>
+        <li>Last train midnight. Taxi home = very expensive. Know your line's last departure.</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="arcades">
+      <h4>🕹️ Arcades</h4>
+      <ul>
+        <li><strong>UFO catchers (crane games):</strong> Watch before you play. ¥100–200 per play. Budget ¥500–1,000 max per machine then move on.</li>
+        <li>"Okuroi onegaishimasu" — ask staff to reposition the prize. Some will do it.</li>
+        <li><strong>Rhythm games:</strong> Taiko no Tatsujin (taiko drums), maimai DX (touchscreen circle), CHUNITHM (air sensor). All have English interfaces.</li>
+        <li><strong>Purikura</strong> (photo sticker booths): upper floors of most arcades. Great group photo souvenir. Skin-smoothing filters are automatic and intense.</li>
+        <li>GiGO arcades in Akihabara are the best for Pokémon/anime UFO catchers.</li>
+        <li>Round1 entertainment centers are everywhere — have everything plus bowling.</li>
+        <li>Arcades stay open until midnight or 2 AM.</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="pokemon">
+      <h4>🎮 Pokémon</h4>
+      <ul>
+        <li><strong>Pokémon Center Mega Tokyo</strong> (Sunshine City, Ikebukuro, 2F) — largest in Japan, exclusive products</li>
+        <li><strong>Pokémon Center Shibuya</strong> — smaller but has Shibuya-exclusive designs</li>
+        <li><strong>Pokémon Center Akihabara</strong> — retro gaming crossover products</li>
+        <li><strong>Pokémon GO Fest (May 30):</strong> Odaiba. Use your own eSIM, keep incense running, coordinate with raid trains via Discord/Reddit Japan GO communities</li>
+        <li>Physical game stores: Yodobashi Akiba, Sofmap in Akihabara for used Pokémon games and accessories</li>
+        <li>Pokémon cards: authentic Japanese sets available at department stores and Pokemon Centers. Cheaper than importing.</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="disney">
+      <h4>🏰 Disney Tips</h4>
+      <ul>
+        <li><strong>MUST pre-purchase tickets</strong> — not sold at the gate. Book at tokyodisneyresort.jp</li>
+        <li>Open the app before entering — accounts must be linked in advance</li>
+        <li>DisneySea: Fantasy Springs Priority Access opens AT park opening — grab it instantly</li>
+        <li>Disneyland: Pooh's Hunny Hunt has no skip option — go at opening or accept a long wait</li>
+        <li>June = rainy season. Bring a poncho. Many attractions are indoors.</li>
+        <li>The food is legitimately good — budget ¥3,000–5,000/person for meals inside</li>
+        <li>JDM-exclusive merchandise not available in US parks — worth browsing the shops</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="usj">
+      <h4>🎢 USJ Tips</h4>
+      <ul>
+        <li><strong>Express Pass for Nintendo World</strong> sells out in hours — buy the moment the Apr 13 alert fires</li>
+        <li>Without Express Pass: run directly to Nintendo World at opening. No other stop.</li>
+        <li>Timed entry slots for Nintendo World reset throughout the day — check the app every hour</li>
+        <li>Power-Up Bands (~¥3,300) — interactive stamp challenges throughout Nintendo World. Optional but fun.</li>
+        <li>Mario Kart: Bowser's Challenge uses AR — wear the physical item they give you properly</li>
+        <li>Universal City Walk (outside, no ticket needed) has cheaper food options</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="onsen">
+      <h4>🛁 Onsen Guide</h4>
+      <ul>
+        <li>Most onsen prohibit tattoos — always check before going</li>
+        <li>Tattoo-friendly in Kawaguchiko: Ooike Hotel (best, Fuji view rotenburo), Hotel Koryu, Rakuyu</li>
+        <li>Wash COMPLETELY at the shower stations before entering the bath. Sitting, using soap and shampoo, rinse completely. Then enter the bath.</li>
+        <li>No swimwear in traditional baths (some Western-style onsen hotels allow it)</li>
+        <li>No phones/cameras in the bathing area — ever</li>
+        <li>Tie long hair up so it doesn't touch the water</li>
+        <li>Stay in the bath 10–15 min max, then cool down before re-entering</li>
+        <li>Rotenburo = outdoor bath. Worth seeking out, especially with a mountain or garden view.</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="shopping">
+      <h4>🛍️ Shopping</h4>
+      <ul>
+        <li><strong>Tax-free:</strong> Spend ¥5,000+ at one store with passport for 10% back. Works at electronics, department stores, many pharmacies.</li>
+        <li><strong>Don Quijote (Donki):</strong> Everything. 24 hrs. Snacks, electronics, costumes, beauty, souvenirs. Cheapest prices.</li>
+        <li><strong>Animate (Ikebukuro):</strong> 8 floors of anime merch. No better place in Tokyo.</li>
+        <li><strong>Gashapon Dept. Store (Ikebukuro):</strong> 3,000–4,000 machines, ¥300–400/capsule</li>
+        <li><strong>Bic Camera / Yodobashi:</strong> Electronics, tax-free with passport</li>
+        <li><strong>Daiso / Seria / Can★Do:</strong> 100-yen shops. Incredible for gifts — stationery, kitchen items, unique designs</li>
+        <li>Narita airport duty-free: Japanese whisky (Hibiki, Nikka, Yamazaki), matcha KitKats, Shiroi Koibito cookies — often as cheap or cheaper than city prices</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="etiquette">
+      <h4>🙏 Etiquette</h4>
+      <ul>
+        <li>No eating while walking (except festival stalls) — hold the item still or finish before moving</li>
+        <li>No tipping — ever. It causes confusion and mild offense.</li>
+        <li>Loud talking on trains = rude. Keep phones on silent. Speak quietly or not at all.</li>
+        <li>Bow slightly when thanking people: 15° = thank you, 30° = I'm sorry, 45° = deep apology</li>
+        <li>Shoes off when entering homes and many ryokan — look for the genkan (entrance step)</li>
+        <li>Tattoo caution: some onsen, some ryokan, and some public pools prohibit tattoos. Always check before paying.</li>
+        <li>Queuing: Japan takes queues very seriously. Always line up properly. Do not jump.</li>
+        <li>Trash cans are rare — carry a small bag for your garbage. You'll end up at a convenience store eventually.</li>
+      </ul>
+    </div>
+
+    <div class="e-card" id="phrases">
+      <h4>🗣️ Key Phrases</h4>
+      <div class="quick-phrases">
+        <div class="phrase-row"><span class="phrase-jp">すみません</span><span class="phrase-en">Excuse me / Sorry (Sumimasen)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">ありがとう</span><span class="phrase-en">Thank you (Arigatou)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">これください</span><span class="phrase-en">This please (Kore kudasai)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">おいしい</span><span class="phrase-en">Delicious (Oishii)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">お会計</span><span class="phrase-en">Check please (Okaikei onegai)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">えいご？</span><span class="phrase-en">English? (Eigo wakarimasu ka?)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">〜はどこですか</span><span class="phrase-en">Where is [X]? (wa doko desu ka)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">いくらですか</span><span class="phrase-en">How much? (Ikura desu ka)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">辛くして</span><span class="phrase-en">Make it spicy (Karakushite)</span></div>
+        <div class="phrase-row"><span class="phrase-jp">塩で</span><span class="phrase-en">With salt seasoning (Shio de)</span></div>
+      </div>
+    </div>
+
+    <div class="e-card" id="rainy">
+      <h4>🌧️ Rainy Day</h4>
+      <ul>
+        <li>June = rainy season. Plan for at least 3–4 rainy days. Embrace it.</li>
+        <li><strong>Best rainy options:</strong> teamLab Borderless (fully indoor), Akihabara (covered arcades), Kappabashi Kitchen Street (covered), Nishiki Market (covered), any major museum, any Department Store (B1 food halls are incredible)</li>
+        <li>Temples in rain: Senso-ji, Fushimi Inari (atmospheric + fewer tourists), Arashiyama Bamboo Grove (mist is beautiful)</li>
+        <li>Department store basement food halls (depachika) — incredible quality, massive variety. Every department store has one.</li>
+        <li>Compact umbrellas: buy one at any konbini for ¥500–800 if caught in rain. Convenience stores also sell ponchos.</li>
+        <li>Indoor Tokyo alternatives: teamLab, Tokyo National Museum (Ueno), Mori Art Museum (Roppongi), Shinjuku/Ikebukuro covered shopping arcades</li>
+      </ul>
+    </div>
+
+  </div><!-- /essentials-grid -->
+</div>
+
+<footer style="text-align:center; padding: 48px 20px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 11px; border-top: 1px solid var(--border); margin-top: 48px;">
+  Japan 2026 Field Guide · sardella.dev/japantrip · May 27 – Jun 16
+</footer>
+
+</main>
+
+<script>
+function toggleDay(header) {
+  const card = header.closest('.day-card');
+  card.classList.toggle('open');
+}
+
+function switchTab(btn, tabName) {
+  const body = btn.closest('.day-body');
+  body.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  body.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const pane = body.querySelector(`.tab-pane[data-tab="${tabName}"]`);
+  if (pane) pane.classList.add('active');
+}
+
+// Active nav on scroll
+const navLinks = document.querySelectorAll('nav a');
+const sections = [];
+navLinks.forEach(a => {
+  const id = a.getAttribute('href').replace('#','');
+  const el = document.getElementById(id);
+  if (el) sections.push({el, a, id});
+});
+
+function updateNav() {
+  let current = null;
+  const scroll = window.scrollY + 80;
+  for (const s of sections) {
+    if (s.el.offsetTop <= scroll) current = s;
+  }
+  navLinks.forEach(a => a.classList.remove('active'));
+  if (current) {
+    current.a.classList.add('active');
+    // Auto-open the parent details
+    const details = current.a.closest('details');
+    if (details) details.open = true;
+  }
+}
+
+window.addEventListener('scroll', updateNav, {passive: true});
+updateNav();
+
+// Close sidebar on link click (mobile)
+navLinks.forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('sidebar').classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
