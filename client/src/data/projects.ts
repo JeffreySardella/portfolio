@@ -19,7 +19,7 @@ export const projects: Project[] = [
       'Forum platform for an organization that trains 14,000+ water professionals annually. Four-tier RBAC system (Admin, Mod, User, Guest), OTP email auth, and WCAG 2.2-compliant frontend.',
     challenge:
       'Building the permission middleware was tricky — every route needed to check role + ownership + resource state, and the client kept changing the permission matrix mid-sprint.',
-    screenshot: '/photos/projects/owp-forum.png',
+    screenshot: '/photos/projects/owp-forum.gif',
     techTags: ['PHP Slim', 'Vue.js', 'T-SQL', 'REST API', 'GitHub Actions'],
     githubUrl: 'https://github.com/MaxShkrabak/OWP-Forum',
     featured: true,
@@ -30,10 +30,7 @@ export const projects: Project[] = [
       'Healthcare app with patient records, appointment scheduling, prescription tracking, and secure messaging. Led a 6-person Agile team through the full lifecycle.',
     challenge:
       'First time leading a team. Had to learn to delegate instead of doing everything myself, and mentored a teammate on SQL injection prevention after catching vulnerabilities in their code.',
-    screenshot: '/photos/projects/medical-app.webp',
-    screenshotFit: 'contain',
-    screenshotPosition: 'center',
-    screenshotBg: '#e8f4f8',
+    screenshot: '/photos/projects/medical-app.gif',
     techTags: ['ASP.NET MVC', 'C#', 'SQL Server', 'REST API'],
     githubUrl: 'https://github.com/gbkabel/MedicalApp',
     featured: true,
@@ -44,7 +41,7 @@ export const projects: Project[] = [
       'Production analytics dashboard pulling data from GA4, Search Console, Google Ads, and Meta Ads through Supabase Edge Function proxies. Claude API generates insights from the data.',
     challenge:
       'Each ad platform returns data in completely different formats and time zones. Normalizing everything into a unified view without losing precision was a rabbit hole.',
-    screenshot: '/photos/projects/drover-dashboard.png',
+    screenshot: '/photos/projects/drover-dashboard.gif',
     techTags: ['React', 'TypeScript', 'Supabase', 'Claude API'],
     featured: true,
   },
@@ -52,12 +49,9 @@ export const projects: Project[] = [
     title: 'GitPulse',
     description:
       'Full-stack GitHub analytics dashboard with commit heatmaps, language breakdowns, and repo stats. Background jobs sync data hourly via Hangfire with Polly retry logic. GitHub OAuth + JWT auth.',
-    challenge:
-      'Hardest part was designing the snapshot system — pre-computing daily aggregates so the dashboard loads instantly instead of querying months of raw commit data on every page load.',
-    screenshot: '/photos/projects/gitpulse.png',
     techTags: ['ASP.NET Core', 'React', 'TypeScript', 'PostgreSQL', 'Hangfire', 'Chart.js'],
     githubUrl: 'https://github.com/JeffreySardella/GitPulse',
-    featured: true,
+    featured: false,
   },
   {
     title: '3DAI',
@@ -83,10 +77,13 @@ export const projects: Project[] = [
   {
     title: 'SmartTripPlanner',
     description:
-      'Local AI trip planner with agent loop that researches destinations, checks calendar, validates travel times. 41 unit tests.',
-    techTags: ['ASP.NET Core', 'Blazor', 'Ollama', 'SQLite'],
+      'Local AI trip planner that runs an agent loop with 9 tools — researches destinations, checks Google Calendar availability, validates travel times, and pushes finalized itineraries to your calendar. Includes a Chrome extension for saving locations from any webpage.',
+    challenge:
+      'Getting the agent loop to reliably converge was the real puzzle. The LLM would sometimes hallucinate tool calls or loop endlessly, so I had to build a 10-round cap with structured validation at each step to keep it on track.',
+    screenshot: '/photos/projects/smarttripplanner.mp4',
+    techTags: ['ASP.NET Core', 'Blazor', 'Ollama', 'Google Calendar API', 'SQLite', 'Chrome Extension'],
     githubUrl: 'https://github.com/JeffreySardella/SmartTripPlanner',
-    featured: false,
+    featured: true,
   },
   {
     title: 'ItinerBot',

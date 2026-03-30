@@ -50,13 +50,25 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           style={project.screenshotBg ? { backgroundColor: project.screenshotBg } : undefined}
         >
           {project.screenshot && (
-            <img
-              src={project.screenshot}
-              alt={`Screenshot of ${project.title}`}
-              className={`w-full h-full ${project.screenshotFit === 'contain' ? 'object-contain' : 'object-cover'}`}
-              style={{ objectPosition: project.screenshotPosition ?? 'top' }}
-              loading="lazy"
-            />
+            project.screenshot.endsWith('.mp4') ? (
+              <video
+                src={project.screenshot}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={`w-full h-full ${project.screenshotFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                style={{ objectPosition: project.screenshotPosition ?? 'top' }}
+              />
+            ) : (
+              <img
+                src={project.screenshot}
+                alt={`Screenshot of ${project.title}`}
+                className={`w-full h-full ${project.screenshotFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                style={{ objectPosition: project.screenshotPosition ?? 'top' }}
+                loading="lazy"
+              />
+            )
           )}
         </div>
 
