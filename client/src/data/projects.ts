@@ -14,6 +14,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'CalSight',
+    description:
+      'California crash data explorer that ingests CCRS datasets from data.ca.gov through an ETL pipeline into PostgreSQL. FastAPI serves filtered analytics to a React dashboard — all containerized with Docker Compose and deployed via GitHub Actions CI/CD.',
+    challenge:
+      'The raw CCRS data is messy — inconsistent county codes, missing coordinates, and mixed date formats across years. Building an ETL pipeline that cleaned and normalized everything without silently dropping records took more iteration than expected.',
+    screenshot: '/photos/projects/calsight.mp4',
+    techTags: ['Python', 'FastAPI', 'React', 'TypeScript', 'PostgreSQL', 'Docker'],
+    githubUrl: 'https://github.com/JeffreySardella/CalSight',
+    featured: true,
+  },
+  {
     title: 'OWP Forum',
     description:
       'Forum platform for an organization that trains 14,000+ water professionals annually. Four-tier RBAC system (Admin, Mod, User, Guest), OTP email auth, and WCAG 2.2-compliant frontend.',
