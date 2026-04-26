@@ -2,8 +2,8 @@ import PhotoStrip from '../components/PhotoStrip'
 import GitHubHeatmap from '../components/GitHubHeatmap'
 
 const QUICK_FACTS = [
-  { label: 'DEGREE', value: 'B.S. Computer Science, Sac State (2026)' },
-  { label: 'CERTS', value: 'AZ-900 · DP-900 · GitHub Foundations (In Progress)' },
+  { label: 'DEGREE', value: 'B.S. Computer Science, Sac State (May 2026)' },
+  { label: 'CERTS', value: 'AZ-900 · DP-900 · 6× Google (Cybersecurity, Data, AI, Python)' },
   { label: 'LOCATION', value: 'Rocklin, CA' },
   { label: 'STATUS', value: 'Open to work — full-stack, backend, and AI engineering' },
   { label: 'LANGUAGES', value: 'C# (6yr) · Python (4yr) · SQL (3yr) · JS (2yr)' },
@@ -39,7 +39,7 @@ export default function AboutSection() {
             </p>
             <p className="text-text-muted leading-relaxed text-lg mt-4">
               Now I'm finishing my CS degree at Sac State, building AI training pipelines under
-              contract, and working on civic data tools. Three Microsoft/GitHub certs and a garage
+              contract, and working on civic data tools. Eight certs across Microsoft and Google — and a garage
               full of half-finished projects. I just like making things work.
             </p>
           </div>

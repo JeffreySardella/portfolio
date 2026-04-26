@@ -13,7 +13,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{SUMMARY}
-Full-stack developer with 6+ years of software development experience and a strong background in C\#, Python, SQL, and modern web frameworks. Builds production-ready applications, REST APIs, and automation tools across web, mobile, and AI-powered platforms. Comfortable owning projects end-to-end --- from database design to frontend --- and working in fast-moving Agile teams with real clients.
+Full-stack developer with 6+ years of software development experience and a strong background in C\#, Python, SQL, and modern web frameworks. Builds production-ready applications, REST APIs, and automation tools across web and AI-powered platforms. Comfortable owning projects end-to-end --- from database design to frontend --- and working in Agile teams with real clients. Seeking a position supporting the State of California's mission of delivering reliable, secure, and accessible public services.
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -21,10 +21,12 @@ Full-stack developer with 6+ years of software development experience and a stro
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{TECHNICAL SKILLS}
-\textbf{Languages:} C\# (6 yrs), Python (4 yrs), SQL (3+ yrs), JavaScript (2+ yrs), PHP, Java, R, HTML/CSS \\
+\textbf{Languages:} C\# (6 yrs), Python (4 yrs), SQL/T-SQL (3+ yrs), JavaScript (2+ yrs), PHP, Java, R, HTML/CSS \\
 \textbf{Frameworks:} ASP.NET MVC / .NET Core, Vue.js, React, PHP Slim, Bootstrap, Tailwind CSS, pandas, NumPy \\
-\textbf{Databases:} SQL Server, PostgreSQL, SQLite --- relational modeling, stored procedures, Power BI integration \\
-\textbf{APIs \& Tools:} RESTful APIs, RBAC, OTP auth, Git/GitHub, Jira, Figma, Postman, Claude Code, Azure Fundamentals
+\textbf{Databases:} SQL Server (stored procedures, relational modeling), PostgreSQL, SQLite, Power BI integration \\
+\textbf{APIs \& Security:} RESTful API design, Role-Based Access Control (RBAC), OTP authentication, middleware \\
+\textbf{Tools:} Git/GitHub, GitHub Actions (CI/CD), Jira, Figma, Visual Studio, VS Code, Postman, Agile/Scrum \\
+\textbf{Compliance:} WCAG 2.2 accessibility, technical documentation, requirements specifications, ERD design
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -34,70 +36,30 @@ Full-stack developer with 6+ years of software development experience and a stro
 \begin{rSection}{SOFTWARE ENGINEERING EXPERIENCE}
 
 \textbf{Backend \& Full-Stack Developer} --- \textit{OWP Forum --- Sacramento State} \hfill Oct 2025 -- Present \\
-\textit{Sacramento, CA --- Real-world client project, 8-person Agile team}
+\textit{Sacramento, CA --- Volunteer --- Real-world client project, 8-person Agile team}
 \begin{itemize}
-    \item Building a RESTful API in PHP Slim with full CRUD across a four-tier role system (Admin, Moderator, User, Guest) for a client that trains 14,000+ professionals annually.
-    \item Architecting a T-SQL database with OTP email auth and custom middleware for permission-based route protection.
-    \item Building WCAG-compliant Vue.js frontend components and Figma mockups presented directly to the client for approval before implementation.
-    \item Managing sprints in Jira, coordinating an 8-person team via Discord, and attending bi-weekly client meetings.
-    \item Integrated Git version control with feature branching and pull request workflows across the full team.
+    \item Developing a RESTful API in PHP Slim with full CRUD across a four-tier role-based access control system (Admin, Moderator, User, Guest) for a client that trains 14,000+ professionals annually.
+    \item Designed a normalized T-SQL database schema with stored procedures for security and performance, OTP email authentication, and custom middleware for permission-based route protection.
+    \item Building WCAG 2.2-compliant Vue.js frontend components and Figma mockups presented directly to the client at bi-weekly sprint reviews.
+    \item Configured and maintained a CI/CD pipeline via GitHub Actions running PHPUnit and Vitest test suites on every push.
+    \item Managing sprints in Jira, coordinating the team via Discord, and producing technical documentation including API specs and requirements documents.
 \end{itemize}
 
 \textbf{Project Lead \& Backend Developer} --- \textit{Medical Web Application} \hfill Jan 2024 -- May 2024 \\
-\textit{California State University, Sacramento --- 6-person team, real client}
+\textit{California State University, Sacramento --- 6-person Agile team}
 \begin{itemize}
-    \item Led backend development on a 6-person team; drove the majority of commits across patient management, appointments, prescriptions, medical records, and secure in-app messaging.
-    \item Built a full ASP.NET MVC / C\# application with a DAL pattern; designed and normalized a SQL Server schema using stored procedures for performance and security.
-    \item Migrated database to PostgreSQL to support Power BI analytics integration.
-    \item Implemented role-based auth (doctor, worker, patient) with OTP email confirmation.
-    \item Performed functional testing and bug fixes across all modules, validating behavior against documented requirements.
+    \item Led backend development in ASP.NET MVC with C\#: role-based authentication (Doctor, Worker, Patient), patient records, appointment scheduling, prescription tracking, and secure in-app messaging.
+    \item Designed a normalized SQL Server schema with stored procedures; migrated to PostgreSQL for Power BI reporting integration, validating data integrity throughout.
+    \item Built full CRUD across all modules. Produced requirements specs, ERDs in Visio, architecture diagrams, and use case models. Delivered status presentations to stakeholders.
+    \item Managed GitHub version control, resolved merge conflicts, and mentored a teammate on parameterized queries and secure coding standards.
 \end{itemize}
 
 \textbf{Game Developer (Volunteer)} --- \textit{Toontown in Unity} \hfill Oct 2021 -- Nov 2023 \\
 \textit{Remote --- toon.gg}
 \begin{itemize}
-    \item Shipped Pizzatron 3000, a fully playable multiplayer minigame in C\#, and contributed to Match Minnie through development and testing.
-    \item Implemented networking using the Krypton library including distributed objects and data sync to support multiplayer gameplay.
-    \item Modified core game logic, built UI elements for minigames, and handled fixes and improvements across the project.
-    \item Collaborated with the project lead and a distributed volunteer community; coordinated work asynchronously via Discord.
-\end{itemize}
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-% PERSONAL PROJECTS
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{PERSONAL PROJECTS}
-
-\textbf{3DAI} --- \textit{TypeScript, Node.js, OpenSCAD, Google AI API, Docker} \hfill 2026
-\begin{itemize}
-    \item Built the multi-level training pipeline for an AI 3D model generation system at a hackathon. Level 1 agents iteratively generate and score OpenSCAD code until hitting a quality threshold or stagnation, then present 4-angle renders for human approval with feedback.
-    \item Levels 2--3 add photo-based regression testing and generalization testing on unseen objects. Includes cross-training scorecards and a Google AI API integration with token-optimized skill mapping.
-\end{itemize}
-
-\textbf{Discord Voice Word Tracker} --- \textit{Python, Pycord, Faster-Whisper} \hfill 2025
-\begin{itemize}
-    \item Captures per-user audio streams in Discord and transcribes speech entirely on-device via Faster-Whisper --- no external APIs, no data leaving the server.
-    \item Posts per-user word counts and top 10 most-used keywords to a text channel at session end; designed for privacy-first local deployment.
-\end{itemize}
-
-\textbf{SmartTripPlanner} --- \textit{ASP.NET Core, Blazor, Ollama, Google Calendar API, SQLite} \hfill 2025
-\begin{itemize}
-    \item Local AI trip planner with an agent loop that researches destinations, checks Google Calendar availability, validates travel times, and pushes optimized itineraries directly to your calendar.
-    \item Runs on local hardware via Ollama with tool-calling LLMs; includes a Blazor Server chat UI, REST API, SQLite persistence with EF Core, and 41 unit tests.
-\end{itemize}
-
-\textbf{Drive Smart} --- \textit{WordPress, Custom Theme, CSS, JavaScript} \hfill 2025
-\begin{itemize}
-    \item Static WordPress site with a custom theme teaching defensive driving tips not covered in traditional driver's ed --- following distance, highway merging, weather driving, and zipper merging.
-    \item Custom responsive design with CSS variables, interactive dropdown navigation, and mobile hamburger menu. Live at sardella.dev/drive-smart.
-\end{itemize}
-
-\textbf{X Country Filter} --- \textit{JavaScript, Chrome Extensions, MutationObserver} \hfill 2025
-\begin{itemize}
-    \item Chrome extension that filters posts on X (Twitter) by geographic origin, intercepting API data via content scripts to extract and resolve user locations to country codes.
-    \item Supports allowlist/blocklist modes with hidden and collapsed display options; uses MutationObserver for real-time DOM filtering as the feed loads.
+    \item Shipped Pizzatron 3000, a multiplayer minigame in C\#, and contributed to Match Minnie through development and testing.
+    \item Implemented networking via the Krypton library including distributed objects and real-time data sync for multiplayer gameplay.
+    \item Modified core game logic, built UI elements, and performed debugging and regression testing across the project.
 \end{itemize}
 
 \end{rSection}
@@ -108,32 +70,54 @@ Full-stack developer with 6+ years of software development experience and a stro
 
 \begin{rSection}{PROFESSIONAL EXPERIENCE}
 
-\textbf{AI Automation Engineer (Contract)} --- \textit{Drover Insights LLC} \hfill Mar 2026 -- Present \\
+\textbf{AI Solutions Engineer (Contract)} --- \textit{Drover Insights LLC} \hfill Mar 2026 -- Present \\
 \textit{Remote --- California}
 \begin{itemize}
-    \item Building AI-powered automation agents using Claude Code to solve real business workflow problems for small and mid-size clients.
-    \item Providing technical consulting and architectural guidance on software implementation, tech stack decisions, and system design.
-    \item Designing reusable automation frameworks to deploy consistent AI-powered workflows across multiple business clients from a single tool.
-    \item Analyzing client business processes to identify inefficiencies, improve prompt engineering, and accelerate automation deployment timelines.
-    \item Built \textbf{Drover Dashboard}: plugin-based analytics platform in React + TypeScript with Supabase, integrating GA4, Search Console, Google Ads, and Meta Ads through Edge Function proxies. Includes Claude API-powered insights, CRM Kanban board, and scheduled reports.
-    \item Built \textbf{SmartApply Agent}: automated job application system using Claude AI that discovers jobs across 7 sources, scores candidates 0--100, generates ATS-optimized resumes/cover letters, and auto-submits via Playwright across 6 ATS platforms.
-    \item Includes a web dashboard with Chart.js analytics, Discord bot for approvals and notifications, and IMAP email monitoring with AI-powered recruiter response classification.
+    \item Designing and developing AI-powered automation tools and internal software for a business consulting firm serving small and mid-size clients.
+    \item Built a React/TypeScript analytics dashboard integrating GA4, Search Console, Google Ads, and Meta Ads through Supabase Edge Function API proxies. Includes Claude API-powered insights, CRM Kanban board, and scheduled reports.
+    \item Building a Python-based training and evaluation pipeline that scores AI agent performance against defined tasks and iteratively improves agent configurations to increase task completion accuracy.
+    \item Developed a Playwright-based RPA tool automating job application data collection and submission workflows across multiple client environments.
+    \item Conducting code reviews evaluating structure, functionality, and security. Providing technical consulting on software architecture and tech stack decisions.
 \end{itemize}
 
 \textbf{Computer Tech \& Operations Support} --- \textit{Pool Time Pool and Spa} \hfill Jan 2021 -- Jun 2021 \\
 \textit{Rancho Cordova, CA}
 \begin{itemize}
-    \item Evaluated and rejected proposed job estimation software after independently assessing workflows; researched alternatives and presented options to ownership.
+    \item Evaluated proposed job estimation software, determined it was not viable, researched alternatives, and presented options to ownership.
     \item Configured GPS fleet tracking for 5--10 vehicles, extracted and manipulated operational data in Excel, and trained staff on mobile time tracking tools.
-    \item Provided Windows technical support and network infrastructure work across 50+ employees.
+    \item Provided Windows technical support and network infrastructure work across a 50+ employee organization.
 \end{itemize}
 
 \textbf{Shift Manager} --- \textit{Burger and Cream} \hfill Nov 2015 -- Dec 2020 \\
 \textit{Auburn, CA}
 \begin{itemize}
-    \item Supervised 15 employees across daily operations; handled POS migrations, ethernet cabling, workstation setup, and security camera configuration.
-    \item Built a Windows desktop app to automate labor calculations, cutting manual tracking time significantly.
-    \item Managed vendor relationships and made operational decisions independently during shifts in a high-volume environment.
+    \item Supervised 15 employees across daily operations; handled POS system migration, ethernet cabling, workstation setup, and security camera configuration.
+    \item Built a Windows desktop application in C\# to automate labor calculations, reducing manual tracking time.
+    \item Produced operational documentation and trained non-technical staff on new technology systems.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECTS}
+
+\textbf{3DAI} --- \textit{TypeScript, Node.js, OpenSCAD, Google AI API, Docker} \hfill 2026 \\
+\textit{Hornet Hacks 4.0 Hackathon}
+\begin{itemize}
+    \item Built a multi-level training pipeline for an AI 3D model generation system. Level 1 agents iteratively generate and score OpenSCAD code, then present 4-angle renders for human approval. Levels 2--3 add regression and generalization testing with cross-training scorecards.
+\end{itemize}
+
+\textbf{SmartTripPlanner} --- \textit{ASP.NET Core, Blazor, Ollama, Google Calendar API, SQLite} \hfill 2025
+\begin{itemize}
+    \item Local AI trip planner with an agent loop that researches destinations, checks calendar availability, validates travel times, and pushes itineraries to Google Calendar. Runs via Ollama with tool-calling LLMs; 41 unit tests.
+\end{itemize}
+
+\textbf{Discord Voice Word Tracker} --- \textit{Python, Pycord, Faster-Whisper} \hfill 2025
+\begin{itemize}
+    \item Captures per-user audio in Discord and transcribes speech on-device via Faster-Whisper. Posts word counts and top keywords at session end. Privacy-first, no external APIs.
 \end{itemize}
 
 \end{rSection}
@@ -143,11 +127,13 @@ Full-stack developer with 6+ years of software development experience and a stro
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{EDUCATION}
-\textbf{Bachelor of Science, Computer Science} \hfill Expected May 2026 \\
+\textbf{Bachelor of Science, Computer Science} \hfill May 2026 \\
 California State University, Sacramento \\
 
 \textbf{Associate of Science, Computer Science} \hfill May 2024 \\
-Sierra College --- Rocklin, CA
+Sierra College --- Rocklin, CA \\
+
+\textbf{Certifications:} Microsoft Azure Fundamentals (AZ-900), Microsoft Azure Data Fundamentals (DP-900), 6 Google Coursera Certificates (Cybersecurity, Data Analytics, AI, Python)
 \end{rSection}
 
 \end{document}
