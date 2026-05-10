@@ -22,6 +22,7 @@ export const projects: Project[] = [
     screenshot: '/photos/projects/calsight.mp4',
     techTags: ['Python', 'FastAPI', 'React', 'TypeScript', 'PostgreSQL', 'Docker'],
     githubUrl: 'https://github.com/JeffreySardella/CalSight',
+    liveUrl: 'https://calsight.org',
     featured: true,
   },
   {
