@@ -15,20 +15,20 @@ export const experience: ExperienceEntry[] = [
     dates: 'Mar 2026 – Present',
     current: true,
     bullets: [
-      'React/TypeScript analytics dashboard integrating GA4, Search Console, Google Ads, and Meta Ads',
-      'Python-based AI agent training and evaluation pipeline',
+      'React/TypeScript analytics dashboard integrating GA4, Search Console, Google Ads, and Meta Ads with Claude API-powered insights',
+      'Drover Content — multi-tenant B2B SaaS on Next.js + Supabase with four-role RBAC and Stripe billing',
       'Playwright-based RPA tool for automated data collection workflows',
     ],
   },
   {
-    title: 'Backend & Full-Stack Developer',
+    title: 'Team Lead & Full-Stack Developer',
     company: 'OWP Forum — Sacramento State',
     location: 'Sacramento, CA',
-    dates: 'Oct 2025 – Present',
-    current: true,
+    dates: 'Oct 2025 – May 2026',
+    current: false,
     bullets: [
-      'PHP Slim REST API with four-tier RBAC for a client serving 14,000+ professionals',
-      'Vue.js frontend components and CI/CD via GitHub Actions',
+      'Led an 8-person Agile team building a PHP Slim REST API with four-tier RBAC for a client serving 14,000+ professionals',
+      'Vue.js frontend components and CI/CD via GitHub Actions; delivered and handed off to the client in May 2026',
     ],
   },
   {

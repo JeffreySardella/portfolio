@@ -38,7 +38,7 @@ export default function AboutSection() {
               job costs and track field operations.
             </p>
             <p className="text-text-muted leading-relaxed text-lg mt-4">
-              Now I'm finishing my CS degree at Sac State, building AI training pipelines under
+              Now I've just wrapped up my CS degree at Sac State, building AI automation tools under
               contract, and working on civic data tools. Eight certs across Microsoft and Google — and a garage
               full of half-finished projects. I just like making things work.
             </p>
