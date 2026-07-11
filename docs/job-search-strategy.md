@@ -71,6 +71,61 @@ throughline, and the state cares about it (all state sites must meet WCAG).
   data. For DWR/SWRCB panels, that's a candidate who already lives in their
   world.
 
+## Application mechanics (researched July 2026 — verify live figures on the bulletins)
+
+**You qualify for both entry classes by education alone.** A B.S. in CS
+(120+ semester units incl. ≥15 IT units) satisfies the ITS I *and* IT
+Associate minimum qualifications directly — no prior work experience needed.
+
+| Class | Entry salary (monthly, range A) | Exam | Notes |
+|---|---|---|---|
+| **ITS I** (primary) | ~$6,500–$8,700 (≈$78–105k/yr across ranges) | Online Training & Experience self-assessment, 70% to pass | Your degree qualifies you outright |
+| **IT Associate** (wider net) | ~$4,900–$6,600 (≈$59–79k/yr) | Same T&E format, 70% | Common postings, less competitive; many promote to ITS I in 1–2 yrs |
+
+**It's a two-track system — the step most people miss.** (1) Take the exam →
+land on the **eligible list** at a rank. (2) *Separately* apply to individual
+job postings (Job Control numbers), each needing a full **STD 678** application
+plus usually a **Statement of Qualifications (SOQ)**. Get on **both** lists
+(each exam is one afternoon), then apply broadly — the same list works
+statewide (FTB, DMV, CDT, Caltrans, EDD all hire ITS I in Sacramento).
+
+**The SOQ is the real filter, not the exam.** Passing the T&E at Rank 1 is
+easy; the SOQ is a *scored, rubric-graded* essay instrument that usually
+decides whether you interview at all. What scores well:
+- Answer each numbered prompt separately, in order, using the posting's exact
+  headings; the prompts are drawn from the duty statement + "Desirable
+  Qualifications" — mirror that language.
+- STAR-style specifics: named technologies, project scope, measurable outcomes.
+  For a new grad, **portfolio projects count as concrete evidence** — cite
+  CalSight's ETL pipelines, the water module, the OWP team-lead role by name.
+- Follow formatting rules (font/size/page limit) exactly — violations are an
+  auto-disqualify. Tailor per posting; never reuse verbatim.
+
+**Concrete department contacts:**
+- **DWR** hires IT through the **Division of Technology Services (DTS)** —
+  recurring ITS I/II Sacramento postings. General recruiter
+  `recruiter@water.ca.gov`. The **CNRA Career Center** (715 P St, Sacramento,
+  Tue/Thu 11–4) gives free walk-in SOQ review + mock interviews — run by the
+  agency that hires you. DWR also runs a **Student Employment** program
+  (Student Assistant → permanent DTS), the most reliable back door.
+- **SWRCB** hires IT through its **Division of Information Technology** (1001 I
+  St). **Help Desk & Client Services** is a classic entry point. Recruitment
+  `DAS-HRB-RecruitmentUnit@waterboards.ca.gov`.
+
+**2026 climate:** Newsom's RTO order takes 4-days-in-office effective **July 1,
+2026** — so **living near Sacramento is now an advantage**, not a constraint.
+Budget is tight (thousands of vacant positions cut, ~8% operations reduction)
+but there is **no statewide IT hiring freeze** — breadth of applications
+matters more than usual. Reachable rank + strong SOQ gets you the interview;
+the structured panel interview usually decides it (prep STAR answers, use the
+CNRA mock service).
+
+**First moves, in order:** (1) take both T&E exams now — ITS I bulletin
+ExamControlId 1750, IT Associate 1749 on calcareers.ca.gov; (2) build one
+strong master SOQ keyed to your portfolio, then tailor per posting;
+(3) apply broadly across departments, contacting each posting's hiring-unit
+contact; (4) look into a DWR Student Assistant role as a parallel path.
+
 ## Launch checklist (needs your machine — sandbox couldn't reach state servers)
 
 1. `python -m etl.cdec_api --smoke` and `python -m etl.usdm_api --smoke` —
