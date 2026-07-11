@@ -129,7 +129,76 @@ Add two the SOQ may not cover:
 Use the free **CNRA Career Center mock interviews** (715 P St, Tue/Thu) before
 any DWR/SWRCB panel.
 
+## Worked example — DWR ITS I (adapt to the real posting)
+
+*Below is a complete, submission-shaped SOQ answering three prompts of the
+kind ITS I postings commonly ask. **Replace the prompts with the actual
+posting's wording and re-check the page/format limit** — this is a template to
+edit, not to submit as-is. Written in first person, ~one page.*
+
+---
+
+**Statement of Qualifications — Jeffrey Sardella**
+*Information Technology Specialist I — [JC-XXXXXX], [Division]*
+
+Each numbered response addresses the corresponding SOQ prompt in order. Font:
+Arial 11, 1-inch margins, [N]-page maximum per the bulletin.
+
+**1. Describe your experience designing and developing software applications,
+including the technologies used.**
+
+Over six years I have built full-stack applications across C# (6 yrs), Python
+(4 yrs), SQL (3 yrs), and JavaScript/TypeScript (2 yrs). My most complete
+example is **CalSight** (calsight.org), a public California open-data platform
+I designed and built end to end. The source data — the state's crash records —
+arrives messy: inconsistent county codes, missing coordinates, and mixed date
+formats across years. I built an ETL pipeline in Python that cleans and
+normalizes every record without silently dropping data, loads 11 million rows
+into PostgreSQL, and serves filtered analytics through a FastAPI backend to a
+React/TypeScript dashboard, all containerized with Docker and deployed through
+GitHub Actions CI/CD. I have since extended it into a multi-domain platform
+that also ingests California Department of Water Resources reservoir and
+snowpack data and US Drought Monitor data — the same architecture you would
+recognize from a data-driven state IT system. This work maps directly to the
+[posting's named stack — e.g., .NET, SQL Server, REST APIs].
+
+**2. Describe your experience working within a team to deliver a project
+through its full lifecycle.**
+
+As Team Lead on the OWP Forum project, I led an eight-person Agile team
+building a forum platform for a client that trains over 14,000 water
+professionals annually. I ran sprint planning, divided the work — most notably
+the four-tier role-based permission middleware — and unblocked teammates while
+coordinating with a client whose permission requirements changed mid-sprint. We
+delivered a PHP Slim REST API with a Vue.js front end and GitHub Actions CI/CD,
+and handed the system off to the client on schedule in May 2026. Earlier, as
+Project Lead on a six-person medical-records application, I owned requirements
+specifications, ERDs, and architecture diagrams — so I have taken projects from
+requirements through delivery on both a lead and a hands-on-development basis.
+
+**3. Describe your experience with databases and with identifying or mitigating
+security risks.**
+
+I design relational schemas for correctness and performance: CalSight's
+PostgreSQL database uses materialized views and targeted indexes to serve
+analytics over 11 million rows, and my medical-records project used a normalized
+SQL Server schema with role-based access control. On that project, during code
+review I identified SQL-injection vulnerabilities in a teammate's queries,
+corrected them with parameterized queries, and mentored the teammate so the
+issue would not recur — turning one fix into a lasting improvement in the team's
+practice. I default to least-privilege access design, having built four-tier and
+four-role RBAC systems on multiple projects. I hold the Microsoft AZ-900 and
+DP-900 certifications and six Google certificates spanning cybersecurity, data,
+and Python.
+
+---
+
+*Tailoring checklist for each submission: (1) swap in the posting's exact
+prompts as headings; (2) confirm font/margins/page limit from the bulletin;
+(3) add one sentence per answer naming the posting's specific technologies or
+mission; (4) proofread aloud — grammar and clarity are scored.*
+
 ---
 *Reminder: verify the exact prompts and formatting rules on each posting's
-bulletin — these skeletons are raw material, not a submission. Fill every
-bracket with posting-specific detail before sending.*
+bulletin — these skeletons and the worked example are raw material, not a
+submission. Fill every bracket with posting-specific detail before sending.*
