@@ -58,6 +58,14 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'AccessGuard',
+    description:
+      'Accessibility compliance governance for Drupal, built on axe-core — continuous site-wide scanning, a compliance dashboard, publish-gating for regressions, violation tracking over time, and audit evidence export for WCAG 2.2 / Section 508.',
+    techTags: ['Drupal', 'PHP', 'axe-core', 'GitHub Actions'],
+    githubUrl: 'https://github.com/JeffreySardella/accessguard',
+    featured: false,
+  },
+  {
     title: 'Quorum',
     description:
       'Fully offline AI media organizer for Plex — nine CLI modes that sort and metadata-enrich home video and photo libraries, generate AI titles, cluster faces via computer vision, identify films through TMDB, and log every change to reversible JSONL transactions for full undo.',
