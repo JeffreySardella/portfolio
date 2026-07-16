@@ -58,6 +58,22 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'Quorum',
+    description:
+      'Fully offline AI media organizer for Plex — nine CLI modes that sort and metadata-enrich home video and photo libraries, generate AI titles, cluster faces via computer vision, identify films through TMDB, and log every change to reversible JSONL transactions for full undo.',
+    techTags: ['Python', 'Ollama', 'InsightFace', 'ffmpeg', 'TMDB API'],
+    githubUrl: 'https://github.com/JeffreySardella/Quorum',
+    featured: false,
+  },
+  {
+    title: 'Academ-VR',
+    description:
+      'Full-stack 360° VR e-learning platform delivering A-Frame video courses with multi-role dashboards (student, instructor, admin), course hierarchy, quizzes, progress tracking, token-based invites, and analytics.',
+    techTags: ['Django', 'DRF', 'Next.js', 'React', 'A-Frame'],
+    githubUrl: 'https://github.com/JeffreySardella/vr-experiential-learning-app-1',
+    featured: false,
+  },
+  {
     title: 'GitPulse',
     description:
       'Full-stack GitHub analytics dashboard with commit heatmaps, language breakdowns, and repo stats. Background jobs sync data hourly via Hangfire with Polly retry logic. GitHub OAuth + JWT auth.',
