@@ -22,6 +22,9 @@ export default function Footer() {
             LinkedIn
           </a>
         </p>
+        <p className="text-center text-text-muted text-xs mt-3">
+          Personal site. Views are my own and do not represent the California Department of Justice.
+        </p>
       </div>
     </footer>
   )

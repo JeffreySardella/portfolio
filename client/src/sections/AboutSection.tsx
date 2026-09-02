@@ -5,7 +5,7 @@ const QUICK_FACTS = [
   { label: 'DEGREE', value: 'B.S. Computer Science, Sac State (May 2026)' },
   { label: 'CERTS', value: 'AZ-900 · DP-900 · 6× Google (Cybersecurity, Data, AI, Python)' },
   { label: 'LOCATION', value: 'Rocklin, CA' },
-  { label: 'STATUS', value: 'Open to work — full-stack, backend, and AI engineering' },
+  { label: 'CURRENT', value: 'IT Specialist I, California Department of Justice' },
   { label: 'LANGUAGES', value: 'C# (6yr) · Python (4yr) · SQL (3yr) · JS (2yr)' },
 ]
 
@@ -38,9 +38,10 @@ export default function AboutSection() {
               job costs and track field operations.
             </p>
             <p className="text-text-muted leading-relaxed text-lg mt-4">
-              Now I've just wrapped up my CS degree at Sac State, building AI automation tools under
-              contract, and working on civic data tools. Eight certs across Microsoft and Google — and a garage
-              full of half-finished projects. I just like making things work.
+              Now I've finished my CS degree at Sac State and I write software for the California
+              Department of Justice, after a stretch building AI automation tools under contract.
+              Eight certs across Microsoft and Google — and a garage full of half-finished projects.
+              I just like making things work.
             </p>
           </div>
 

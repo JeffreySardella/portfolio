@@ -9,15 +9,26 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
   {
+    title: 'Information Technology Specialist I',
+    company: 'California Department of Justice',
+    location: 'Sacramento, CA',
+    dates: 'Sep 2026 – Present',
+    current: true,
+    bullets: [
+      'Software development and support for the Office of the Attorney General',
+      'Building and maintaining internal applications under state security and accessibility standards',
+    ],
+  },
+  {
     title: 'AI Solutions Engineer (Contract)',
     company: 'Drover Insights LLC',
     location: 'Remote — California',
-    dates: 'Mar 2026 – Present',
-    current: true,
+    dates: 'Mar 2026 – Aug 2026',
+    current: false,
     bullets: [
-      'React/TypeScript analytics dashboard integrating GA4, Search Console, Google Ads, and Meta Ads with Claude API-powered insights',
+      'Built a React/TypeScript analytics dashboard integrating GA4, Search Console, Google Ads, and Meta Ads with Claude API-powered insights',
       'Drover Content — multi-tenant B2B SaaS on Next.js + Supabase with four-role RBAC and Stripe billing',
-      'Playwright-based RPA tool for automated data collection workflows',
+      'Shipped a Playwright-based RPA tool for automated data collection workflows',
     ],
   },
   {
