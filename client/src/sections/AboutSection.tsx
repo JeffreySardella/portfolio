@@ -39,9 +39,10 @@ export default function AboutSection() {
             </p>
             <p className="text-text-muted leading-relaxed text-lg mt-4">
               Now I've got the CS degree from Sac State and a day job writing software for the
-              California Department of Justice. Before that I spent a stretch building AI automation
-              tools under contract. Eight certs across Microsoft and Google — and a garage full of
-              half-finished projects. I just like making things work.
+              California Department of Justice. Before that I was building AI automation tools under
+              contract, and I've still got a civic data project going on the side. Eight certs
+              across Microsoft and Google — and a garage full of half-finished projects. I just like
+              making things work.
             </p>
           </div>
 
