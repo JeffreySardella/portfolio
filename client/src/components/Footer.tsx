@@ -23,7 +23,7 @@ export default function Footer() {
           </a>
         </p>
         <p className="text-center text-text-muted text-xs mt-3">
-          Personal site. Views are my own and do not represent the California Department of Justice.
+          Personal site. Opinions are my own, not the Department of Justice's.
         </p>
       </div>
     </footer>
