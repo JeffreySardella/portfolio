@@ -15,8 +15,8 @@ export const experience: ExperienceEntry[] = [
     dates: 'Sep 2026 – Present',
     current: true,
     bullets: [
-      'Building and maintaining internal applications for the Office of the Attorney General',
-      'Writing to state standards for security, accessibility, and change management',
+      'Building internal applications for the Office of the Attorney General — the specifics stay inside the building',
+      'Writing to state standards for security, accessibility, and change control, which is more of the work than it sounds',
     ],
   },
   {
